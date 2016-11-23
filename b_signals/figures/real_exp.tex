@@ -1,0 +1,74 @@
+\pgfplotsset{compat=1.12}
+\pgfplotsset{every tick label/.append style={font=\scriptsize}}
+  \begin{tikzpicture}
+
+  \def\a{0.8}
+  \def\C{0.2}
+    \begin{axis}[
+     clip=false,
+     xmin=-3,xmax=3,
+     xlabel= $t$,
+     ylabel=$ x(t)$,
+     ymin=-0.2,ymax=1.5,
+     axis lines=middle,
+     %axis x line=middle,
+     %axis y line=left,
+%     axis x line=middle,
+     xtick=\empty,
+     xticklabels={$-\pi$, $-\frac{\pi}{2}$, $0$, $\frac{\pi}{2}$,$\pi\,$,$\,\,\,\frac{3}{2}\pi$,$\,\,\,2\pi$, $\frac{5\pi}{2}$},
+     ytick=\empty,
+     yticklabels={$\small  -A$, $\small  A$},
+     %xticklabel style={anchor=north west}
+     every axis x label/.style={
+    at={(ticklabel* cs:1)},
+    anchor=west,
+},
+every axis y label/.style={
+    at={(ticklabel* cs:1)},
+    anchor=south,
+},
+     ]
+      \addplot[domain=-2:2,samples=200,red]{\C*exp(\a*x)}
+                                node[right,pos=1,font=\footnotesize, black]{\scriptsize $x(t)=Ce^{at}$};
+
+	\node at (axis cs:1, 1) [anchor=east] {\scriptsize $a > 0$  };
+
+    \end{axis}
+    
+    \begin{scope}[xshift=8cm]
+      \def\a{-0.8}
+  \def\C{0.2}
+    \begin{axis}[
+     clip=false,
+     xmin=-3,xmax=3,
+     xlabel= $t$,
+     ylabel=$ x(t)$,
+     ymin=-0.2,ymax=1.5,
+     axis lines=middle,
+     %axis x line=middle,
+     %axis y line=left,
+%     axis x line=middle,
+     xtick=\empty,
+     xticklabels={$-\pi$, $-\frac{\pi}{2}$, $0$, $\frac{\pi}{2}$,$\pi\,$,$\,\,\,\frac{3}{2}\pi$,$\,\,\,2\pi$, $\frac{5\pi}{2}$},
+     ytick=\empty,
+     yticklabels={$\small  -A$, $\small  A$},
+     %xticklabel style={anchor=north west}
+     every axis x label/.style={
+    at={(ticklabel* cs:1)},
+    anchor=west,
+},
+every axis y label/.style={
+    at={(ticklabel* cs:1)},
+    anchor=south,
+},
+     ]
+      \addplot[domain=-2:2,samples=200,red]{\C*exp(\a*x)}
+                                node[right,pos=0,font=\footnotesize, black]{\scriptsize $x(t)=Ce^{at}$};
+
+	\node at (axis cs:1, 1) [anchor=east] {\scriptsize $a < 0$  };
+
+    \end{axis}
+\end{scope}
+
+
+  \end{tikzpicture} 

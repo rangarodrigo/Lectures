@@ -1,0 +1,80 @@
+\section{Convolution}
+
+\begin{frame}{Introduction}
+    \begin{enumerate}
+        \item Using the convolution we can express the response of an LTI system to an arbitrary input in terms of the system's response to the unit impulse.
+        \item An LTI system is completely characterized by its response to a single signal, namely, its response to the unit impulse.
+        \item In discrete time, we have the convolution sum. In continuous time, we have the convolution integral.
+        \item In this part of the course, we will learn to compute convolution sums and convolution integrals.
+        \item In a latter section, under LTI system, we will obtain a thorough understanding of the concept of convolution.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Convolution Sum}
+    The convolution of the sequence $x[n]$ and $h[n]$ is given by
+    \begin{equation}\label{eq:convolution_sum}
+        y[n] = \sum_{k=-\infty}^{\infty}x[k]h[n-k],
+    \end{equation}
+    which we represent symbolically as
+    \begin{equation}\label{eq:convolution_symbol}
+        y[n] = x[n]\ast h[n]
+    \end{equation}
+\end{frame}
+
+\begin{frame}{Example}
+    Computer $y[n] = x[n]\ast h[n]$ for $x[n]$ and $h[n]$ as shown in Figure \ref{fi:example01_discrete_conv_signals}.
+    \begin{figure}
+      \centering
+      \input{figures/example01_discrete_conv_signals}
+      \caption{Computing convolution}\label{fi:example01_discrete_conv_signals}
+    \end{figure}        
+\end{frame}
+
+\begin{frame}<beamer>[plain,t]
+    \begin{figure}
+      \centering
+      \input{figures/example01_discrete_conv_01}
+      \caption{Computing convolution}\label{fi:example01_discrete_conv_01}
+    \end{figure}
+\end{frame}
+
+\begin{frame}<beamer>[plain,t]
+    \begin{figure}
+      \centering
+      \input{figures/example01_discrete_conv_02}
+      \caption{Computing convolution}\label{fi:example01_discrete_conv_02}
+    \end{figure}
+\end{frame}
+
+
+
+\begin{frame}<beamer>[plain,t]
+    \begin{figure}
+      \centering
+      \input{figures/example01_discrete_conv_03}
+      \caption{Computing convolution}\label{fi:example01_discrete_conv_03}
+    \end{figure}
+\end{frame}
+
+
+
+
+\begin{frame}{Example}
+    Consider and input $x[n]$ and a unit impulse response $h[n]$ given by 
+    \begin{equation}
+        \begin{split}
+            x[n] &= \alpha^nu[n]'\\
+            h[n] &= u[n],
+        \end{split}
+    \end{equation}
+    which $0 < \alpha < 1$. Find $y[n]$ and sketch.
+\end{frame}
+
+\begin{frame}
+    \begin{enumerate}
+        \item
+    \end{enumerate}
+\end{frame}
+
+
+
