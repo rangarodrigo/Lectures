@@ -1,7 +1,9 @@
-\tikzstyle{int}=[draw, fill=pink!60, minimum size=2em]
+\tikzstyle{int}=[draw, fill=pink!60, minimum size=2em, align=center]
 \tikzstyle{init} = [pin edge={to-,thin,black}]
 
-\begin{tikzpicture}[node distance=2.5cm,auto,>=latex']
+\begin{tikzpicture}[node distance=2.5cm,auto,>=latex',
+var/.style={draw=none, fill=none, text width=6mm, inner sep=2mm}
+]
 	
 	\begin{scope}[yshift=-2cm,
 		start chain,
@@ -9,9 +11,9 @@
 		every node/.style={int, draw,on chain,join,inner sep=2mm},
 		every join/.style={->}
 		]
-		\node[draw=none, fill=none]  {$u[n]$};	
-		\node { $h[n]$};
-		\node[draw=none, fill=none]   {$s[n]$};
+		\node[var]  {$x(t)$\\ $x[n]$};	
+		\node[int, text width=6mm]  {$h(t)$\\ $h[n]$};	
+		\node[var]  {$y(t)$\\ $y[n]$};	
 	\end{scope}
 	
 	

@@ -3,22 +3,84 @@
     \begin{enumerate}
       \item In representing and analyzing LTI systems, our approach has been to decompose the system inputs into a liner combination of basic signals and exploit the fact that for a linear system, the response is the same linear combination of the responses to the basic inputs.
       \item The convolution sum and the convolution integral req out of the particular choice of the basic signals, delayed unit impulses.
-      \item This choice has the advantage that for systems that are time invariant in addition to being linear, once the response to an impulse at one time position is known, then the response id know at all time positions. 
+      \item This choice has the advantage that for systems that are time invariant in addition to being linear, once the response to an impulse at one time position is known, then the response id know at all time positions.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}{Complex Exponentials with Unity Magnitude as Basic Signals}
     \begin{enumerate}
-      \item When we select complex exponential with unity magnitude as the basic signals, the decomposition of this form of a periodic signal is the Fourier series. 
+      \item When we select complex exponential with unity magnitude as the basic signals, the decomposition of this form of a periodic signal is the Fourier series.
       \item For aperiodic signals, it becomes the Fourier transform.
-      \item In latter lectures, we will generalize thsi representation to Laplace tangram for continuous-time signals and $z$-tansfrom for discrete-time signals. 
+      \item In latter lectures, we will generalize this representation to Laplace tangram for continuous-time signals and $z$-transform for discrete-time signals.
     \end{enumerate}
 \end{frame}
 
-\begin{frame}[plain]
-    Consider a linear system
-            \column{0.68\textwidth}
-                \input{figures/fourier_system}
+\begin{frame}[plain]    
+    \begin{columns}
+            \column{0.48\textwidth}
+                Consider a linear system
+                {
+                \input{figures/fourier_system}\par
+                }
+                If
+                \begin{equation*}
+                    x(t) = a_1\phi_1(t) + a_2\phi_2(t) + \cdots
+                \end{equation*}
+                and
+                \begin{equation*}
+                    \phi_k(t) \longrightarrow \psi_k(t), \quad \text{(output due to $\phi_k(t) $)}
+                \end{equation*}        
+                then
+                \pause
+                \begin{equation*}
+                    y(t) = a_1\psi_1(t) + a_2\psi_2(t) + \cdots
+                \end{equation*}  
+                Identical for DT. So
+                \pause                
+                \begin{align*}
+                   \text{If}\quad x(t) &= a_1\phi_1 + a_2\phi_2 + \cdots,\\
+                   \text{then}\quad y(t) &= a_1\psi_1 + a_2\psi_2 + \cdots.
+                \end{align*}
+                
+                \pause
+            \column{0.48\textwidth}  
+                Choose $\phi_k(t)$ or $\phi_k[n]$ so that
+                \begin{enumerate}
+                    \item A broad class of signals can be constructed as a linear combination of $\phi_k$s
+                    \item Response to $\phi_k$s easy to compute.
+                \end{enumerate}   
+                \pause                               
+                Choice of signals $\delta(t-k\Delta)$ and $\delta[n-k]$ lead to the convolution integral and convolution sum. 
+                \begin{align*}
+                    \text{CT}\quad \phi_k(t) &=  \delta(t-k\Delta)\\
+                    \psi_k(t) &= h(t-k\Delta)\quad \Rightarrow \text{ convolution integral}\\
+                    \text{DT}\quad \phi_k[n] &=  \delta[n-k]\\
+                    \psi_k[n] &= h[n-k]\quad \Rightarrow \text{ convolution sum}                    
+                \end{align*} 
+                \pause                 
+                Here, we  choose complex exponentials as the set of basic signals.
+                \begin{align*}
+                    \phi_k(t) &= e^{s_k t},\quad s_k \text{ complex}\\
+                    \phi_k[n] &= z_k^n,\quad z_k \text{ complex}\\
+                \end{align*}
+                
+    \end{columns}
+\end{frame} 
 
-            \column{0.3\textwidth}    
+\begin{frame}{Fourier Analysis}
+    
 \end{frame}
+
+%\begin{frame}{}
+%    \begin{enumerate}
+%        \item
+%    \end{enumerate}
+%
+%    \mode<beamer>
+%    {
+%        \begin{columns}
+%            \column{0.48\textwidth}
+%            \column{0.48\textwidth}
+%        \end{columns}
+%    }
+%\end{frame}
