@@ -1,0 +1,171 @@
+%\section{Introduction}
+
+\begin{frame}{Introduction}
+    \begin{itemize}[<+->]
+        \item Now, we have studied Fourier series and Fourier transform for CT signals.
+        \item In this lesson we will develop similar tool for discrete time.
+        \item Specifically, we consider the representation of discrete-time signals though a decomposition as a linear combination of complex exponentials.
+            \begin{itemize}
+                \item DT periodic signals $\rightarrow$ DT Fourier series
+                \item DT aperiodic signals $\rightarrow$ DT Fourier transform
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Philosophy}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[thick] (0,0)  -- ++(2,0)node[near start, above] {$x(t)$} node[near start, below] {$x[n]$} node (s) [rectangle, draw=black, thick, fill=gray, minimum width=0.4in, minimum height = 0.4in,anchor=west] {LTI} (s.east) -- ++(2,0) node[near end, above] {$y(t)$} node[near end, below] {$y[n]$};
+            \end{tikzpicture}
+        \end{center}
+        Decompose the input as
+            \begin{equation*}
+                x = a_1\phi_1 + a_2\phi_2 + \cdots \quad \text{linear combination of basic inputs}
+            \end{equation*}
+        Then
+            \begin{equation*}
+                y = a_1\psi_1 + a_2\psi_2 + \cdots \quad \text{linear combination of corresponding outputs}
+            \end{equation*}
+
+        Choose $\phi_k(t)$ or $\phi_k[n]$ such that
+        \begin{itemize}
+            \item Broad class of signals can be constructed, and
+            \item Response to $\phi_k$s easy to compute.
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{Eigenfunction Property}
+    \textbf{Continuous-Time}:\par
+    $\phi_k(t) = e^{j\omega_k t}$:
+    \begin{equation*}
+        e^{j\omega_k t} \longrightarrow H(\omega_k) e^{j\omega_k t} \quad \text{(a scaled-version of the input)}
+    \end{equation*}
+    \textbf{``Discrete-Time'':}\pause
+    \mode<beamer>
+    {
+        $\phi_k[n] = e^{j\omega_k n}$\par
+        \begin{equation*}
+            e^{j\omega_k n} \longrightarrow
+            \underset{\mathclap{\tikz \node {$\uparrow$} node [below=3ex, text=red] {eigenfunction};}}{
+            e^{j\omega_k n}
+            }
+            \underbrace{
+            \sum_{r=-\infty}^{\infty} h[r]e^{-j\omega_k r}
+            }_{\textcolor{red}{\text{eigenvalue}}}
+        \end{equation*}
+    }
+\end{frame}
+
+
+\begin{frame}{Discrete-Time Fourier Series}
+    \mode<beamer>
+    {
+        \begin{columns}
+            \column{0.48\textwidth}
+                $x[n]$ periodic\par
+                period $N$\par
+                fundamental frequency $\omega_0 = \frac{2\pi}{N}$\par
+                $e^{jk\omega_0 n} = e^{j(k+N)\omega_0 n}$\par
+                \begin{equation*}
+                    x[n] = \sum_k a_k e^{jk\omega_0 n}, \quad k = 0,1, 2, \dots, N-1.
+                \end{equation*}
+                \begin{equation*}
+                    x[n] = \sum_{k=<N>} a_k e^{jk\omega_0 n}.
+                \end{equation*}    
+                $N$ equations in $N$ unknowns.
+                \begin{equation*}
+                    a_k = \frac{1}{N}\sum_{<N>} x[n]e^{-jk\omega_0 n}.
+                \end{equation*}                             
+            \column{0.48\textwidth}
+            \textbf{Continuous-Time}\par
+            \begin{align*}
+                x(t) &= \sum_{k=-\infty}^{\infty}a_k e^{jk\omega_0 t}\\
+                a_k &= \frac{1}{T} \int_{T} x(t)e^{-jk\omega_0 t}dt
+            \end{align*}
+            \textbf{Discrete-Time Fourier Series}
+            \mode<beamer>
+            { 
+            
+            \begin{align*}
+                \text{Synthesis} &\\
+                x[n] &= \sum_{k=<N>} a_k e^{jk\omega_0 n}.\\
+                \text{Analysis} &\\
+                a_k &= \frac{1}{N}\sum_{n=<N>} x[n]e^{-jk\omega_0 n}.
+            \end{align*}
+            }                   
+        \end{columns}
+    }
+\end{frame} 
+
+
+\begin{frame}
+    
+
+    \mode<beamer>
+    {
+        \begin{columns}
+            \column{0.48\textwidth}
+            \textbf{Periodicity}
+                \begin{equation*}
+                    \begin{array}{lll}
+                        x[n] & \text{periodic in } n & \text{true for CT}\\
+                        e^{jk\omega_0 n} & \text{periodic in } n &\text{true for CT}\\
+                        e^{jk\omega_0 n} & \text{periodic in } k &\text{not true for CT}\\
+                        a_k &  \text{periodic in } k &\text{not true for CT}
+                    \end{array}
+                \end{equation*}
+            \column{0.48\textwidth}
+            \textbf{Convergence}\par
+            Continuous-time:
+            \begin{itemize}
+                \item $x(t)$ square-integrable OR
+                \item Dirichlet condition
+            \end{itemize}
+            Discrete-time
+            \begin{equation*}
+                x[n] = \sum_{k=<N>} a_k e^{jk\omega_0 n}.
+            \end{equation*}
+            \begin{equation*}
+                \hat{x}[n] = \sum_{p \text{ terms}} a_k e^{jk\omega_0 n}.
+            \end{equation*}  
+            $p = N$\par
+            \begin{equation*}
+                \hat{x}[n] \equiv x[n].
+            \end{equation*}          
+            There is no issue of convergence in DT.
+        \end{columns}
+    }
+\end{frame}
+
+\begin{frame}{Example}
+    Determine and sketch the DTFT of 
+    \begin{equation*}
+        x[n] = 1 + \sin \omega_0 n + 3 \cos \omega_0 n + \cos\left(2\omega_0 b + \frac{pi}{2}\right).
+    \end{equation*}
+    \pause
+\end{frame}
+
+\begin{frame}{Example}
+    Determine and sketch the DTFT of $x[n]$ of which is shown in the figure. 
+    \begin{figure}
+        \centering
+        \input{figures/example53}
+    \end{figure}
+    \pause
+\end{frame}
+
+
+%\begin{frame}{}
+%    \begin{enumerate}
+%        \item
+%    \end{enumerate}
+%
+%    \mode<beamer>
+%    {
+%        \begin{columns}
+%            \column{0.48\textwidth}
+%            \column{0.48\textwidth}
+%        \end{columns}
+%    }
+%\end{frame}
