@@ -72,11 +72,11 @@
                 \end{equation*}
                 \begin{equation*}
                     x[n] = \sum_{k=<N>} a_k e^{jk\omega_0 n}.
-                \end{equation*}    
+                \end{equation*}
                 $N$ equations in $N$ unknowns.
                 \begin{equation*}
                     a_k = \frac{1}{N}\sum_{<N>} x[n]e^{-jk\omega_0 n}.
-                \end{equation*}                             
+                \end{equation*}
             \column{0.48\textwidth}
             \textbf{Continuous-Time}\par
             \begin{align*}
@@ -85,22 +85,22 @@
             \end{align*}
             \textbf{Discrete-Time Fourier Series}
             \mode<beamer>
-            { 
-            
+            {
+
             \begin{align*}
                 \text{Synthesis} &\\
-                x[n] &= \sum_{k=<N>} a_k e^{jk\omega_0 n}.\\
+                x[n] &= \sum_{k=<N>} a_k e^{jk\omega_0 n} = \sum_{k=<N>} a_k e^{jk(2\pi/N) n} .\\
                 \text{Analysis} &\\
-                a_k &= \frac{1}{N}\sum_{n=<N>} x[n]e^{-jk\omega_0 n}.
+                a_k &= \frac{1}{N}\sum_{n=<N>} x[n]e^{-jk\omega_0 n}  = \frac{1}{N}\sum_{n=<N>} x[n]e^{-jk(2\pi/N) n}.
             \end{align*}
-            }                   
+            }
         \end{columns}
     }
-\end{frame} 
+\end{frame}
 
 
 \begin{frame}
-    
+
 
     \mode<beamer>
     {
@@ -128,26 +128,26 @@
             \end{equation*}
             \begin{equation*}
                 \hat{x}[n] = \sum_{p \text{ terms}} a_k e^{jk\omega_0 n}.
-            \end{equation*}  
+            \end{equation*}
             $p = N$\par
             \begin{equation*}
                 \hat{x}[n] \equiv x[n].
-            \end{equation*}          
+            \end{equation*}
             There is no issue of convergence in DT.
         \end{columns}
     }
 \end{frame}
 
 \begin{frame}{Example}
-    Determine and sketch the DTFT of 
+    Determine and sketch the DTFT of
     \begin{equation*}
-        x[n] = 1 + \sin \omega_0 n + 3 \cos \omega_0 n + \cos\left(2\omega_0 b + \frac{pi}{2}\right).
+        x[n] = 1 + \sin \omega_0 n + 3 \cos \omega_0 n + \cos\left(2\omega_0 n + \frac{\pi}{2}\right).
     \end{equation*}
     \pause
 \end{frame}
 
 \begin{frame}{Example}
-    Determine and sketch the DTFT of $x[n]$ of which is shown in the figure. 
+    Determine and sketch the DTFT of $x[n]$ of which is shown in the figure.
     \begin{figure}
         \centering
         \input{figures/example53}
@@ -168,4 +168,4 @@
 %            \column{0.48\textwidth}
 %        \end{columns}
 %    }
-%\end{frame}
+%\end{frame} 

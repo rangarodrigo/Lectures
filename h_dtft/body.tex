@@ -1,0 +1,74 @@
+\begin{frame}
+    \begin{figure}
+        \centering
+        \input{figures/dtfs_square_wave}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Fourier Representation of Aperiodic Signals}
+\begin{itemize}
+    \item $x[n]$ aperiodic
+        \begin{itemize}
+          \item Construct periodic signals $\tilde{x}[n]$ for which one period is $x[n]$
+          \item $\tilde{x}[n]$ has a Fourier series
+        \end{itemize}
+    \item As period of $\tilde{x}[n]$ increases
+        \begin{itemize}
+          \item $\tilde{x}[n] \longrightarrow x[n]$
+          \item $\tilde{x}[n] \longrightarrow$ Fourier transform of $x[n]$.
+        \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{align*}
+        x[n] &= \sum_{k=<N>} a_k e^{jk\omega_0 n}.\\
+        a_k &= \frac{1}{N}\sum_{n=<N>} x[n]e^{-jk\omega_0 n}.
+    \end{align*}
+    If $x[n]$ is aperiodic, for the periodic signal $\tilde{x}[n]$ whose one period is $x[n]$
+    \begin{equation*}
+        \tilde{x}[n] = \sum_{k=<N>}  a_ke^{jk\omega_0 n}.
+    \end{equation*}
+
+    \begin{equation*}
+        a_k = \frac{1}{N} \sum_{n=<N>}\tilde{x}[n]e^{-jk(2\pi/N) n}
+    \end{equation*}
+    Since $x[n] = \tilde{x}[n]$ over a period that includes $-N1\leq n\leq N_2$
+    \begin{equation*}
+        a_k = \frac{1}{N} \sum_{n=-N_1}^{N_2}\tilde{x}[n]e^{-jk(2\pi/N) n} = \frac{1}{N} \sum_{n=-\infty}^{\infty}\tilde{x}[n]e^{-jk(2\pi/N) n}
+    \end{equation*}
+\end{frame}
+
+\begin{frame}
+    Defining the function
+    \begin{equation*}
+        X(e^{j\omega}) = \sum_{n=-\infty}^{\infty}x[n]e^{-j\omega n},
+    \end{equation*}
+    we see that the coefficients $a_k$ are proportional to the samples of $X(e^{j\omega})$,i.e.,
+    \begin{equation*}
+        a_k = \frac{1}{N} X(e^{jk\omega_0})
+    \end{equation*}
+    where $\omega_0 = 2\pi/N$ is the spacing of the samples in the frequency domain. Combining
+    \begin{equation*}
+        \tilde{x}[n] = \sum_{k=<N>}   \frac{1}{N} X(e^{jk\omega_0}) e^{jk\omega_0 n}.
+    \end{equation*}
+    Since $1/N = \omega_0/2\pi$,
+    \begin{equation*}
+        \tilde{x}[n] = \frac{1}{2\pi}\sum_{k=<N>}    X(e^{jk\omega_0}) e^{jk\omega_0 n}\omega_0.
+    \end{equation*}
+
+    As $N\longrightarrow \infty$
+    \begin{equation*}
+      x[n] = \frac{1}{2\pi}\int_{2\pi} X(e^{j\omega}) e^{j\omega n}d\omega
+    \end{equation*}
+\end{frame}
+
+\begin{frame}{Discrete-Time Fourier Transform}
+    \begin{align*}
+        x[n] &= \frac{1}{2\pi}\int_{2\pi} X(e^{j\omega}) e^{j\omega n}d\omega\\
+        X(e^{j\omega}) &= \sum_{n=-\infty}^{\infty}x[n]e^{-j\omega n}.
+    \end{align*}
+\end{frame}
+
+
