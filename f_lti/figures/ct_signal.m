@@ -13,5 +13,5 @@ plot(xt);
 fn = 'ct_signal.dat';
 fileID = fopen(fn,'w');
 fprintf(fileID,'%s\t%s\n','t','xt');
-fclose(fileID);
+fclose(fileID);pi
 dlmwrite(fn, [t', xt'],'delimiter', '\t', 'precision', 6 , '-append');

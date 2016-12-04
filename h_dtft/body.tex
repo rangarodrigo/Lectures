@@ -1,3 +1,35 @@
+\section{Discrete-Time Fourier Transform}
+
+\begin{frame}{Discrete-Time Fourier Transform from DTFS}
+    \begin{itemize}[<+->]
+        \item We can represent the Fourier series coefficients as samples of an envelope. This envelope is determined by the behavior of the sequence over one period but is not dependent on the specific value of the period.
+        \item As the period of the sequence increases, with the nonzero content in the period remaining the same, the Fourier series coefficients are samples of the same envelope function with increasingly finer spacing along the frequency axis (specifically, a spacing of $2\pi/N$ where $N$ is the period).
+        \item Consequently, as the period approaches infinity, this envelope function corresponds to a Fourier representation of the aperiodic signal corresponding to one period. This is, then, the Fourier transform of the aperiodic signal.
+        \item The discrete-time Fourier transform developed, as we have just described, corresponds to a decomposition of an aperiodic signal as a linear combination of a continuum of complex exponentials.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Discrete-Time Fourier Transform from DTFS}
+    \begin{itemize}
+        \item The synthesis equation is then the limiting form of the Fourier series sum, specifically an integral. The analysis equation is the same one we used previously in obtaining the envelope of the Fourier series coefficients.
+        \item While there was a duality in the expressions between the discrete-time Fourier series analysis and synthesis equations, the duality is lost in the discrete-time Fourier transform since the synthesis equation is now an integral and the analysis equation a summation. This is a difference compared to the continuous-time Fourier transform.
+        \item Another important difference is that the discrete-time Fourier transform is always a periodic function of frequency.
+        \item Consequently, it is completely defined by its behavior over a frequency range of $2\pi$ in contrast to the continuous-time Fourier transform, which extends over an infinite frequency range.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Approach}
+    \begin{itemize}
+        \item Construct the periodic signal $\tilde{x}[n]$ for which one period is $x[n]$.
+        \item $\tilde{x}[n]$ has a Fourier series.
+        \item As the period of $\tilde{x}[n]$ increases,\\
+            $\tilde{x}[n] \rightarrow x[n]$ and the Fourier series of $\tilde{x}[n]$ $\rightarrow$ Fourier transform of $x[n]$.
+    \end{itemize}
+\end{frame}
+
+
+
 \begin{frame}
     \begin{figure}
         \centering
@@ -65,10 +97,283 @@
 \end{frame}
 
 \begin{frame}{Discrete-Time Fourier Transform}
-    \begin{align*}
-        x[n] &= \frac{1}{2\pi}\int_{2\pi} X(e^{j\omega}) e^{j\omega n}d\omega\\
-        X(e^{j\omega}) &= \sum_{n=-\infty}^{\infty}x[n]e^{-j\omega n}.
-    \end{align*}
+    Synthesis:
+    \begin{equation*}
+        x[n] = \frac{1}{2\pi}\int_{2\pi}X(e^{j\omega})e^{j\omega n}d\omega
+    \end{equation*}
+    Analysis
+    \begin{equation*}
+        X(e^{j\omega}) = \sum_{-\infty}^{\infty}x[n]e^{-j\omega n}
+    \end{equation*}
+
+    \begin{equation*}
+        x[n] \overset{\mathcal{F}}{\leftrightarrow} X(e^{j\omega})
+    \end{equation*}
+
+    \begin{equation*}
+        \begin{split}
+            X(e^{j\omega}) &= \mathrm{Re}\{X(e^{j\omega})\} + j\mathrm{Im}\{X(e^{j\omega})\}\\
+            &= |X(e^{j\omega})| e^{\angle X(e^{j\omega})}\\
+        \end{split}
+    \end{equation*}
 \end{frame}
 
+
+\begin{frame}
+    \begin{example}
+        Obtain an expression for the DTFT of
+        \begin{equation*}
+            x[n] = a^nu[n], |a|<1.
+        \end{equation*}
+        Sketch the magnitude and phase of $X(e^{j\omega})$ for
+        \begin{enumerate}
+            \item $a>0$, ($a=0.5$) and
+            \item $a<0$, ($a=-0.5$).
+        \end{enumerate}
+     \end{example}
+     % Solution: Example 5.1 in Oppenheim p. 363
+\end{frame}
+
+
+
+\begin{frame}
+    \mode<beamer>
+    {
+        \begin{align*}
+            X(e^{j\omega}) &= \sum_{n=-\infty}^{\infty} a^nu[n]e^{-j\omega n}\\
+            &= \sum_{n = 0}^{\infty} (ae^{-j\omega})^n\\
+            &= \frac{1}{1-ae^{-j\omega}}.
+        \end{align*}
+    }
+\end{frame}
+
+
+
+\begin{frame}
+    \mode<beamer>
+    {
+        \begin{figure}
+            \centering
+            \input{figures/dtft_anun}
+        \end{figure}
+
+    }
+\end{frame} 
+
+
+\begin{frame}
+    \begin{example}
+        Consider the rectangular pulse
+        \begin{equation*}
+            x[n] = \begin{cases}
+                1, & |n| \leq N_1,\\
+                0, & |n| > N_1.
+            \end{cases}
+        \end{equation*}
+        \begin{enumerate}
+            \item Obtain an expression for the DTFT $X(e^{j\omega})$ of this signal.
+            \item Sketch for $N_1 = 2$.
+        \end{enumerate}
+     \end{example}
+     
+        \begin{figure}
+            \centering
+            \input{figures/example53}
+        \end{figure}     
+     
+\end{frame}
+
+
+\section{Properties of the Fourier Transform}
+
+\begin{frame}{Periodicity}
+    DTFT is always periodic in $\omega$ withe period $2\pi$
+    \begin{equation*}
+        x[n] \overset{\mathcal{F}}{\leftrightarrow} X(e^{j\omega})
+    \end{equation*}
+
+    \begin{equation*}
+        X\left(e^{j(\omega+2\pi)}\right) = X(e^{j\omega})
+    \end{equation*}
+\end{frame}
+
+\begin{frame}{Linearity}
+    If
+    \begin{equation*}
+        x_1[n] \overset{\mathcal{F}}{\leftrightarrow} X_1(e^{j\omega})
+    \end{equation*}
+    and
+    \begin{equation*}
+        x_2[n] \overset{\mathcal{F}}{\leftrightarrow} X_2(e^{j\omega})
+    \end{equation*}
+    then
+    \begin{equation*}
+        ax_1[n] + bx_2[n] \overset{\mathcal{F}}{\leftrightarrow} aX_1(e^{j\omega}) + bX_2(e^{j\omega})
+    \end{equation*}
+\end{frame}
+
+\begin{frame}{Time Shifting and Frequency Shifting}
+    If
+    \begin{equation*}
+        x[n] \overset{\mathcal{F}}{\leftrightarrow} X(e^{j\omega})
+    \end{equation*}
+    then
+    \begin{equation*}
+        x[n-n_0] \overset{\mathcal{F}}{\leftrightarrow} e^{-j\omega n_0}X(e^{j\omega})
+    \end{equation*}
+    and
+    \begin{equation*}
+        e^{j\omega_0 n}x[n] \overset{\mathcal{F}}{\leftrightarrow} X\left(e^{j(\omega - \omega_0)}\right)
+    \end{equation*}
+\end{frame}
+
+
+
+\begin{frame}
+    \begin{example}
+        The frequency response of an ideal low-pass filter has the cutoff frequency of $\omega_c$.
+        \begin{enumerate}
+            \item Obtain an expression for the frequency response of the corresponding high-pass filter (cutoff frequency $\pi - \omega_c$).
+            \item Obtain and expression for the impulse response of this high-pass filter in terms of the impulse response of the low-pass filter.
+        \end{enumerate}
+     \end{example}
+     % Solution: Example 5.1 in Oppenheim p. 374
+\end{frame}
+
+
+\begin{frame}{Conjugation and Conjugate Symmetry}
+    If
+    \begin{equation*}
+        x[n] \overset{\mathcal{F}}{\leftrightarrow} X(e^{j\omega})
+    \end{equation*}
+    then
+    \begin{equation*}
+        x^\ast[n] \overset{\mathcal{F}}{\leftrightarrow} X^\ast(e^{-j\omega}).
+    \end{equation*}
+    Also, if $x[n]$ is real-valued, its transform $X(e^{j\omega})$ is conjugate symmetric. That is
+    \begin{equation*}
+        X(e^{j\omega}) = X^\ast(e^{-j\omega}), \quad (x[n] \text{ real}.)
+    \end{equation*}
+    $\mathrm{Re}\{X(e^{j\omega})\}$ is an even function of $\omega$ and  $\mathrm{Im}\{X(e^{j\omega})\}$ is an odd function of $\omega$.\\
+    The magnitude of $X(e^{j\omega})$ is an even function and the phase angle is an odd function.
+\end{frame}
+
+\begin{frame}{Time Reversal}
+    \begin{equation*}
+        x[-n] \overset{\mathcal{F}}{\leftrightarrow} X(e^{-j\omega}).
+    \end{equation*}
+    \begin{example}
+        Prove the time-reversal property.
+    \end{example}
+    % Solution: Example 5.1 in Oppenheim p. 377
+\end{frame}
+
+\begin{frame}{Differentiation in Frequency}
+    \begin{equation*}
+        nx[n] \overset{\mathcal{F}}{\leftrightarrow} j \frac{d X(e^{j\omega})}{d\omega}.
+    \end{equation*}
+    \begin{example}
+        Prove the differentiation property.
+    \end{example}
+    % Solution: Example 5.1 in Oppenheim p. 380
+\end{frame}
+
+\begin{frame}{Parseval's Relation}
+    \begin{equation*}
+        \sum_{n=-\infty}^{+\infty}|x[n]|^2 = \frac{1}{2\pi}\int_{2\pi} | X(e^{j\omega})|^2d\omega
+    \end{equation*}
+\end{frame}
+
+\begin{frame}{The Convolution Property}
+    If $x[n]$, $h[n]$ and $y[n]$ are the input, impulse response, and output respectively of an LTI system, so that
+    \begin{equation*}
+        y[n] = x[n]\ast h[n]
+    \end{equation*}
+    then
+    \begin{equation*}
+        Y(e^{j\omega}) = X(e^{j\omega})H(e^{j\omega}).
+    \end{equation*}
+
+    \begin{example}
+        Consider an LTI system with impulse response
+        \begin{equation*}
+          h[n] = \delta[n-n_0]
+        \end{equation*}
+        Obtain the output $y[n]$ for an input $x[n]$.
+    \end{example}
+    % Solution: Example 5.1 in Oppenheim p. 383
+\end{frame}
+
+
+\begin{frame}
+    \begin{example}
+        Consider an LTI system with impulse response
+        \begin{equation*}
+          h[n] = \alpha^n u[n], \quad |\alpha| <1
+        \end{equation*}
+        and suppose that the input to this system is
+        \begin{equation*}
+          x[n] = \beta^n u[n], \quad |\beta| <1
+        \end{equation*}
+        Obtain the output $y[n]$ for $\alpha \neq \beta$ and $\alpha = \beta$.
+    \end{example}
+    % Solution: Example 5.1 in Oppenheim p. 383
+\end{frame}
+
+
+\begin{frame}{The Multiplication Property}
+    Consider $y[n]$ equal to the product of $x_1[n]$ and $x_2[n]$, then
+    \begin{equation*}
+        Y(e^{j\omega}) = \frac{1}{2\pi}\int_{2\pi}X_1(e^{j\theta})X_2(e^{j(\omega - \theta)})d\theta
+    \end{equation*}
+    This equation corresponds to the \alert{periodic convolution} of $X_1(e^{j\omega})$ and $X_2(e^{j\omega})$, and the integral in this equation can be evaluation over any given interval of length $2\pi$.\\
+
+    See example 5.15.
+\end{frame}
+
+\begin{frame}{Summary}
+\centering
+{%\renewcommand{\arraystretch}{4}%
+    \begin{tabular}{lcc}
+
+    & CT & DT\\
+        \cline{2-3}
+    & Series (CT) & Series (DT)\\
+    \cline{2-3}
+    Periodic &
+    $\begin{aligned}
+        x(t) &= \sum_{k=-\infty}^{+\infty}a_k e^{jk\left(\frac{2\pi}{T}\right)t}\\
+        a_k &= \frac{1}{T} \int_{T}x(t)e^{-jk\left(\frac{2\pi}{T}\right) t}dt
+    \end{aligned}$\par
+
+    &
+    $\begin{aligned}
+        x[n] &= \sum_{k=<N>}a_k e^{jk\left(\frac{2\pi}{N}\right) n}\\
+        a_k &= \frac{1}{N} \sum_{n=<N>}x[n]e^{-jk\left(\frac{2\pi}{N}\right)n}
+    \end{aligned}$\par
+    \\[4ex]
+        \cline{2-3}
+     & Transform (CT) & Transform (DT)\\
+    \cline{2-3}
+    Aperiodic &
+    $\begin{aligned}
+        x(t) &= \frac{1}{2\pi}\int_{-\infty}^{+\infty} X(j\omega)e^{j\omega t}d\omega\\
+        X(j\omega) &=  \int_{-\infty}^{+\infty}x(t)e^{-j\omega t}dt
+    \end{aligned}$\par
+
+    &
+
+
+    $\begin{aligned}
+        x[n] &= \frac{1}{2\pi}\int_{2\pi} X(e^{j\omega})e^{j\omega n}d\omega\\
+        X(e^{j\omega}) &= \sum_{n=-\infty}^{+\infty}x[n]e^{-j\omega n}
+    \end{aligned}$\par
+    \\[4ex]
+        \cline{2-3}
+    \end{tabular}
+    }
+
+    CT: $\omega_0 = \frac{2\pi}{T}$, DT: $\omega_0 = \frac{2\pi}{N}$
+
+\end{frame}
 
