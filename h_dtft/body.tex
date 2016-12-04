@@ -53,6 +53,8 @@
 \end{itemize}
 \end{frame}
 
+
+
 \begin{frame}
     \begin{align*}
         x[n] &= \sum_{k=<N>} a_k e^{jk\omega_0 n}.\\
@@ -191,7 +193,7 @@
         \centering
         \input{figures/dtft_square_pulse}
     \end{figure}
-\end{frame} 
+\end{frame}
 
 \section{Properties of the Fourier Transform}
 
@@ -250,6 +252,23 @@
 \end{frame}
 
 
+\begin{frame}
+    \mode<beamer>
+    {
+        \begin{figure}
+            \centering
+            \input{figures/filter_lp_hp}
+        \end{figure}
+
+    }
+    $H_{lp}(e^{j(\omega - \pi)})$ is the frequency response of $H_{lp}(e^{j\omega})$ shifted by one-half period, i.e., by $\pi$. Since high frequencies in discrete time are concentrated near $\pi$ (and other odd multiples of $\pi$), the filter depicted in the second figure is an ideal highpass filter with cutoff frequency $\pi - \omega_c$.
+
+    \begin{align*}
+        h_{hp}[n] &= e^{j\pi n}h_{lp}[n] \\
+        &= (-1)^n h_{lp}[n].
+    \end{align*}
+\end{frame}
+
 \begin{frame}{Conjugation and Conjugate Symmetry}
     If
     \begin{equation*}
@@ -266,6 +285,10 @@
     $\mathrm{Re}\{X(e^{j\omega})\}$ is an even function of $\omega$ and  $\mathrm{Im}\{X(e^{j\omega})\}$ is an odd function of $\omega$.\\
     The magnitude of $X(e^{j\omega})$ is an even function and the phase angle is an odd function.
 \end{frame}
+%
+%%%%%%%%%%%%%%%%%%%%%%
+%
+%
 
 \begin{frame}{Time Reversal}
     \begin{equation*}
@@ -274,8 +297,56 @@
     \begin{example}
         Prove the time-reversal property.
     \end{example}
-    % Solution: Example 5.1 in Oppenheim p. 377
+    \pause
+    \mode<beamer>
+    {
+        Let $x[n]$ be a signal with spectrum $X(e^{j\omega})$, and consider the transform $Y(e^{j\omega})$ of $y[n] = x[-n]$.
+        \begin{equation*}
+            Y(e^{j\omega}) = \sum_{n=-\infty}^{\infty}y[n] e^{-j\omega n} = \sum_{n=-\infty}^{\infty}x[-n] e^{-j\omega n}
+        \end{equation*}
+        Substituting $m=-n$
+        \begin{equation*}
+            Y(e^{j\omega}) = \sum_{m=-\infty}^{\infty}x[m] e^{-j(-\omega)m} = X(e^{-j\omega}).
+        \end{equation*}
+    }
 \end{frame}
+
+\begin{frame}{Time Expansion}
+    Because of the discrete nature of the time index for discrete-time signals, the relation between time and frequency scaling in discrete time takes on a somewhat different form from its continuous-time counterpart. In CT
+    \begin{equation*}
+        x(at)  \overset{\mathcal{F}}{\leftrightarrow}  \frac{1}{|a|} X\left(\frac{j\omega}{a}\right).
+    \end{equation*}
+    However, if we try to define the signal $x[an]$ , we run into difficulties if a is not an integer. Therefore, we cannot slow down the signal by choosing $a < 1$. On the other hand, if we let a be an integer other than $\pm1$---e.g., if we consider $x[2n]$---we do not merely
+    speed up the original signal. That is, since n can take on only integer values, the signal $x[2n]$ consists of the even samples of $x[n]$ alone.
+
+    Let $k$ be a positive integer, and define the signal
+    \begin{equation*}
+        x_{(k)}[n] = \begin{cases}x[n/k], & \text{if $n$ is a multiple of $k$},\\0, & \text{if $n$ is not a multiple of $k$}. \end{cases}
+    \end{equation*}
+\end{frame}
+
+\begin{frame}
+        \begin{figure}
+            \centering
+            \input{figures/dt_slowed}
+        \end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{equation*}
+        X_{(k)}(e^{j\omega}) = \sum_{n=-\infty}^{\infty}x_{(k)}[n]e^{-j\omega n} = \sum_{r=-\infty}^{\infty}x_{(k)}[rk]e^{-j\omega rk}
+    \end{equation*}
+    Furthermore, since $x_{(k)}[rk] = x[r]$ ,
+    \begin{equation*}
+        X_{(k)}(e^{j\omega}) = \sum_{r=-\infty}^{\infty}x[r]e^{-j(k\omega) r} = X(e^{jk\omega})
+    \end{equation*}
+
+    \begin{equation*}
+        x_{(k)}[n]  \overset{\mathcal{F}}{\leftrightarrow}  X(e^{jk\omega})
+    \end{equation*}
+\end{frame} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Differentiation in Frequency}
     \begin{equation*}
@@ -284,9 +355,19 @@
     \begin{example}
         Prove the differentiation property.
     \end{example}
-    % Solution: Example 5.1 in Oppenheim p. 380
+    \pause
+    \mode<beamer>
+    {
+        \begin{equation*}
+            X(e^{j\omega}) = \sum_{n=-\infty}^{\infty}x[n] e^{-j\omega n}.
+        \end{equation*}
+        Differentiating
+        \begin{equation*}
+            \frac{d X(e^{j\omega})}{d\omega} = \sum_{n=-\infty}^{\infty}-jnx[n] e^{-j\omega n}.
+        \end{equation*}
+    }
 \end{frame}
-
+%
 \begin{frame}{Parseval's Relation}
     \begin{equation*}
         \sum_{n=-\infty}^{+\infty}|x[n]|^2 = \frac{1}{2\pi}\int_{2\pi} | X(e^{j\omega})|^2d\omega
