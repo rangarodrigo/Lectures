@@ -195,6 +195,53 @@
     \end{figure}
 \end{frame}
 
+
+
+\begin{frame}{The Fourier Transform for Periodic Signals}
+As in the continuous-time case, discrete-time periodic signals can be incorporated within
+the framework of the discrete-time Fourier transform by interpreting the transform of a
+periodic signal as an impulse train in the frequency domain.
+
+Consider the signal
+\begin{equation*}
+    x[n] = e^{j\omega_0 n}.
+\end{equation*}
+ In CT the \ft~ of $e^{j\omega_0 t}$ can be interpreted as an impulse at $\omega = \omega_0$. However, the DT Fourier transform must
+be periodic in w with period $\pi$, requiring impulses at $\omega_0$,  $\omega_0 \pm 2\pi$, $\omega_0 \pm 4\pi$, $\dots$. So
+\begin{equation*}
+    X(e^{j\omega}) = \sum_{l=-\infty}^{\infty} 2\pi \delta (\omega - \omega_0 - 2\pi l).
+\end{equation*}
+    \begin{figure}
+        \centering
+        \input{figures/dtft_periodic}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \mode<beamer>
+    {
+    For a periodic sequence $x[n]$ with period $N$ and with the Fourier series representation
+    \begin{equation*}
+        x[n] = \sum_{k=<N>}a_k e^{jk(2\pi/N)n}
+    \end{equation*}
+    the Fourier transform is
+    \begin{equation*}
+        X(e^{j\omega}) = \sum_{k=-\infty}^{\infty} 2\pi a_k\delta \left(\omega - \frac{2\pi k}{N} \right).
+    \end{equation*}
+    }
+\end{frame}
+
+
+\begin{frame}
+    \begin{example}
+        Consider the periodic signal
+        \begin{equation*}
+            x[n] = \cos \omega_0 n = \frac{1}{2}e^{j\omega_0 n} +\frac{1}{2}e^{-j\omega_0 n}, \quad \text{with} \omega_0 = \frac{2\pi}{5}.
+        \end{equation*}
+    \end{example}
+\end{frame}
+
+
 \section{Properties of the Fourier Transform}
 
 \begin{frame}{Periodicity}
@@ -344,8 +391,33 @@
     \begin{equation*}
         x_{(k)}[n]  \overset{\mathcal{F}}{\leftrightarrow}  X(e^{jk\omega})
     \end{equation*}
-\end{frame} 
+\end{frame}
 
+
+\begin{frame}
+  \mode<beamer>
+  {
+    For figure 5.14
+  }
+\end{frame}
+
+
+\begin{frame}
+    \begin{example}
+        Find the DTFT of the signal $x[n]$ shown in the figure, expressing the signal in terms of a simpler signal.
+    \end{example}
+    \begin{figure}
+        \centering
+        \input{figures/example59problem}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}
+        \centering
+        \input{figures/example59}
+    \end{figure}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Differentiation in Frequency}
