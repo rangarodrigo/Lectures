@@ -134,7 +134,7 @@
 
     \mode<beamer>
     {
-    
+
     %    \mode<beamer>
 %    {
 %        \begin{columns}
@@ -476,7 +476,7 @@ Instead of having to reevaluate the transform of a given signal, we can simply r
     }
 \end{frame}
 
-\section{Continuous-Time Second-Order Systems}
+\section{Analysis of LTI Systems Using the Laplace Transform}
 
 \begin{frame}{Introduction}
     \begin{itemize}
@@ -667,6 +667,40 @@ Instead of having to reevaluate the transform of a given signal, we can simply r
 \end{frame}
 
 
+\section{The Unilateral Laplace Transform}
+
+\begin{frame}{Introduction to The Unilateral Laplace Transform}
+    \begin{itemize}
+      \item In the preceding sections, we have dealt with what is commonly called the bilateral Laplace transform.
+      \item In this section, we briefly study the unilateral Laplace transform.
+      \item  It is of considerable value in analyzing causal systems and, particularly, systems specified by linear constant-coefficient differential equations with nonzero initial conditions (i.e., systems that are not initially at rest).
+    \end{itemize}
+    
+\end{frame}
+    
+    
+\begin{frame}{The Unilateral Laplace Transform}    
+    \begin{equation*}
+        \mathcal{X}(s) \triangleq \int_{0^{-}}^{\infty}x(t)e^{-st}dt
+    \end{equation*}
+    where the lower limit of integration, $0^{-}$, signifies that we include in the interval of integration any impulses or higher order singularity functions concentrated at $t = 0$.
+    \begin{equation*}
+        x(t) \xleftrightarrow{\mathcal{UL}} \mathcal{X}(s)
+    \end{equation*}    
+
+    \pause
+    \mode<beamer>
+    {
+    \begin{tikzpicture}[remember picture,overlay]  \node at (current page.east) [anchor=east, text width=2in, fill=pink]{    $X(s) = \int_{-\infty}^{+\infty}x(t)e^{-st}dt$\\ $x(t) \xleftrightarrow{\mathcal{L}} X(s)$}; \end{tikzpicture}
+    }
+    
+    The system analysis tools and system function algebra developed and used in this lecture apply without change to unilateral transforms, \alert{as long
+as we deal with causal LTI systems (for which the system function is both the bilateral and the unilateral transform of the impulse response) with inputs that are identically zero
+fort $t< 0$}.
+\end{frame}
+
+
+
 \begin{frame}
     \begin{example}
         A causal LTI system is described by the differential equation
@@ -675,15 +709,44 @@ Instead of having to reevaluate the transform of a given signal, we can simply r
         \end{equation*}
         Suppose that the system is at initial rest.
         \begin{enumerate}
-            \item Find the system function $H(s)$.
-            \item Find the Laplace transform of the output $Y(s)$ if the input is $x(t) = \alpha u(t)$.
+            \item Find the system function $\mathcal{H}(s)$.
+            \item Find the Laplace transform of the output $\mathcal{Y}(s)$ if the input is $x(t) = \alpha u(t)$.
             \item Find the output $y(t)$.
         \end{enumerate}
     \end{example}
 \end{frame}
 
+
+
+
+
 \begin{frame}
-    \begin{center}
-        %\input{Figures/soplot01}
-    \end{center}
-\end{frame} 
+    \mode<beamer>
+    {
+        \begin{equation*}
+            \frac{d^2y(t)}{dt^2} + 3\frac{dy(t)}{dt} + 2y(t) = x(t).
+        \end{equation*} 
+        System function is
+        \begin{equation*}
+            \mathcal{H}(s) = \frac{1}{s^2 + 3s + 1}
+        \end{equation*} 
+        \pause
+        \begin{align*}
+          x(t) &= \alpha u(t)\\
+          X(s) &= \alpha \frac{1}{s}\\
+        \end{align*}
+        \pause
+        \begin{equation*}
+            \begin{split}
+            \mathcal{Y}(s) &=  \mathcal{H}(s)\mathcal{X}(s) = \frac{\alpha}{s(s^2 + 3s + 1)}\\
+            &= \frac{\alpha/2}{s} - \frac{\alpha}{s+1} +\frac{\alpha/2}{s+2}
+            \end{split}
+        \end{equation*}     
+        \pause
+        \begin{equation*}
+            y(t) = \alpha \left[ \frac{1}{2} - e^{-t} + \frac{1}{2}e^{-2t}\right]u(t)
+        \end{equation*}
+                    
+    }
+\end{frame}
+
