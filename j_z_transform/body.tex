@@ -15,19 +15,19 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Relationship between the $z$-Transform and the Discrete-Time Fourier transform}
+\begin{frame}{Relationship between the $z$-Transform and the Discrete-Time Fourier Transform}
     \begin{itemize}
         \item We saw that the Laplace transform is a generalization of the continuous-time Fourier transform.
         \item A close relationship exists between the z-transform and the discrete-time Fourier transform.
         \item For $z = e^{j\omega}$ or, equivalently, for the magnitude of $z$ equal to unity, the $z$-transform reduces to the Fourier transform.
         \item More generally, the $z$-transform can be viewed as the Fourier transform of an exponentially weighted sequence.
-        \item Because of this, the z-transform may converge for a given sequence even if the Fourier transform does not: the $z$-transform offers the possibility of transform analysis for a broader class of signals and systems.
+        \item Because of this, the $z$-transform may converge for a given sequence even if the Fourier transform does not: the $z$-transform offers the possibility of transform analysis for a broader class of signals and systems.
     \end{itemize}
 \end{frame}
 
 \begin{frame}{The Region of Convergence (ROC)}
     \begin{itemize}
-        \item The z-transform of a signal too has associated with it both  a range of values of $z$, referred to as the region of convergence (ROC), for which this expression is valid.
+        \item The $z$-transform of a signal too has associated with it both  a range of values of $z$, referred to as the region of convergence (ROC), for which this expression is valid.
         \item Two different sequences can have $z$-transforms with identical algebraic expressions such that their $z$-transforms differ only in the ROC.
         \item Consequently, the ROC is an important part of the specification of the $z$-transform.
     \end{itemize}
@@ -38,9 +38,9 @@
     \begin{itemize}
         \item $z$-transforms of the form of a ration of polynomials in $z^{-1}$ are described by poles and zeros in the complex plane, referred to as the $z$-plane.
         \item The circle of radius 1, concentric with the origin, in the $z$-plane, is  referred to as the \alert{unit circle}.
-        \item Since this circle corresponds to the magnitude of $z$ equal to unity, it is the contour in the z-plane on which the $z$-transform reduces to the Fourier transform.
+        \item Since this circle corresponds to the magnitude of $z$ equal to unity, it is the contour in the $z$-plane on which the $z$-transform reduces to the Fourier transform.
         \item In contrast, for continuous time it is the imaginary axis in the $s$-plane on which the Laplace transform reduces to the Fourier transform.
-        \item If the sequence is known to be right-sided, for example, then the ROC must be the portion of the z-plane outside the circle bounded by the outermost pole.
+        \item If the sequence is known to be right-sided, for example, then the ROC must be the portion of the $z$-plane outside the circle bounded by the outermost pole.
     \end{itemize}
 \end{frame}
 
@@ -48,7 +48,7 @@
 
 \begin{frame}{Recall: Discrete-Time Fourier Transform}
     \begin{align*}
-        x[n] &= \frac{1}{2\pi}\int_{2\pi}X(\omega)e^{j\omega n}d\omega\\
+        x[n] &= \frac{1}{2\pi}\int_{2\pi}X(e^{j\omega})e^{j\omega n}d\omega\\
         X(e^{j\omega}) &= \sum_{-\infty}^{+\infty}x[n]e^{-j\omega n}\\
     \end{align*}
     LTI systems: impulse response $h(t)$:
@@ -94,7 +94,7 @@
     \end{equation*}
 \end{frame}
 
-\begin{frame}{Laplace Transform: Convergence Comparison}
+\begin{frame}{$z$-Transform: Convergence Comparison}
     \begin{align*}
         \left.X(z)\right|_{z=e^{j\omega}} &= X(e^{j\omega})\\
         X(z) &= \sum_{n=-\infty}^{+\infty}x[n]z^{-n}\\
@@ -119,6 +119,7 @@
     \mode<beamer>
     {
         \begin{solution}
+        \end{solution}
             \begin{align*}
                 X(e^{j\omega}) &= \frac{1}{1-ae^{-j\omega}}, \quad |a|<1\\
                 \pause
@@ -129,7 +130,7 @@
             \begin{equation*}
                 a^nu[n] \xleftrightarrow{\mathcal{Z}}   \frac{1}{1-az^{-1}}, \quad |z|> |a|
             \end{equation*}
-        \end{solution}
+
     }
 
 \end{frame}
@@ -148,7 +149,7 @@
     \pause
     \mode<beamer>
     {
-        \begin{solution}
+        \begin{solution}\end{solution}
             \begin{align*}
                 X(z) &= \sum_{n=-\infty}^{+\infty}x[n]z^{-n}\\
                 &= \int_{n=-\infty}^{+\infty}-a^nz^{-n}u[-n-1]\\
@@ -158,7 +159,7 @@
             \begin{equation*}
                 -a^nu[-n-1] \xleftrightarrow{\mathcal{Z}}   \frac{1}{1-az^{-1}}, \quad |z|< |a|
             \end{equation*}
-        \end{solution}
+
     }
 \end{frame}
 
@@ -347,11 +348,11 @@
     \end{equation*}
     \mode<beamer>
     {
-        \begin{solution}
+        \begin{solution}\end{solution}
         \begin{center}
             \input{Figures/pz07}
         \end{center}
-        \end{solution}
+
     }
 \end{frame}
 
@@ -376,7 +377,7 @@
     \pause
     \mode<beamer>
     {
-        \begin{solution}
+        \begin{solution}\end{solution}
             \begin{align*}
                 X(z) &= \frac{z}{\left(z-\frac{1}{3}\right)(z-2)}, \quad |z|>2,\\
                 &= \frac{z^{-1}}{\left(1-\frac{1}{3}z^{-1}\right)(1-2z^{-1})}, \quad |z|>2,\\
@@ -384,9 +385,9 @@
                 \pause
                 x[n] &=  -\frac{3}{5} \left(\frac{1}{3}\right)^nu[n] + \frac{3}{5} (2)^n u[n].\\
             \end{align*}
-        \end{solution}
+
     }
-\end{frame} 
+\end{frame}
 
 
 \begin{frame}
