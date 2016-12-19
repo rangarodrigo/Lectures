@@ -35,6 +35,7 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage[american]{circuitikz}
+\usepackage{esint}
 
 \usetikzlibrary{positioning}
 \usetikzlibrary{trees}
@@ -42,6 +43,17 @@
 \usetikzlibrary{patterns}
 \usetikzlibrary{chains}
 \usetikzlibrary{calc}
+
+\usetikzlibrary{math}
+\tikzmath{
+  function sinc(\x) {
+    if  abs(\x) < .001 then { % (|x| < .001) ~ (x = 0)
+      return 1;
+    } else {
+      return sin(\x r)/\x;
+    };
+  };
+}
 
 
 \tikzset{every picture/.style={font issue=\footnotesize},
