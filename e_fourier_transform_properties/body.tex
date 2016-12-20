@@ -1,0 +1,444 @@
+\section{Fourier Transform Properties}
+
+
+\begin{frame}{Fourier Transform: Recall}
+Synthesis equation:
+    \begin{equation}
+        x(t) = \frac{1}{2\pi}\int_{-\infty}^{\infty}X(j\omega)e^{j\omega t} d\omega.
+    \end{equation}
+Analysis equation:
+    \begin{equation}
+        X(j\omega) = \int_{-\infty}^{\infty}x(t)e^{-j\omega t} dt.
+    \end{equation}
+
+    \begin{equation}
+        x(t) \overset{\mathcal{F}}{\longleftrightarrow} X(j\omega).
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{Linearity}
+    If
+    \begin{equation*}
+        x(t) \overset{\mathcal{F}}{\longleftrightarrow} X(j\omega).
+    \end{equation*}
+    and
+    \begin{equation*}
+        y(t) \overset{\mathcal{F}}{\longleftrightarrow} Y(j\omega).
+    \end{equation*}
+    then
+
+    \mode<beamer>
+    {
+    \begin{equation*}
+        ax(t) + by(t) \overset{\mathcal{F}}{\longleftrightarrow} \pause aX(j\omega)+ bY(j\omega).
+    \end{equation*}
+    }
+\end{frame}
+
+
+
+\begin{frame}{Time Shifting}
+    If
+    \begin{equation*}
+        x(t) \overset{\mathcal{F}}{\longleftrightarrow} X(j\omega).
+    \end{equation*}
+    then
+
+    \mode<beamer>
+    {
+    \begin{equation*}
+        x(t-t_0) \overset{\mathcal{F}}{\longleftrightarrow} \pause e^{-j\omega t_0}X(j\omega).
+    \end{equation*}
+    }
+\end{frame}
+
+\begin{frame}[plain]{Proof}
+    \mode<beamer>
+    {
+        \begin{align*}
+          x(t) &= \frac{1}{2\pi}\int_{-\infty}^{\infty}X(j\omega)e^{j\omega t} d\omega.\\
+          x(t - t_0) &= \frac{1}{2\pi}\int_{-\infty}^{\infty}X(j\omega)e^{j\omega (t-t_0)} d\omega.\\
+           &= \frac{1}{2\pi}\int_{-\infty}^{\infty}\left(e^{-j\omega t_0}X(j\omega)\right)e^{j\omega t} d\omega.\\
+        \end{align*}
+        \pause
+        This is the synthesis equation for $x(t-t_0)$. Therefore,
+        \begin{equation*}
+            \mathcal{F}\{x(t-t_0)\} = e^{-j\omega t_0}X(j\omega).
+        \end{equation*}
+        Magnitude of the Fourier transform not altered. Time shift introduces a phase shift $-\omega t_0$, which is a linear function of $\omega$.
+    }
+\end{frame}
+
+\begin{frame}
+    \begin{columns}
+        \column{0.6\textwidth}
+            \begin{example}
+            Evaluate the Fourier transform of $x(t)$.
+                \begin{figure}
+                \centering
+                    \input{figures/example49}
+                \end{figure}
+            \end{example}
+        \column{0.4\textwidth}
+        \pause
+        \mode<beamer>
+        {
+            \begin{equation*}
+                \begin{aligned}
+                    x(t) &= \frac{1}{2}x_1(t-2.5) + x_2(t-2.5)\\
+                    X_1(j\omega) &= \frac{2\sin(\omega/2)}{\omega}\\
+                    X_2(j\omega) &= \frac{2\sin(3\omega/2)}{\omega}\\
+                \end{aligned}
+            \end{equation*}
+            \pause
+            \begin{equation*}
+                X(j\omega) = e^{-j5\omega/2}\left[\frac{\sin(\omega/2) + 2\sin(3\omega/2)}{\omega}\right].
+            \end{equation*}
+        }
+    \end{columns}
+
+\end{frame}
+
+
+\begin{frame}{Conjugation and Conjugate Symmetry}
+    If
+    \begin{equation*}
+        x(t)  \overset{\mathcal{F}}{\longleftrightarrow}  X(j\omega).
+    \end{equation*}
+    then
+    \begin{equation*}
+        x^\ast(t)  \overset{\mathcal{F}}{\longleftrightarrow}  X^\ast(-j\omega).
+    \end{equation*}
+
+    \mode<beamer>
+    {
+        \begin{align*}
+            X^\ast(j\omega) &= \left[\int_{-\infty}^{\infty}x(t)e^{-j\omega t} dt \right]^\ast\\
+            &= \int_{-\infty}^{\infty}x^\ast(t)e^{j\omega t} dt\\
+            \text{Replacing $\omega$ by $-\omega$ }\\
+            X^\ast(-j\omega) &= \int_{-\infty}^{\infty}x^\ast(t)e^{-j\omega t} dt\\
+        \end{align*}
+        which is the analysis equation for $x^\ast(t)$.\\
+
+        If $x(t)$ is real, i.e., $x(t) = x^\ast(t)$, $X(j\omega)$ has conjugate symmetry.
+        \begin{equation*}
+            X(-j\omega) = X^\ast(j\omega)\quad [x(t) \text{ real}]
+        \end{equation*}
+    }
+
+
+\end{frame}
+
+\begin{frame}{Differentiation and Integration}
+    Synthesis equation:
+    \begin{equation*}
+        x(t) = \frac{1}{2\pi}\int_{-\infty}^{\infty}X(j\omega)e^{j\omega t} d\omega.
+    \end{equation*}
+    Differentiating both  sides of the equation
+    \begin{equation*}
+        \frac{dx(t)}{dt} = \frac{1}{2\pi}\int_{-\infty}^{\infty}j\omega X(j\omega)e^{j\omega t} d\omega.
+    \end{equation*}
+    Therefore,
+    \begin{equation*}
+        \frac{dx(t)}{dt}  \overset{\mathcal{F}}{\longleftrightarrow}  j\omega X(j\omega).
+    \end{equation*}
+    Integration:
+    \begin{equation*}
+        \int_{-\infty}^{t} x(\tau)d\tau \overset{\mathcal{F}}{\longleftrightarrow} \frac{1}{ j\omega} X(j\omega) + \pi X(0)\delta(\omega).
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}[plain]
+    \begin{example}
+        Determine the Fourier transform of the unit step $x(t) = u(t)$ making use of the knowledge that
+    \begin{equation*}
+        g(t) = \delta(t)  \overset{\mathcal{F}}{\longleftrightarrow} G(j\omega) = 1.
+    \end{equation*}
+    \end{example}
+    \pause
+    \begin{columns}
+        \column{0.6\textwidth}
+        \mode<beamer>
+        {
+            Noting that
+            \begin{equation*}
+                x(t) = \int_{-\infty}^{t} g(\tau)d\tau
+            \end{equation*}
+            we obtain that
+            \begin{equation*}
+                X(j\omega) = \frac{1}{ j\omega} G(j\omega) + \pi G(0)\delta(\omega).
+            \end{equation*}
+            Since $G(j\omega) = 1$
+            \begin{equation*}
+                X(j\omega) = \frac{1}{ j\omega}  + \pi\delta(\omega).
+            \end{equation*}
+        }
+        \column{0.4\textwidth}
+        \pause
+        \mode<beamer>
+        {
+            Observe that, we can apply the differentiation property to recover the transform of the impulse:
+            \begin{equation*}
+                \delta(t) = \frac{du(t)}{dt}\overset{\mathcal{F}}{\longleftrightarrow} j\omega\left[ \frac{1}{ j\omega}  + \pi\delta(\omega)\right] = 1.
+            \end{equation*}
+            Note: $\omega \delta(\omega) = 0$
+        }
+    \end{columns}
+\end{frame}
+
+\begin{frame}[plain]
+    \begin{columns}
+        \column{0.6\textwidth}
+        \begin{example}
+            Determine the Fourier transform of the signal $x(t)$ shown below:
+            \begin{figure}
+            \centering
+                \input{figures/example411a}
+            \end{figure}
+        \end{example}
+        \pause
+
+        \mode<beamer>
+        {
+            \begin{figure}
+            \centering
+                \input{figures/example411b}
+            \end{figure}
+        }
+        \column{0.4\textwidth}
+        \pause
+        \mode<beamer>
+        {
+            \begin{equation*}
+                G(j\omega) = \left(\frac{2\sin \omega}{\omega}\right) - e^{j\omega} - e^{-j\omega}
+            \end{equation*}
+            \pause
+            \begin{equation*}
+                X(j\omega) = \frac{1}{ j\omega} G(j\omega) + \pi G(0)\delta(\omega).
+            \end{equation*}
+            As $G(0) = 0$\\
+            \pause
+            \begin{equation*}
+                X(j\omega) = \frac{2\sin \omega}{ j\omega^2}  - \frac{2\cos \omega}{j\omega}
+            \end{equation*}
+            Note: $ X(j\omega)$ is purely imaginary and odd.
+        }
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Time and Frequency Scaling}
+    If
+    \begin{equation*}
+        x(t)  \overset{\mathcal{F}}{\longleftrightarrow}  X(j\omega).
+    \end{equation*}
+    then
+    \begin{equation*}
+        x(at)  \overset{\mathcal{F}}{\longleftrightarrow}  \frac{1}{|a|}X\left(\frac{j\omega}{a}\right).
+    \end{equation*}
+    where $a$ is a real constant.\pause \\
+    Letting $a = -1$\pause
+    \begin{equation*}
+        x(-t)  \overset{\mathcal{F}}{\longleftrightarrow}  X(-j\omega).
+    \end{equation*}
+    The scaling property is another example of the inverse relationship between time and frequency.
+\end{frame}
+
+\begin{frame}{Duality}
+    Because of the similarity between the synthesis equation
+    \begin{equation}
+        x(t) = \frac{1}{2\pi}\int_{-\infty}^{\infty}X(j\omega)e^{j\omega t} d\omega.
+    \end{equation}
+    and the analysis equation,
+    \begin{equation}
+        X(j\omega) = \int_{-\infty}^{\infty}x(t)e^{-j\omega t} dt.
+    \end{equation}
+    for any transform pair, there is a dual pair with the time and frequency variables interchanged.
+\end{frame}
+
+\begin{frame}
+
+        We determined the Fourier transform of the square pulse as
+        \begin{equation*}
+            x_1(t) = \begin{cases}
+                1,& |t| < T_1,\\
+                0, & |t| > T_1,
+            \end{cases}
+             \overset{\mathcal{F}}{\longleftrightarrow}
+             X_1(j\omega) = \frac{2\sin \omega T_1}{\omega}
+        \end{equation*}
+
+        \begin{figure}
+          \centering
+          \input{figures/square_pulse}
+          \caption{Rectangular pulse and the Fourier transform.}\label{fi:square_pulse}
+        \end{figure}
+
+\end{frame}
+
+
+\begin{frame}
+        We also determined that for a time-domain signal that is similar in shape to the $X_1(j\omega)$ as
+        \begin{equation*}
+        x_2(t) = \frac{\sin W t}{\pi t}
+         \overset{\mathcal{F}}{\longleftrightarrow}
+            X(j\omega) = \begin{cases}
+                1,& |\omega| < W,\\
+                0, & |\omega| > W.
+            \end{cases}
+        \end{equation*}
+        \begin{figure}
+          \centering
+          \input{figures/xomega_square_pair}
+          \caption{Fourier transform for $x(t)$.}\label{fi:xomega_square}
+        \end{figure}
+\end{frame}
+
+
+
+\begin{frame}[plain]
+\mode<beamer>
+{
+        \begin{figure}
+          \centering
+          \input{figures/duality}
+          \caption{Duality.}\label{fi:diality}
+        \end{figure}
+}
+\end{frame}
+
+
+\begin{frame}[plain]
+    \begin{example}
+        Use the duality property to find the Fourier transform $G(j\omega)$ of the signal
+        \begin{equation*}
+            g(t) = \frac{2}{1+t^2}.
+        \end{equation*}
+    \end{example}
+    \pause
+    \mode<beamer>
+    {
+    Consider the signal $x(t)$ whose Fourier transform is
+    \begin{equation*}
+        X(j\omega) =  \frac{2}{1+\omega^2}.
+    \end{equation*}
+    \begin{equation*}
+        x(t) = e^{-2|t|} \overset{\mathcal{F}}{\longleftrightarrow}  X(j\omega) =  \frac{2}{1+\omega^2}.
+    \end{equation*}
+    }
+\end{frame}
+
+
+\begin{frame}[plain]
+    \mode<beamer>
+    {
+    The synthesis equation for this Fourier transform pair is \pause
+    \begin{equation*}
+        e^{-2|t|} = \frac{1}{2\pi}\int_{-\infty}^{\infty}\left(\frac{2}{1+\omega^2}\right)e^{j\omega t}d\omega.
+    \end{equation*}
+    \pause
+    Multiplying this equation by $2\pi$ and replacing $t$ by $-t$\pause
+    \begin{equation*}
+        2\pi e^{-2|t|} = \int_{-\infty}^{\infty}\left(\frac{2}{1+\omega^2}\right)e^{-j\omega t}d\omega.
+    \end{equation*}
+    \pause
+    Now interchanging the names of variables $t$ and $\omega$\pause
+    \begin{equation*}
+        2\pi e^{-2|\omega|} = \int_{-\infty}^{\infty}\left(\frac{2}{1+t^2}\right)e^{-j\omega t}dt.
+    \end{equation*}
+    \pause
+    The right-hand side of this expression is the Fourier transform analysis equation for $2/(1+t^2)$.   Thus
+    \begin{equation*}
+        \mathcal{F}\left\{ \frac{2}{1+t^2}\right\} =  2\pi e^{-2|\omega|}.
+    \end{equation*}
+    }
+\end{frame}
+
+\begin{frame}{More Properties Using Duality}
+    \begin{equation*}
+        -jtx(t) \overset{\mathcal{F}}{\longleftrightarrow} \frac{dX(j\omega)}{d\omega}.
+    \end{equation*}
+    \begin{equation*}
+        e^{j\omega_0 t}x(t) \overset{\mathcal{F}}{\longleftrightarrow} X(j(\omega - \omega_0)).
+    \end{equation*}
+    \begin{equation*}
+        -\frac{1}{jt}x(t) + \pi x(0) \delta(t) \overset{\mathcal{F}}{\longleftrightarrow} \int_{-\infty}^{\omega}x(\eta)d\eta.
+    \end{equation*}
+\end{frame}
+
+\begin{frame}{Parseval's Relation}
+    \begin{equation*}
+        \int_{-\infty}^{\infty} |x(t)|^2dt = \frac{1}{2\pi} \int_{-\infty}^{\infty} |X(j\omega)|^2d\omega.
+    \end{equation*}
+
+\end{frame}
+
+
+\begin{frame}{Convolution Property}
+    \begin{equation*}
+        y(t) = h(t)\ast x(t) \overset{\mathcal{F}}{\longleftrightarrow} Y(j\omega) =  H(j\omega)  X(j\omega)
+    \end{equation*}
+    This equation is of major importance in signal and system analysis. This says that the Fourier transform maps the convolution of two signals into the product of their Fourier transforms.
+\end{frame}
+
+
+\begin{frame}[plain]
+    \begin{example}
+        An LTI system has the impulse response
+        \begin{equation*}
+            h(t) = \delta(t-t_0).
+        \end{equation*}
+        If the Fourier transform of the input signal $x(t)$ is $X(j\omega)$, what is the Fourier transform of the output?
+        \begin{tikzpicture}
+	       \draw[] (0,0) node (a) {$x(t)$} ++(2,0) node[draw=black] (b) {$h(t)$}  ++(2,0) node (c) {$y(t)$};
+	       \draw[-latex]   (a) edge (b) (b) edge (c) ;
+        \end{tikzpicture}
+    \end{example}
+    \pause
+    \begin{align*}
+      h(t) &= \delta(t-t_0)\\
+      H(j\omega) &= e^{-j\omega t_0}\\
+      Y(j\omega) &=  H(j\omega)  X(j\omega)\\
+      &= e^{-j\omega t_0} X(j\omega)\\
+    \end{align*}
+\end{frame}
+
+\begin{frame}{Multiplication Property}
+    The convolution property states that convolution in \alert{time} domain corresponds to multiplication in \alert{frequency} domain. Because of the duality between time and frequency domains, we would expect a dual property also to hold (i.e., that multiplication in the time domain corresponds to convolution in the frequency domain). Specifically,
+
+    \begin{equation*}
+        r(t) = s(t)p(t) \overset{\mathcal{F}}{\longleftrightarrow} R(j\omega) = \frac{1}{2\pi}[S(j\omega)\ast P(j\omega)].
+    \end{equation*}
+
+    Multiplication of one signal by another can be thought of as using one signal to scale or \alert{modulate} the amplitude of the other. Consequently, the multiplication of two signals is often referred to as \alert{amplitude modulation}. For this reason, this equation is sometime referred to as the \alert{modulation property}.
+\end{frame}
+
+\begin{frame}[plain]
+    \begin{example}
+        Let $s(t)$ be a signal whose spectrum is depicted in the figure below. Also consider the signal
+        \begin{equation*}
+            p(t) = \cos\omega_0 t.
+        \end{equation*}
+        Show the spectrum of $r(t) = s(t)p(t)$.
+
+        \begin{figure}
+          \centering
+          \input{figures/signal_for_modulation}
+          \caption{Spectrum of signal $s(t)$.}\label{fi:signal_for_modulation}
+        \end{figure}
+    \end{example}
+\end{frame}
+\begin{frame}[plain]
+    \mode<beamer>
+    {
+        \begin{figure}
+          \centering
+          \input{figures/modulation_property}
+          \caption{Fourier transform of $r(t) = s(t)p(t)$.}\label{fi:modulation_property}
+        \end{figure}
+    }
+
+
+\end{frame} 
