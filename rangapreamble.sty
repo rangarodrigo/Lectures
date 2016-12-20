@@ -31,12 +31,29 @@
 
 
 \usepackage{microtype}
+\usepackage{extarrows}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[american]{circuitikz}
+\usepackage{esint}
+
 \usetikzlibrary{positioning}
 \usetikzlibrary{trees}
 \usetikzlibrary{shapes,arrows}
 \usetikzlibrary{patterns}
 \usetikzlibrary{chains}
 \usetikzlibrary{calc}
+
+\usetikzlibrary{math}
+\tikzmath{
+  function sinc(\x) {
+    if  abs(\x) < .001 then { % (|x| < .001) ~ (x = 0)
+      return 1;
+    } else {
+      return sin(\x r)/\x;
+    };
+  };
+}
 
 
 \tikzset{every picture/.style={font issue=\footnotesize},
@@ -53,4 +70,7 @@
 \newcommand\fs{Fourier series}
 \newcommand\fsr{Fourier series representation}
 \newcommand\fsrs{Fourier series representations}
+
+\AtBeginSection{\frame{\sectionpage}}
+
 \endinput
