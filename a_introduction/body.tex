@@ -60,22 +60,7 @@
 \begin{frame}[plain]
     \begin{columns}
         \begin{column}{0.6\textwidth}
-            \begin{tikzpicture}
-                \begin{axis}[
-                    axis x line=middle,
-                    axis y line=left,
-                    no markers,
-                    smooth,
-                    y axis line style = {-stealth},
-                    x axis line style = {-stealth},
-                    x label style = {at={(ticklabel* cs:1.05)}, anchor=west, },
-                    y label style = {at={(ticklabel* cs:1.1)}, anchor=north, rotate=-90,},
-                    xlabel= {$t$},
-                    ylabel={$x(t)$},
-                    xticklabels={,,}]
-                    \addplot table  [x=f, y=x, col sep=comma] {../Code/audioclip.csv};
-                \end{axis}
-            \end{tikzpicture}
+            \input{figures/ct_func_audio}
         \end{column}
         \begin{column}{0.4\textwidth}
             A function of a continuous variable\\
@@ -101,7 +86,7 @@
                     x axis line style = {-stealth},
                     xlabel= {$y$},
                     ylabel={$x$},
-                    x label style = {at={(ticklabel cs:1)}, anchor=south west, },
+                    %x label style = {at={(ticklabel cs:1)}, anchor=south west, },
                     %y label style = {at={(ticklabel cs:0)}, anchor=north, rotate=-90,},
                     ylabel=\empty,
                     xticklabels={,,},
@@ -214,7 +199,7 @@
         \input{figures/dt_system}
         %\caption{DT system}
     %\end{subfigure}
-    \caption{CT and DT Systems}\label{fi:ct_dt_systems}
+    \caption{CT and DT Systems.}\label{fi:ct_dt_systems}
 \end{figure}
 \end{frame}
 
@@ -222,7 +207,7 @@
     \begin{figure}
         \centering
         \input{figures/system_types}
-        \caption{CT and DT Systems}\label{fi:system_types}
+        \caption{System types.}\label{fi:system_types}
     \end{figure}
     This course is focused on the class of linear, time-invariant (LTI) systems.
 \end{frame}
