@@ -19,14 +19,8 @@
      ytick=\empty,
      yticklabels={$\small  -A$, $\small  A$},
      %xticklabel style={anchor=north west}
-     every axis x label/.style={
-    at={(ticklabel* cs:1)},
-    anchor=west,
-},
-every axis y label/.style={
-    at={(ticklabel* cs:1)},
-    anchor=south,
-},
+        x label style={at={(current axis.right of origin)},anchor=west},
+        y label style={at={(current axis.above origin)}, anchor=south},
      ]
       \addplot[domain=-2:2,samples=200,red]{\C*exp(\a*x)}
                                 node[right,pos=1,font=\footnotesize, black]{\scriptsize $x(t)=Ce^{at}$};
@@ -34,7 +28,7 @@ every axis y label/.style={
 	\node at (axis cs:1, 1) [anchor=east] {\scriptsize $a > 0$  };
 
     \end{axis}
-    
+
     \begin{scope}[xshift=8cm]
       \def\a{-0.8}
   \def\C{0.2}
@@ -53,14 +47,8 @@ every axis y label/.style={
      ytick=\empty,
      yticklabels={$\small  -A$, $\small  A$},
      %xticklabel style={anchor=north west}
-     every axis x label/.style={
-    at={(ticklabel* cs:1)},
-    anchor=west,
-},
-every axis y label/.style={
-    at={(ticklabel* cs:1)},
-    anchor=south,
-},
+        x label style={at={(current axis.right of origin)},anchor=west},
+        y label style={at={(current axis.above origin)}, anchor=south},
      ]
       \addplot[domain=-2:2,samples=200,red]{\C*exp(\a*x)}
                                 node[right,pos=0,font=\footnotesize, black]{\scriptsize $x(t)=Ce^{at}$};

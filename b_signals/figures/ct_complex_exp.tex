@@ -20,24 +20,18 @@
      ytick={-1, 1},
      yticklabels=\empty,
      %xticklabel style={anchor=north west}
-     every axis x label/.style={
-    at={(ticklabel* cs:1.05)},
-    anchor=west,
-},
-every axis y label/.style={
-    at={(ticklabel* cs:1.05)},
-    anchor=south,
-},
+        x label style={at={(current axis.right of origin)},anchor=west},
+        y label style={at={(current axis.above origin)}, anchor=south},
      ]
       \addplot[domain=-5:5,samples=200,red]{exp(\r*x)*cos(2*pi*deg(x))};
       \addplot[domain=-5:5,samples=200,blue, dashed]{exp(\r*x)}
-                                node[right,pos=1,font=\footnotesize, black]{\scriptsize $e^{rt}$};       
+                                node[right,pos=1,font=\footnotesize, black]{\scriptsize $e^{rt}$};
                                       \addplot[domain=-5:5,samples=200,blue, dashed]{-exp(\r*x)}
-                                node[right,pos=1,font=\footnotesize, black]{\scriptsize $-e^{rt}$};               
+                                node[right,pos=1,font=\footnotesize, black]{\scriptsize $-e^{rt}$};
        \node at (axis cs:2, 8) [anchor=west] {\scriptsize $r>0$ };
     \end{axis}
-    
-    
+
+
     \begin{scope}[xshift=9cm]
 
   \def\omwga0{2*pi}
@@ -59,23 +53,17 @@ every axis y label/.style={
      ytick={-1, 1},
      yticklabels=\empty,
      %xticklabel style={anchor=north west}
-     every axis x label/.style={
-    at={(ticklabel* cs:1.05)},
-    anchor=west,
-},
-every axis y label/.style={
-    at={(ticklabel* cs:1.05)},
-    anchor=south,
-},
+        x label style={at={(current axis.right of origin)},anchor=west},
+        y label style={at={(current axis.above origin)}, anchor=south},
      ]
       \addplot[domain=-5:5,samples=200,red]{exp(\r*x)*cos(2*pi*deg(x))};
       \addplot[domain=-5:5,samples=200,blue, dashed]{exp(\r*x)}
-                                node[right,pos=0,font=\footnotesize, black]{\scriptsize $e^{rt}$};       
+                                node[right,pos=0,font=\footnotesize, black]{\scriptsize $e^{rt}$};
                                       \addplot[domain=-5:5,samples=200,blue, dashed]{-exp(\r*x)}
-                                node[right,pos=0,font=\footnotesize, black]{\scriptsize $-e^{rt}$};               
+                                node[right,pos=0,font=\footnotesize, black]{\scriptsize $-e^{rt}$};
        \node at (axis cs:2, 8) [anchor=west] {\scriptsize $r<0$ };
     \end{axis}
-   
+
 	\end{scope}
 
 

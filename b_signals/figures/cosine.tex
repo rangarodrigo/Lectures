@@ -18,14 +18,8 @@
      ytick={-1, 1},
      yticklabels={$\small  -A$, $\small  A$},
      %xticklabel style={anchor=north west}
-     every axis x label/.style={
-    at={(ticklabel* cs:1.05)},
-    anchor=west,
-},
-every axis y label/.style={
-    at={(ticklabel* cs:1.05)},
-    anchor=south,
-},
+        x label style={at={(current axis.right of origin)},anchor=west},
+        y label style={at={(current axis.above origin)}, anchor=south},
      ]
       \addplot[domain=-pi:3*pi,samples=200,red]{cos(deg(x) + \phase)}
                                 node[right,pos=1,font=\footnotesize, black]{\scriptsize $x(t)=\cos t$};

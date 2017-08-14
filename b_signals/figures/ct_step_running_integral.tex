@@ -14,8 +14,6 @@
     scale=1,
     axis x line=middle,
     axis y line=middle,
-    every axis x label={at={(current axis.right of origin)},anchor=north west},
-    every axis y label={at={(current axis.above origin)},anchor= north west},
     every axis plot post/.style={mark options={fill=black}},
     xmin=-12,
     xmax=12,
@@ -29,8 +27,8 @@
    yticklabels={1},
    xticklabels=\empty,
     clip=false,
-     every axis x label/.style={at={(ticklabel* cs:1)}, anchor=west,} ,
-     every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
+        x label style={at={(current axis.right of origin)},anchor=west},
+        y label style={at={(current axis.above origin)}, anchor=south},
 ]
 \draw[draw=none, pattern=north west lines, pattern color=red!80!blue!30] (axis cs:-12, 1.2) rectangle (axis cs:-3, 0);
 %\addplot+[ycomb,domain=-10:10, blue] {impulse(x)};
@@ -48,8 +46,6 @@
     scale=1,
     axis x line=middle,
     axis y line=middle,
-    every axis x label={at={(current axis.right of origin)},anchor=north west},
-    every axis y label={at={(current axis.above origin)},anchor= north west},
     every axis plot post/.style={mark options={fill=black}},
     xmin=-12,
     xmax=12,
@@ -63,8 +59,8 @@
    yticklabels={1},
    xticklabels=\empty,
     clip=false,
-     every axis x label/.style={at={(ticklabel* cs:1)}, anchor=west,} ,
-     every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
+        x label style={at={(current axis.right of origin)},anchor=west},
+        y label style={at={(current axis.above origin)}, anchor=south},
 ]
 %\addplot+[ycomb,blue] table [x={n}, y={xn}] {step.dat};
 \draw[draw=none, pattern=north west lines, pattern color=red!80!blue!30] (axis cs:-12, 1.2) rectangle (axis cs:3, 0);
