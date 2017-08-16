@@ -1,6 +1,6 @@
 \pgfplotsset{compat=1.12}
 \pgfplotsset{every tick label/.append style={font=\scriptsize}}
-  \begin{tikzpicture}[scale=0.6,
+  \begin{tikzpicture}[
   declare function={
     func(\x)= (\x<0) * (0)   +
                 (\x>=0) * (1);
@@ -9,6 +9,7 @@
   \def\omwga0{2*pi}
   \def\phase{0}
     \begin{axis}[
+    scale=0.6,
      clip=false,
      xmin=-12,xmax=12,
      xlabel= $t$,

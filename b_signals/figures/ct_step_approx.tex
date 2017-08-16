@@ -1,6 +1,6 @@
 \pgfplotsset{compat=1.12}
 \pgfplotsset{every tick label/.append style={font=\scriptsize}}
-  \begin{tikzpicture}[scale=0.6,
+  \begin{tikzpicture}[
   declare function={
     func(\x)= (\x<0) * (0)   +
     			and(0 < \x, \x < 1)*(\x/1) +
@@ -12,6 +12,7 @@
 ]
 \begin{axis}[
 		 clip=false,
+        scale=0.6,
 		 xmin=-5,xmax=5,
 		 xlabel= $t$,
 		 ylabel={$ u_\Delta(t)$},
@@ -32,6 +33,7 @@
 \pause
 \begin{axis}[
 		yshift=-4.25cm,
+        scale=0.6,
 		 clip=false,
 		 xmin=-5,xmax=5,
 		 xlabel= $t$,
@@ -56,6 +58,7 @@
 \pause
 \begin{axis}[
 		yshift=-8.5cm,
+        scale=0.6,
 		 clip=false,
 		 xmin=-5,xmax=5,
 		 xlabel= $t$,

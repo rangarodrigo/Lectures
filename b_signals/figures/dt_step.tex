@@ -1,4 +1,4 @@
-\begin{tikzpicture}[scale=0.6]
+\begin{tikzpicture}
 \begin{filecontents}{step.dat}
 n	xn
 -10	0
@@ -25,7 +25,7 @@ n	xn
 \end{filecontents}
 \begin{axis}
 [%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    scale=1,
+    scale=0.6,
     axis x line=middle,
     axis y line=middle,
     every axis plot post/.style={mark options={fill=black}},
@@ -42,9 +42,9 @@ n	xn
     %xticklabels=\empty,
     ymin=-1.5,
     ymax=1.5,
-        x label style={at={(current axis.right of origin)},anchor=west},
-        y label style={at={(current axis.above origin)}, anchor=south},
+    x label style={at={(current axis.right of origin)},anchor=west},
+    y label style={at={(current axis.above origin)}, anchor=south},
 ]
-\addplot+[ycomb,blue] table [x={n}, y={xn}] {step.dat};
+\addplot+[ycomb,blue, , mark size=1pt] table [x={n}, y={xn}] {step.dat};
 \end{axis}
 \end{tikzpicture} 

@@ -17,12 +17,12 @@
 
 \begin{frame}[plain]{Periodicity of a Sinusoidal}
     Sinusoidal signal is \alert{periodic}.\\
-    A periodic continuous-time signal $x(t)$ has the property that  there is a positive values $T$ for which
+    A periodic continuous-time signal $x(t)$ has the property that  there is a positive value $T$ for which
     \begin{equation}\label{eq:period}
         x(t) = x(t+T)
     \end{equation}
-    for all values of $t$. Under an appropriate time-shift the signal repeats itself. In this case we say that $x(t)$ is periodic with period $T$.
-    Fundamental period $T_0$ = smallest value of $T$ for which \ref{eq:period} holds.\\
+    for all values of $t$. Under an appropriate time-shift the signal repeats itself. In this case we say that $x(t)$ is periodic with period $T$.\\
+    \alert{Fundamental period $T_0$} = smallest positive value of $T$ for which \ref{eq:period} holds.\\
     A signal that is not periodic is referred to as aperiodic. \\
     E.g.: Consider $A\cos(\omega_0t + \phi)$\\
     \begin{equation*}
@@ -37,8 +37,8 @@
 
 
 \begin{frame}[plain]{Phase of a Sinusoidal}
-    A time-shift in a CT sinusoidal is equivalent to a phase shift.\\
-    E.g.: Show that a time-shift is a sinusoidal is equal to a phase shift.
+    A time-shift in a CT sinusoid is equivalent to a phase shift.\\
+    E.g.: Show that a time-shift of a sinusoid is equal to a phase shift.
     \mode<beamer>
     {
         \begin{equation*}
@@ -63,7 +63,7 @@
             }
             \column{0.4\textwidth}
             {
-                This signal is \alert{even}. If we reflect an even signal about the origin, it would look exactly the same.\\
+                \noindent This signal is \alert{even}. If we mirror an even signal about the time origin, it would look exactly the same.\\[12pt]
                 Periodic: $x(t) = x(t+ T)$.\\
                 Even: $x(t) = x(-t)$.
             }
@@ -82,7 +82,7 @@
             }
             \column{0.4\textwidth}
             {
-                This signal is \alert{odd}. If we flip an odd signal about the time origin, we also multiply it by a ($-$) sign.\\
+                \noindent This signal is \alert{odd}. If we flip an odd signal about the time origin, we also multiply it by a ($-$) sign to get the original signal.\\[12pt]
                 Periodic: $x(t) = x(t+ T)$.\\
                 Odd: $x(t) = -x(-t)$.
             }
@@ -103,11 +103,11 @@
             }
             \column{0.4\textwidth}
             {
-                The independent variable is an integer.\\
+                \noindent The independent variable is an integer.\\
                 The sequence takes values only at integer values of he argument.\\
-                This signal is \alert{even}. \\
+                This signal is \alert{even}. \\[12pt]
                 Even: $x[n] = x[-n]$.\\
-                Periodic: $x[n] = x[n+N]$, $N=16$\\
+                Periodic: $x[n] = x[n+N]$. Here, $N=16$\\
                 $\omega_0 = \frac{2\pi}{N} = \frac{\pi}{8}$.
 
 
@@ -128,11 +128,11 @@
             }
             \column{0.4\textwidth}
             {
-                The independent variable is an integer.\\
+                \noindent The independent variable is an integer.\\
                 The sequence takes values only at inter values of he argument.\\
-                This signal is \alert{odd}. \\
+                This signal is \alert{odd}. \\[12pt]
                 Odd: $x[n] = -x[-n]$.\\
-                Periodic: $x[n] = x[n+N]$, $N=16$\\
+                Periodic: $x[n] = x[n+N]$. Here, $N=16$\\
                 $\omega_0 = \frac{2\pi}{N} = \frac{\pi}{8}$.
                 $\phi= -\pi/2$, $x[n] = A\cos(\omega_0n+\phi) = A\cos(\omega_0(n+n_0))$. $n_0$ must be an integer.\\
                 $n_0 = \frac{\phi}{\omega_0} = \frac{\pi/2}{\pi/8} = 4$.
@@ -153,20 +153,20 @@
     {
         Answer: No.\\
         \begin{align*}
-          A\cos[\omega_0(n+n_0)] &=  A\cos[\omega_0(n+n_0)]\\
+          A\cos[\omega_0n+ \phi)] &=  A\cos[\omega_0(n+n_0)]\\
           \omega_0n + \omega_0n_0 &= \omega_0n + \phi \\
           \omega_0n_0 &= \phi\quad n_0 \text{ is an integer}.
         \end{align*}
 
         \begin{itemize}
           \item Depending on $\phi$ and $\omega_0$, $n_0$ many not come out to be an \alert{integer}.
-          \item In discrete time , the amount of time shift must be an integer.
-          \item All continuous-time sinusoids are  periodic. However, discrete-time sinusoids are not necessarily so.
+          \item In discrete time, the amount of time shift must be an integer.
         \end{itemize}
     }
 \end{frame}
 
-\begin{frame}{Periodicity of a DT Signal}
+\begin{frame}{Periodicity of a DT Signal} 
+    All continuous-time sinusoids are  periodic. However, discrete-time sinusoids are not necessarily so.
     \begin{equation}
         x[n] = x[n+N], \quad \text{smallest integer $N$ is the fundamental period}.
     \end{equation}
@@ -182,7 +182,7 @@
         \end{equation}
         $N$ and $m$ must be integers.\\
         Smallest $N$, if any, is the fundamental period.\\
-        $N$ may not be an integer. In this case, the sinal is not periodic.
+        $N$ may not be an integer. In this case, the signal is not periodic.
     }
 \end{frame}
 
@@ -235,7 +235,7 @@
 \begin{frame}[plain]{CT Complex Exponentials}
     \tikzstyle{na} = [baseline=-.5ex]
     \tikzstyle{every picture}+=[remember picture]
-    \begin{align}
+    \begin{align*}
             x(t) &= Ce^{at} \quad C \text{ and } a \text{ are complex numbers}.\\
             C &= |C|e^{j\theta}\\
             a &= r + j\omega_0\\
@@ -261,7 +261,7 @@
             };
             }
             \left.\sin(\omega_0t + \theta)\right]\\
-    \end{align}
+    \end{align*}
 
     \mode<beamer>
     {
@@ -308,7 +308,7 @@
     \end{align}
     Comments:
     \begin{itemize}
-      \item When $|alpha| = 1$: sinusoidal real and imaginary parts.
+      \item When $|\alpha| = 1$: sinusoidal real and imaginary parts.
       \item $e^{j\omega_0 n}$ may or may not be periodic depending on the value of $\omega_0$.
       \item Sinusoidal, exponential, step, and impulse signal form the cornerstones for signals and systems analysis.
     \end{itemize}

@@ -1,4 +1,4 @@
-\begin{tikzpicture}[scale=0.6,
+\begin{tikzpicture}[
   declare function={
     unitstep(\x)= (\x>-0.1)*(1);
   },
@@ -11,7 +11,7 @@
 ]
 \begin{axis}
 [
-    scale=1,
+        scale=0.6,
     axis x line=middle,
     axis y line=middle,
     every axis plot post/.style={mark options={fill=black}},
@@ -43,7 +43,7 @@
 \begin{scope}[yshift=-3cm]
 	\begin{axis}
 [
-    scale=1,
+        scale=0.6,
     axis x line=middle,
     axis y line=middle,
     every axis plot post/.style={mark options={fill=black}},
