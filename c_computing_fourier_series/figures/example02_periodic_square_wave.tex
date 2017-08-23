@@ -1,4 +1,4 @@
-\begin{tikzpicture}
+\begin{tikzpicture}[x=0.9cm]
 	\def\xmin{-7}
 	\def\xmax{7}
 	\def\ymin{0}
@@ -23,10 +23,11 @@
 			{
 				%\node at (\position, 0) [anchor=north] {\small $0$};
 			}
-			\draw (\position-\T1, 0) \pulse;	
+			\draw[thick, blue] (\position-\T1, 0) \pulse;	
 			\draw (\position, 0) -- ++(0,0.1);
 			%\pulse{3}{0.4};		
 		}
+		\draw[thick, blue] (-4*\period,0) -- ++(\period -\T1,0);
 		
 		\node at (-\T1, 0) [anchor=north] {\small $-T_1$};
 		\node at (\T1, 0) [anchor=north] {\small $T_1$};
