@@ -17,13 +17,13 @@
 			\edef\wk{\pgfmathresult}
 			\pgfmathparse{\akmag[\k]}
 			\edef\akmagk{\pgfmathresult}	
-			\draw[thick] (\wk, 0) -- ++(0,10*\akmagk);% node [anchor=south] {\small $\akmagk$};
-			\ifthenelse{\lengthtest{0 pt = \akmagk pt}}{\draw[fill=black]  (\wk,0) circle (2pt);}{}
+			\draw[thick, red] (\wk, 0) -- ++(0,10*\akmagk);% node [anchor=south] {\small $\akmagk$};
+			\ifthenelse{\lengthtest{0 pt = \akmagk pt}}{\draw[fill=red]  (\wk,0) circle (2pt);}{}
 		}
 			\node at (10, 1) {\small $T= 4T_1$};		
 	\end{scope}
 
-
+%\pause
 \def\akmag{{-0.009786,-0.014469,-0.010718,0.000000,0.011846,0.017684,0.013240,-0.000000,-0.015005,-0.022736,-0.017314,0.000000,0.020462,0.031831,0.025009,-0.000000,-0.032154,-0.053052,-0.045016,0.000000,0.075026,0.159155,0.225079,0.250000,0.225079,0.159155,0.075026,0.000000,-0.045016,-0.053052,-0.032154,-0.000000,0.025009,0.031831,0.020462,0.000000,-0.017314,-0.022736,-0.015005,-0.000000,0.013240,0.017684,0.011846,0.000000,-0.010718,-0.014469,-0.009786}}
 
 
@@ -41,12 +41,12 @@
 			\edef\wk{\pgfmathresult}
 			\pgfmathparse{\akmag[\k]}
 			\edef\akmagk{\pgfmathresult}	
-			\draw[thick] (\wk, 0) -- ++(0,10*\akmagk);% node [anchor=south] {\small $\akmagk$};
-			\ifthenelse{\lengthtest{0 pt = \akmagk pt}}{\draw[fill=black]  (\wk,0) circle (2pt);}{}		
+			\draw[thick, red] (\wk, 0) -- ++(0,10*\akmagk);% node [anchor=south] {\small $\akmagk$};
+			\ifthenelse{\lengthtest{0 pt = \akmagk pt}}{\draw[fill=red]  (\wk,0) circle (2pt);}{}		
 		}
 			\node at (10, 1) {\small $T= 8T_1$};			
 	\end{scope}
-
+%\pause
 \def\akmag{{0.005296,0.010231,0.014004,0.015915,0.015478,0.012504,0.007165,-0.000000,-0.008121,-0.016077,-0.022622,-0.026526,-0.026735,-0.022508,-0.013535,0.000000,0.017402,0.037513,0.058816,0.079577,0.098027,0.112540,0.121812,0.125000,0.121812,0.112540,0.098027,0.079577,0.058816,0.037513,0.017402,0.000000,-0.013535,-0.022508,-0.026735,-0.026526,-0.022622,-0.016077,-0.008121,-0.000000,0.007165,0.012504,0.015478,0.015915,0.014004,0.010231,0.005296}}
 
 
@@ -64,8 +64,8 @@
 			\edef\wk{\pgfmathresult}
 			\pgfmathparse{\akmag[\k]}
 			\edef\akmagk{\pgfmathresult}	
-			\draw[thick] (\wk, 0) -- ++(0,10*\akmagk);% node [anchor=south] {\small $\akmagk$};
-			\ifthenelse{\lengthtest{0 pt = \akmagk pt}}{\draw[fill=black]  (\wk,0) circle (2pt);}{}
+			\draw[thick, red] (\wk, 0) -- ++(0,10*\akmagk);% node [anchor=south] {\small $\akmagk$};
+			\ifthenelse{\lengthtest{0 pt = \akmagk pt}}{\draw[fill=red]  (\wk,0) circle (2pt);}{}
 		}
 			\node at (10, 1) {\small $T= 16T_1$};			
 	\end{scope}
