@@ -76,7 +76,7 @@
         \column{0.2\textwidth}
         {
             \small
-            Plots of scaled Fourier series coefficients $Ta_k$ for the periodic square wave with $T_1$ fixed and for several values of $T$: $T=4T_1$, $T=8T_1$, $T=16T_1$.
+            \noindent Plots of scaled Fourier series coefficients $Ta_k$ for the periodic square wave with $T_1$ fixed and for several values of $T$: $T=4T_1$, $T=8T_1$, $T=16T_1$.
 
         }
     \end{columns}
@@ -96,7 +96,7 @@
         \column{0.2\textwidth}
         {
             \small
-            The Fourier series coefficients and their envelope for periodic square wave for several values of $T$ (with $T_1$ fixed): $T=4T_1$, $T=8T_1$, $T=16T_1$. The coefficients are regularly-spaced samples of the envelope $(2\sin \omega T_1)/\omega$, where the spacing between samples, $2\pi/T$ decreases as $T$ increases.
+            \noindent The Fourier series coefficients and their envelope for periodic square wave for several values of $T$ (with $T_1$ fixed): $T=4T_1$, $T=8T_1$, $T=16T_1$. The coefficients are regularly-spaced samples of the envelope $(2\sin \omega T_1)/\omega$, where the spacing between samples, $2\pi/T$ decreases as $T$ increases.
         }
     \end{columns}
 \end{frame}
@@ -138,9 +138,9 @@
     \end{equation}
     $X(j\omega)$ is finite, and
     \begin{equation}
-        \int_{-\infty}^{\infty}|e(t)|^2dt < \infty,
+        \int_{-\infty}^{\infty}|e(t)|^2dt = 0,
     \end{equation}
-    Howler, if $x(t)$ has finite energy, then, although $x(t)$ and its Fourier representation  $\hat{x}(t)$ may differ significantly at individual values of $t$, there is no real energy in their difference.
+    If $x(t)$ has finite energy, then, although $x(t)$ and its Fourier representation  $\hat{x}(t)$ may differ significantly at individual values of $t$, there is no  energy in their difference.
 \end{frame}
 
 \begin{frame}[plain]{Convergence of Fourier Transform: Dirichlet Conditions}
@@ -165,15 +165,27 @@
     \end{example}
     \pause
     \mode<beamer>
-    {
-        \begin{equation*}
-            \begin{aligned}
-                X(j\omega) &= \int_{-\infty}^{\infty}x(t)e^{-j\omega t} dt.\\ \pause
-                X(j\omega) &= \int_{0}^{\infty} e^{-at}e^{-j\omega t}dt\\ \pause
-                &= \frac{1}{a+j\omega}\left. e^{-(a+j\omega)t}\right|_{0}^{\infty}\\ \pause
-                X(j\omega) &= \frac{1}{a+j\omega}, \quad a>0.
-            \end{aligned}
-        \end{equation*}
+    {    
+        \begin{columns}
+            \column{0.5\textwidth}
+                \mode<beamer>
+                {
+                    \begin{figure}
+                      \centering
+                      \input{figures/eatut_signal}
+                      \caption{$e^{-at}u(t), \quad a> 0$.}\label{fi:eatut_signal}
+                    \end{figure}
+                }
+            \column{0.5\textwidth}
+                \begin{equation*}
+                    \begin{aligned}
+                        X(j\omega) &= \int_{-\infty}^{\infty}x(t)e^{-j\omega t} dt.\\ \pause
+                        X(j\omega) &= \int_{0}^{\infty} e^{-at}e^{-j\omega t}dt\\ \pause
+                        &= \frac{1}{a+j\omega}\left. e^{-(a+j\omega)t}\right|_{0}^{\infty}\\ \pause
+                        X(j\omega) &= \frac{1}{a+j\omega}, \quad a>0.
+                    \end{aligned}
+                \end{equation*}
+        \end{columns}
     }
 \end{frame}
 
@@ -184,7 +196,7 @@
           \centering
           \input{figures/eatut}
           \caption{Fourier transform of the signal $e^{-at}u(t), \quad a> 0$.}\label{fi:eatut}
-        \end{figure}    
+        \end{figure}
     }
 \end{frame}
 
@@ -217,7 +229,7 @@
           \centering
           \input{figures/eamodt}
           \caption{Fourier transform of the signal $e^{-a|t|}, \quad a> 0$.}\label{fi:eat}
-        \end{figure}    
+        \end{figure}
     }
 \end{frame}
 
@@ -231,14 +243,27 @@
             x(t) = \delta(t).
         \end{equation*}
     \end{example}
-    \pause
+    \pause    
     \mode<beamer>
     {
-        \begin{equation*}
-            X(j\omega) = \int_{-\infty}^{\infty} \delta(t)e^{-j\omega t} dt = 1.
-        \end{equation*}
-        The unit impulse has a Fourier transform consisting of qual contributions at all frequencies.
-    }
+        \begin{columns}
+            \column{0.5\textwidth}
+                \mode<beamer>
+                {
+                    \begin{figure}
+                      \centering
+                      \input{figures/unit_impulse}
+                      \caption{$\delta(t)$}\label{fi:unit_impulse}
+                    \end{figure}
+                }
+            \column{0.5\textwidth}
+                \pause
+                \begin{equation*}
+                    X(j\omega) = \int_{-\infty}^{\infty} \delta(t)e^{-j\omega t} dt = 1.
+                \end{equation*}
+                The unit impulse has a Fourier transform consisting of qual contributions at all frequencies.
+        \end{columns}
+    }    
 \end{frame}
 
 
@@ -259,22 +284,34 @@
           \centering
           \input{figures/square_pulse}
           \caption{Rectangular pulse and the Fourier transform.}\label{fi:square_pulse}
-        \end{figure} 
+        \end{figure}
     }
 \end{frame}
 
 \begin{frame}
     \mode<beamer>
     {
-        \begin{equation*}
-            \begin{aligned}
-                X(j\omega) &= \int_{-\infty}^{\infty}x(t)e^{-j\omega t} dt.\\ \pause
-                &= \int_{-T_1}^{T_1} e^{-j\omega t} dt.\\ \pause
-                &= \left.\frac{e^{-j\omega t}}{-j\omega}\right|_{-T_1}^{T_1} \\ \pause
-                &= 2\frac{\sin \omega T_1}{\omega}.\\
-            \end{aligned}
-        \end{equation*}
+        \begin{columns}
+            \column{0.25\textwidth}
+                \begin{equation*}
+                    \begin{aligned}
+                        X(j\omega) &= \int_{-\infty}^{\infty}x(t)e^{-j\omega t} dt.\\ \pause
+                        &= \int_{-T_1}^{T_1} e^{-j\omega t} dt.\\ \pause
+                        &= \left.\frac{e^{-j\omega t}}{-j\omega}\right|_{-T_1}^{T_1} \\ \pause
+                        &= 2\frac{\sin \omega T_1}{\omega}.\\
+                    \end{aligned}
+                \end{equation*}
+            \column{0.75\textwidth}
+                \pause
+                \begin{figure}
+                  \centering
+                  \input{figures/square_pulse_ft}
+                  \caption{Fourier transform of the rectangular pulse.}\label{fi:square_pulse_ft}
+                \end{figure}
+        \end{columns}
     }
+
+    
 \end{frame}
 
 
@@ -297,7 +334,7 @@
     \pause
     \mode<beamer>
     {
-       
+
     }
 \end{frame}
 
@@ -306,7 +343,7 @@
 \begin{frame}[plain]
     \mode<beamer>
     {
-    
+
         Using the synthesis equation:
         \begin{equation*}
             \begin{aligned}
@@ -314,8 +351,8 @@
                 &= \frac{1}{2\pi}\int_{-W}^{W}e^{j\omega t} d\omega.\\ \pause
                 &= \frac{\sin W t}{\pi t}.\\
             \end{aligned}
-        \end{equation*} 
-        \pause    
+        \end{equation*}
+        \pause
         \begin{figure}
           \centering
           \input{figures/rectift}

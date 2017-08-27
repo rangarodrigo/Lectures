@@ -17,8 +17,8 @@
 			\edef\wk{\pgfmathresult}
 			\pgfmathparse{\akmag[\k]}
 			\edef\akmagk{\pgfmathresult}	
-			\draw[thick] (\wk, 0) -- ++(0,10*\akmagk);% node [anchor=south] {\small $\akmagk$};
-			\ifthenelse{\lengthtest{0 pt = \akmagk pt}}{\draw[fill=black]  (\wk,0) circle (2pt);}{}
+			\draw[thick, red] (\wk, 0) -- ++(0,10*\akmagk);% node [anchor=south] {\small $\akmagk$};
+			\ifthenelse{\lengthtest{0 pt = \akmagk pt}}{\draw[fill=red]  (\wk,0) circle (2pt);}{}
 		}
 			\node at (10, 1) {\small $T= 4T_1$};		
 	\end{scope}
@@ -41,8 +41,8 @@
 			\edef\wk{\pgfmathresult}
 			\pgfmathparse{\akmag[\k]}
 			\edef\akmagk{\pgfmathresult}	
-			\draw[thick] (\wk, 0) -- ++(0,10*\akmagk);% node [anchor=south] {\small $\akmagk$};
-			\ifthenelse{\lengthtest{0 pt = \akmagk pt}}{\draw[fill=black]  (\wk,0) circle (2pt);}{}		
+			\draw[thick, red] (\wk, 0) -- ++(0,10*\akmagk);% node [anchor=south] {\small $\akmagk$};
+			\ifthenelse{\lengthtest{0 pt = \akmagk pt}}{\draw[fill=red]  (\wk,0) circle (2pt);}{}		
 		}
 			\node at (10, 1) {\small $T= 8T_1$};			
 	\end{scope}
@@ -64,8 +64,8 @@
 			\edef\wk{\pgfmathresult}
 			\pgfmathparse{\akmag[\k]}
 			\edef\akmagk{\pgfmathresult}	
-			\draw[thick] (\wk, 0) -- ++(0,10*\akmagk);% node [anchor=south] {\small $\akmagk$};
-			\ifthenelse{\lengthtest{0 pt = \akmagk pt}}{\draw[fill=black]  (\wk,0) circle (2pt);}{}
+			\draw[thick, red] (\wk, 0) -- ++(0,10*\akmagk);% node [anchor=south] {\small $\akmagk$};
+			\ifthenelse{\lengthtest{0 pt = \akmagk pt}}{\draw[fill=red]  (\wk,0) circle (2pt);}{}
 		}
 			\node at (10, 1) {\small $T= 16T_1$};			
 	\end{scope}
