@@ -11,6 +11,9 @@
 *.cb
 *.cb2
 
+## Directories to ignor
+TeXAux/
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*

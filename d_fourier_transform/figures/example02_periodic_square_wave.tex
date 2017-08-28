@@ -7,7 +7,7 @@
 	\def\T1{0.3}
 	\def\A{1}
 	
-	\edef\pulse{|- ++(2*\T1, \A) |- ++( \period - \T1, -\A)}
+	\edef\pulse{|- ++(2*\T1, \A) |- ++( \period - 2*\T1, -\A)}
 
 	
 	\draw (\xmin-1, 0) --(\xmax+1, 0) node[anchor=west] {\small $t$};
@@ -16,14 +16,28 @@
 		{
 			\pgfmathmultiply{\period}{\x}
 			\edef\position{\pgfmathresult}
-			\ifthenelse{\NOT \x=0}
-			{
-				\node at (\position, 0) [anchor=north] {\small $\x T$};
-			}
+			\ifthenelse{\x=0 \OR \x=1 \OR \x=-1}
 			{
 				%\node at (\position, 0) [anchor=north] {\small $0$};
 			}
-			\draw (\position-\T1, 0) \pulse;	
+			{
+				
+				\node at (\position, 0) [anchor=north] {\small $\x T$};
+			}
+			\ifthenelse{ \x=1 }
+			{
+				\node at (\position, 0) [anchor=north] {\small $T$};
+			}
+			{
+			}
+			
+			\ifthenelse{ \x=-1 }
+			{
+				\node at (\position, 0) [anchor=north] {\small $-T$};
+			}
+			{
+			}			
+			\draw[thick, red] (\position-\T1, 0) \pulse;	
 			\draw (\position, 0) -- ++(0,0.1);
 			%\pulse{3}{0.4};		
 		}
