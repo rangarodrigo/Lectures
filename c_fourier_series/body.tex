@@ -30,7 +30,7 @@
               \item Every signal has a frequency distribution or a \alert{spectrum}.
               \item Periodic signals have a line spectra, called the Fourier series.
               \item The French mathematician, Jean-Baptiste Joseph Fourier, discovered this representation.
-              \item Fourier series provides a way  to represent a periodic signal as a sum of complex sinusoids.
+              \item Fourier series provides a way  to represent a periodic signal as a sum of complex exponentials.
               \item These sinusoids will be at frequencies that are integer multiples of the fundamental frequency $\omega_0$.
               \item $\omega_0 = \frac{2\pi}{T}$, where $T$: fundamental period of the waveform.
             \end{itemize}
@@ -200,7 +200,7 @@
                 \begin{equation*}
                     \begin{split}
                        a_k &= \frac{1}{T} \int_{T}x(t)e^{-jk\omega_0 t}dt,\\
-                       &=  \frac{1}{T} \int_{-T_1}^{T_1}e^{-jk\omega_0 t},\\
+                       &=  \frac{1}{T} \int_{-T_1}^{T_1}e^{-jk\omega_0 t}dt,\\
                        &= -\left. \frac{1}{jk\omega_0 T}e^{-jk\omega_0 t}\right|^{T_1}_{-T_1}
                     \end{split}
                 \end{equation*}
@@ -290,7 +290,7 @@
           x(t) &\overset{\mathcal{FS}}{\longleftrightarrow} a_k, \quad x(t-t_0) \overset{\mathcal{FS}}{\longleftrightarrow} b_k,\\
                 b_k &=  \frac{1}{T}\int_{T}x(t-t_0)e^{-jk\omega_0 t}dt,\\
                 &= \frac{1}{T}\int_{T}x(\tau)e^{-jk\omega_0(\tau + t_0)}dt,\\
-                &= e^{-jk\omega_0  t_0}\frac{1}{T}\int_{T}x(\tau)e^{-jk\omega_0\tau)}d\tau,\\
+                &= e^{-jk\omega_0  t_0}\frac{1}{T}\int_{T}x(\tau)e^{-jk\omega_0\tau}d\tau,\\
                 &= e^{-jk\omega_0  t_0}a_k.
             \end{aligned}
         \end{equation*}
@@ -320,7 +320,7 @@
         \end{equation}
         Substitution: $k=-m$
         \begin{equation*}
-            y(t) = x(-t) = \sum_{m=-\infty}^{\infty}a_{-m}e^{-jk2\pi t/T}.
+            x(-t) = \sum_{m=-\infty}^{\infty}a_{-m}e^{-jm2\pi t/T}.
         \end{equation*}
         %\pause
 
@@ -570,7 +570,7 @@
         \begin{equation*}
             \begin{split}
             b_k &= e^{jk\omega_0 T_1}a_k - e^{-jk\omega_0 T_1}a_k, \quad \omega_0 = 2\pi/T,\\
-                &= \frac{1}{T}\left[e^{jk\omega_0 T_1} - e^{-jk\omega_0 T_1}\right] = \frac{2j\sin(k\omega_0 T_1}{T}.\\
+                &= \frac{1}{T}\left[e^{jk\omega_0 T_1} - e^{-jk\omega_0 T_1}\right] = \frac{2j\sin(k\omega_0 T_1}{T}).\\
             \end{split}
         \end{equation*}
         \pause
@@ -696,7 +696,7 @@
 
     \begin{itemize}[<+->]
         \item In this case coefficients $a_k$ are finite.
-        \item As $N\rightarrow 0$, $E_N \rightarrow 0$.
+        \item As $N\rightarrow \infty$, $E_N \rightarrow 0$.
         \item This \alert{does not imply that the signal $x(t)$ and its Fourier series representation are equal at every value of $t$}. What it does say is that there is no energy in their difference.
         \item However, since physical systems respond to signal energy, from this perspective $x(t)$ and its Fourier series representation are indistinguishable.
     \end{itemize}
