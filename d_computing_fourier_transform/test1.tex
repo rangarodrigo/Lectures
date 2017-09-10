@@ -1,0 +1,63 @@
+%\subsection{The Fourier Transform for Periodic Signals}
+
+\begin{frame}{The Fourier Transform for Periodic Signals: Introduction}
+    In the previous section, we studied the Fourier transform representation, paying attention to aperiodic signals. We can also develop \ftrs~for periodic signals. This allows us to consider periodic and aperiodic signals in a unified context. We can construct the \ft of a periodic signal directly from its \fsr .
+    
+    Consider a signal $x(t)$  with \ft~ $X(j\omega)$ that is a single impulse of area $2\pi$ at $\omega=\omega_0$, i.e.,
+    \begin{equation}
+        X(j\omega) = 2\pi \delta(\omega-\omega_0)
+    \end{equation}
+\end{frame}
+    
+\begin{frame}    
+    Let's determine the signal $x(t)$:
+    \pause
+    \mode<beamer>
+    {
+        \begin{equation*}
+            \begin{split}
+                x(t) &= \frac{1}{2\pi}\int_{-\infty}^{\infty} 2\pi \delta(\omega-\omega_0)e^{j\omega t} d\omega,\\
+                &= e^{j\omega_0 t}.\\
+            \end{split}
+        \end{equation*}
+        \pause
+        More generally, if $X(j\omega)$ is of the form of a linear combination of impulses equally spaced in frequency, i.e.,
+        \begin{equation}
+             X(j\omega) = \sum_{k=-\infty}^{\infty}2\pi a_k \delta(\omega-k\omega_0)
+        \end{equation}
+        \pause
+        then
+        \begin{equation}
+            x(t) = \sum_{k=-\infty}^{\infty}e^{jk\omega_0 t}.
+        \end{equation}
+        which is exactly the \fsr~ of a periodic signal. \\
+        Thus, the \ft of a periodic signal with \fs~coefficients $\{a_k\}$ can be interpreted as a train of impulses occurring at the harmonically related frequencies and for which the area of the impulse at the $k$th harmonic frequency $k\omega_0$ is $2\pi$ times the $k$th \fs~coefficient $a_k$.
+    }
+
+\end{frame} 
+
+
+\begin{frame}[plain]
+    Example: Find the \ft of the signal whose \fs~coefficients are 
+    \begin{equation*}
+        a_k = \frac{\sin k \omega_0 T_1}{\pi k}.
+    \end{equation*}
+\end{frame}
+
+\begin{frame}[plain]
+    Example:  Find the \ft of 
+    \begin{equation*}
+        x(t) = \sin \omega_0 t.
+    \end{equation*}
+    and
+    \begin{equation*}
+        x(t) = \cos \omega_0 t.
+    \end{equation*}    
+\end{frame}
+
+\begin{frame}[plain]
+    Example: Find the \ft of the impulse train
+    \begin{equation*}
+        x(t) = \sum_{k=-\infty}^{\infty} \delta(t-kT).
+    \end{equation*}
+\end{frame}

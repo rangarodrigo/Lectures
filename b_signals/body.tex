@@ -165,7 +165,7 @@
     }
 \end{frame}
 
-\begin{frame}{Periodicity of a DT Signal} 
+\begin{frame}{Periodicity of a DT Signal}
     All continuous-time sinusoids are  periodic. However, discrete-time sinusoids are not necessarily so.
     \begin{equation}
         x[n] = x[n+N], \quad \text{smallest integer $N$ is the fundamental period}.
@@ -312,7 +312,26 @@
       \item $e^{j\omega_0 n}$ may or may not be periodic depending on the value of $\omega_0$.
       \item Sinusoidal, exponential, step, and impulse signal form the cornerstones for signals and systems analysis.
     \end{itemize}
+\end{frame}
 
+
+
+\begin{frame}{Periodicity Properties of Discrete-Time Complex Exponentials $e^{j\omega_0 n}$}
+    \begin{itemize}[<+-| alert@+>]
+      \item For the CT counterpart  $e^{j\omega_0 t}$,
+        \begin{enumerate}
+            \item The larger the magnitude of $\omega_0$, the higher is the rate of oscillation in the signal.
+            \item $e^{j\omega_0 t}$ is periodic for any value of $\omega_0$.
+        \end{enumerate}
+      \item In DT, as 
+        \begin{equation*}
+            e^{j(\omega_0 + 2\pi)n} = e^{j2\pi n}e^{j\omega_0n} = e^{j\omega_0n}
+        \end{equation*}
+        the exponential at frequency $\omega_0 + 2\pi$ is the same as that at frequency $\omega_0$ .
+      \item Although in CT  $e^{j\omega_0 t}$ are all distinct for distinct values of $\omega_0$. In DT, these signals are not distinct, as the signal with frequency $\omega_0$ is identical to the signals with frequencies $\omega_0 + 2\pi$, $\omega_0 + 4\pi$, and so on. Therefore, in considering DT complex exponentials, we need only consider a frequency interval of length $2\pi$ in which to choose $\omega_0$.
+      \item In DT, as we increase $\omega_0$ from 0, we obtain signals that oscillate more and more rapidly until we reach $\omega_0 = \pi$. As we continue to increase $\omega_0$, we decrease the rate of oscillation until we reach $\omega_0 = 2\pi$. Note: $e^{j\pi n} = \left(e^{j\pi}\right)^n = (-1)^n$.
+    \end{itemize}
+    
 \end{frame}
 
 \begin{frame}[plain]{DT Complex Exponentials Plot}

@@ -30,7 +30,7 @@
               \item Every signal has a frequency distribution or a \alert{spectrum}.
               \item Periodic signals have a line spectra, called the Fourier series.
               \item The French mathematician, Jean-Baptiste Joseph Fourier, discovered this representation.
-              \item Fourier series provides a way  to represent a periodic signal as a sum of complex exponentials.
+              \item Fourier series provides a way  to represent a periodic signal as a sum of complex sinusoids.
               \item These sinusoids will be at frequencies that are integer multiples of the fundamental frequency $\omega_0$.
               \item $\omega_0 = \frac{2\pi}{T}$, where $T$: fundamental period of the waveform.
             \end{itemize}
@@ -67,11 +67,7 @@
         \end{equation*}
         which has the fundamental frequency $\omega_0$.
     \end{example}
-    \pause
-    \begin{tikzpicture}[remember picture,overlay]
-        \node[draw=red!50, fill=red!10, inner sep=2pt,outer sep=2pt, rounded corners=0.1cm, anchor=south east, yshift=7cm, xshift=-1cm, text width=3cm, align=left]  at (current page.south east) {Euler's formula\\$e^{j\theta} = \cos\theta + j\sin\theta$\\$\sin \theta = \frac{e^{j\theta} - e^{-j\theta}}{2j}$} ;
-    \end{tikzpicture}
-    \pause
+
     \mode<beamer>
     {
         \begin{equation*}
@@ -109,19 +105,17 @@
         \end{equation*}
 
         \begin{tikzpicture}[remember picture,overlay]
-          \node[draw=blue!50, fill=blue!20, inner sep=2pt,outer sep=2pt, rounded corners=0.1cm, anchor=south east, yshift=6.5cm, xshift=0cm, text width=3cm, align=left]  at (current page.south east) {Euler's formula\\$e^{j\theta} = \cos\theta + j\sin\theta$\\$\cos \theta = \frac{e^{j\theta} + e^{-j\theta}}{2}$\\$\sin \theta = \frac{e^{j\theta} - e^{-j\theta}}{2j}$} ;
+          \node[draw=blue!50, fill=blue!20, inner sep=2pt,outer sep=2pt, rounded corners=0.1cm, anchor=south east, yshift=8cm, xshift=-2cm, text width=3cm]  at (current page.south east) {Euler's formula\\$e^{j\theta} = \cos\theta + j\sin\theta$} ;
         \end{tikzpicture}
 
         Using Euler's formula
         \begin{equation*}
             x(t) = 1 + \frac{1}{2j}\left[e^{j\omega_0 t} - e^{-j\omega_0 t}\right] + \left[e^{j\omega_0 t} + e^{-j\omega_0 t}\right] + \frac{1}{2}\left[e^{j(2\omega_0 t + \pi/4)} + e^{-j(2\omega_0 t + \pi/4)}\right]
         \end{equation*}
-        \pause
         Collecting terms,
         \begin{equation*}
             x(t) = 1 + \left(1 + \frac{1}{2j}\right)e^{j\omega_0 t} +  \left(1 - \frac{1}{2j}\right)e^{-j\omega_0 t} + \left(\frac{1}{2} e^{j\pi/4}\right)e^{j2\omega_0 t} + \left(\frac{1}{2} e^{-j\pi/4}\right)e^{-j2\omega_0 t}
         \end{equation*}
-        \pause
         \begin{columns}
             \begin{column}{0.5\textwidth}
                 The Fourier coefficients are
@@ -200,7 +194,7 @@
                 \begin{equation*}
                     \begin{split}
                        a_k &= \frac{1}{T} \int_{T}x(t)e^{-jk\omega_0 t}dt,\\
-                       &=  \frac{1}{T} \int_{-T_1}^{T_1}e^{-jk\omega_0 t}dt,\\
+                       &=  \frac{1}{T} \int_{-T_1}^{T_1}e^{-jk\omega_0 t},\\
                        &= -\left. \frac{1}{jk\omega_0 T}e^{-jk\omega_0 t}\right|^{T_1}_{-T_1}
                     \end{split}
                 \end{equation*}
@@ -208,9 +202,9 @@
           \begin{column}{0.5\textwidth}
                 \pause
 
-            \begin{tikzpicture}[remember picture,overlay]
-              \node[draw=blue!50, fill=blue!20, inner sep=2pt,outer sep=2pt, rounded corners=0.1cm, anchor=south east, yshift=6cm, xshift=-1cm, text width=3cm, align=left]  at (current page.south east) {Euler's formula\\$e^{j\theta} = \cos\theta + j\sin\theta$\\$\cos \theta = \frac{e^{j\theta} + e^{-j\theta}}{2}$\\$\sin \theta = \frac{e^{j\theta} - e^{-j\theta}}{2j}$} ;
-            \end{tikzpicture}
+                \begin{tikzpicture}[remember picture,overlay]
+                  \node[draw=blue!50, fill=blue!20, inner sep=2pt,outer sep=2pt, rounded corners=0.1cm, anchor=south east, yshift=8cm, xshift=-2cm, text width=3cm]  at (current page.south east) {Euler's formula\\$e^{j\theta} = \cos\theta + j\sin\theta$} ;
+                \end{tikzpicture}
                 \pause
 
                 \begin{equation*}
@@ -268,7 +262,6 @@
         y(t) &\overset{\mathcal{FS}}{\longleftrightarrow} b_k.\\
     \end{align*}
     Any linear combination of the two signals will also be periodic with period $T$. Fourier series coefficients $c_k$ of the linear combination of $X(t)$ and $y(t)$, $z(t) = Ax(t) + By(t)$, are given by the same linear combination:
-    \pause
     \mode<beamer>
     {
         \begin{equation}
@@ -290,7 +283,7 @@
           x(t) &\overset{\mathcal{FS}}{\longleftrightarrow} a_k, \quad x(t-t_0) \overset{\mathcal{FS}}{\longleftrightarrow} b_k,\\
                 b_k &=  \frac{1}{T}\int_{T}x(t-t_0)e^{-jk\omega_0 t}dt,\\
                 &= \frac{1}{T}\int_{T}x(\tau)e^{-jk\omega_0(\tau + t_0)}dt,\\
-                &= e^{-jk\omega_0  t_0}\frac{1}{T}\int_{T}x(\tau)e^{-jk\omega_0\tau}d\tau,\\
+                &= e^{-jk\omega_0  t_0}\frac{1}{T}\int_{T}x(\tau)e^{-jk\omega_0\tau)}d\tau,\\
                 &= e^{-jk\omega_0  t_0}a_k.
             \end{aligned}
         \end{equation*}
@@ -320,7 +313,7 @@
         \end{equation}
         Substitution: $k=-m$
         \begin{equation*}
-            x(-t) = \sum_{m=-\infty}^{\infty}a_{-m}e^{-jm2\pi t/T}.
+            y(t) = x(-t) = \sum_{m=-\infty}^{\infty}a_{-m}e^{-jk2\pi t/T}.
         \end{equation*}
         %\pause
 
@@ -386,10 +379,9 @@
     \begin{equation}\label{eq:parseval}
         \frac{1}{T}\int_{T} |x(t)|^2dt = \sum_{k=-\infty}^{\infty}|a_k|^2.
     \end{equation}
-    \pause
     \mode<beamer>
     {
-        \noindent Note: Left-hand side of equation \ref{eq:parseval} is the average power (i.e., energy per unit time) in one period of the periodic signal $x(t)$.\\
+        Note: Left-hand side of equation \ref{eq:parseval} is the average power (i.e., energy per unit time) in one period of the periodic signal $x(t)$.\\
 
         \begin{equation}
             \frac{1}{T}\int_{T} \left| a_k e^{jk\omega_0 t}\right|^2dt = \frac{1}{T}\int_{T} \left| a_k \right|^2dt = |a_k|^2.
@@ -416,59 +408,12 @@
     \end{example}
 \end{frame}
 
-
-
-
-
-
-
 \begin{frame}
 \mode<beamer>
 {
-    \begin{columns}
-        \column{0.5\textwidth}
-
-            We notice that
-            \begin{equation*}
-                g(t) = x(t-1) - 1/2,
-            \end{equation*}
-            with $T=4$ and $T_1 = 1$.
-            \pause
-            If FS coefficients of $x(t)$ are denoted by $a_k$, the FS coefficients of $x(t-1)$ may be expressed as
-            \begin{equation*}
-                b_k = a_k e^{-jk\pi/2},
-            \end{equation*}
-            The FS coefficients of the dc offset $-1/2$
-            \begin{equation*}
-                c_k =
-                \begin{cases}
-                    0, & \text{for } k \neq 0,\\
-                    -\frac{1}{2}& \text{for } k = 0.
-                \end{cases}
-            \end{equation*}
-            \
-
-        \column{0.5\textwidth}
-            Applying the linearity property, the FS coefficients of $g(t)$ may be expressed as
-            \pause
-            \begin{equation*}
-                d_k =
-                \begin{cases}
-                    a_k e^{-jk\pi/2}, & \text{for } k \neq 0,\\
-                    a_0-\frac{1}{2}& \text{for } k = 0.
-                \end{cases}
-            \end{equation*}
-            yielding
-            \begin{equation*}
-                d_k =
-                \begin{cases}
-                    \frac{\sin(\pi k/2)}{k\pi} e^{-jk\pi/2}, & \text{for } k \neq 0,\\
-                    0& \text{for } k = 0.
-                \end{cases}
-            \end{equation*}
-   \end{columns}
 }
 \end{frame}
+
 
 
 \begin{frame}%3.7
@@ -485,23 +430,9 @@
 \begin{frame}
 \mode<beamer>
 {
-    The derivative of this signal is the signal $g(t)$ in the previous example. Denoting the Fourier coefficients of $g(t)$ by $d_k$ and those of $x(t)$ by $e_k$ we see that the \alert{differentiation property}  indicates that
-    \pause
-    \begin{equation*}
-        d_k = jk(\pi/2)e_k.
-    \end{equation*}
-    This equation can be used to express $e_k$ in terms of $d_k$ except when $k = 0$. Specifically,
-    \pause
-    \begin{equation*}
-        e_k = \frac{2d_k}{jk\pi} = \frac{2\sin(\pi k/2)}{j(k\pi)^2}e^{-jk\pi/2}, \quad k \neq 0.
-    \end{equation*}
-    For $k = 0$, $e_0$ can be determined by finding the area under one period of $x(t)$ and dividing by the length of the period:
-    \pause
-    \begin{equation*}
-        e_0 = \frac{1}{2}.
-    \end{equation*}
 }
 \end{frame}
+
 
 \begin{frame}%3.8
     \begin{example}
@@ -510,24 +441,11 @@
             x(t) = \sum_{k=-\infty}^{\infty} \delta(t-kT).
         \end{equation}
     \end{example}
-    \begin{figure}
-      \centering
-      \input{figures/impulse_train}
-      \caption{Impulse train}\label{fi:impulse_train}
-    \end{figure}
-
 \end{frame}
 
 \begin{frame}
 \mode<beamer>
 {
-    To determine the Fourier series coefficients $a_k$, we select the interval of integration to be $-T/2 \leq t \leq T/2$. Within this interval, $x(t)$ is the same as $\delta(t)$.
-    \pause
-    \begin{equation*}
-        a_k = \frac{1}{T}\int_{-T/2}^{T/2}\delta(t)e^{-jk 2\pi/T}dt = \frac{1}{T}.
-    \end{equation*}
-    \pause
-    In other words, all the Fourier series coefficients of the impulse train are identical. These coefficients are also real valued and even (with respect to the index $k$).
 }
 \end{frame}
 
@@ -546,48 +464,6 @@
 \begin{frame}
 \mode<beamer>
 {
-    \begin{figure}
-      \centering
-      \input{figures/deriv_periodic_square}
-      \caption{Periodic square wave and its derivative.}\label{fi:deriv_periodic_square}
-    \end{figure}
-}
-\end{frame}
-
-\begin{frame}
-\mode<beamer>
-{
-    \begin{columns}
-        \column{0.5\textwidth}
-
-        We may interpret $q(t)$ as the difference of two shifted versions of the impulse train $x(t)$. That is,
-
-        \begin{equation*}
-            q(t) = x(t+T_1) - x(t-T_1).
-        \end{equation*}
-        \pause
-        Fourier series coefficients $b_k$ of $q(t)$ may be expressed in terms of the Fourier series coefficients $a_k$ of $x(t)$; that is,
-        \begin{equation*}
-            \begin{split}
-            b_k &= e^{jk\omega_0 T_1}a_k - e^{-jk\omega_0 T_1}a_k, \quad \omega_0 = 2\pi/T,\\
-                &= \frac{1}{T}\left[e^{jk\omega_0 T_1} - e^{-jk\omega_0 T_1}\right] = \frac{2j\sin(k\omega_0 T_1}{T}).\\
-            \end{split}
-        \end{equation*}
-        \pause
-        \column{0.5\textwidth}
-        Since $q(t)$ is the derivative of $g(t)$, we can use the differentiation property:
-        \begin{equation*}
-            b_k = jk\omega_0c_k,
-        \end{equation*}
-        where the $c_k$ are the Fourier series coefficients of $g(t)$. Thus,
-        \begin{equation*}
-            c_k = \frac{b_k}{jk\omega_0} = \frac{2j\sin(k\omega_0 T_1)}{jk\omega_0T} = \frac{\sin(k\omega_0 T_1)}{k\pi}, \quad k\neq 0
-        \end{equation*}
-        Since $c_0$ is just the average value of $g(t)$ over one period,
-        \begin{equation*}
-            c_0 = \frac{2T_1}{T}.
-        \end{equation*}
-    \end{columns}
 }
 \end{frame}
 
@@ -644,7 +520,7 @@
 
 \section{Convergence of Fourier Series}
 
-\begin{frame}{Convergence of Fourier Series}
+\begin{frame}
     Fourier series representation:
     \begin{equation*}
             x(t) = \sum_{k=-\infty}^{+\infty}a_k e^{jk\omega_0 t}
@@ -661,6 +537,11 @@
     \begin{equation*}
         E_N = \int_T \left|e_N(t)\right|^2 dt
     \end{equation*}
+    \begin{itemize}[<+->]
+        \item If $x(t)$ has a Fourier series representation, then the limit of $E_N$ as $N \rightarrow \infty$ is zero.
+        \item If $x(t)$ does not have a Fourier series representation, then the integral that computes $a_k$ may diverge. Moreover, even if all of the coefficients $a_k$ obtained  are finite, when these coefficients are substituted into the synthesis equation, the resulting infinite series may not converge to the original signal $x(t)$.
+        \item Fortunately, there are no convergence difficulties for large classes of periodic signals, continuous and discontinuous.
+    \end{itemize}
 
 
     \begin{tikzpicture}[remember picture,overlay]
@@ -677,17 +558,6 @@
 \end{frame}
 
 
-\begin{frame}{Convergence of Fourier Series}
-    \begin{itemize}[<+->]
-        \item If $x(t)$ has a Fourier series representation, then the limit of $E_N$ as $N \rightarrow \infty$ is zero.
-        \item If $x(t)$ does not have a Fourier series representation, then the integral that computes $a_k$ may diverge. Moreover, even if all of the coefficients $a_k$ obtained  are finite, when these coefficients are substituted into the synthesis equation, the resulting infinite series may not converge to the original signal $x(t)$.
-        \item Fortunately, there are no convergence difficulties for large classes of periodic signals, continuous and discontinuous.
-    \end{itemize}
-
-
-\end{frame}
-
-
 \begin{frame}{Finite-Energy Convergence Criterion}
     One class of periodic signals that are representable through the Fourier series is those signals which have finite energy over a single period:
     \begin{equation}
@@ -696,8 +566,8 @@
 
     \begin{itemize}[<+->]
         \item In this case coefficients $a_k$ are finite.
-        \item As $N\rightarrow \infty$, $E_N \rightarrow 0$.
-        \item This \alert{does not imply that the signal $x(t)$ and its Fourier series representation are equal at every value of $t$}. What it does say is that there is no energy in their difference.
+        \item As $N\rightarrow 0$, $E_N \rightarrow 0$.
+        \item This does not imply that the signal $x(t)$ and its Fourier series representation are equal at every value of $t$. What it does say is that there is no energy in their difference.
         \item However, since physical systems respond to signal energy, from this perspective $x(t)$ and its Fourier series representation are indistinguishable.
     \end{itemize}
 \end{frame}

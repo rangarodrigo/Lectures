@@ -1,0 +1,449 @@
+\section{Continuous-Time Fourier Transform}
+
+\subsection{Introduction}
+\begin{frame}{Introduction}
+    \begin{itemize}[<+->]
+      \item Using the Fourier techniques we can obtain the frequency-domain representation of signals.
+      \item We use Fourier series for periodic signals, and Fourier transform for aperiodic signals.
+      \item Each of these have continuous-time and discrete-time versions:
+        \begin{enumerate}
+            \item Continuous-time Fourier series
+            \item Continuous-time Fourier transform
+            \item Discrete-time Fourier series
+            \item Discrete-time Fourier transform
+        \end{enumerate}
+      \item In this part of the course, we will concentrate on how to actually compute continuous-time Fourier series and transform. Later, after we study liner, time-invariant (LTI) systems, we will study the conceptual aspects of Fourier techniques.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Fourier Transform}
+    \begin{itemize}[<+->]
+          \item In the last lecture, we represented a periodic signal as a linear combination of complex exponentials.
+          \item We use Fourier transform to represent aperiodic signals. A larger class of signals, including all signals with finite energy, can be represented through a linear combination of complex exponentials.
+          \item Whereas for periodic signals the complex exponential building blocks are harmonically related, for aperiodic signals they are infinitesimally close in frequency, and the representation in terms of a linear combination takes the form of an integral rather than a sum.
+          \item The resulting spectrum of coefficients in this representation is called the Fourier transform.
+          \item The synthesis integral itself, which uses these coefficients to represent the signal as a linear combination of complex exponentials, is called the inverse Fourier transform.
+      \end{itemize}
+\end{frame}
+
+
+\subsection{Development of the Fourier Transform Representation}
+
+\begin{frame}[plain]{Fourier Series Representation for Square Wave}
+        The continuous-time periodic square wave, sketched below, is defined over one period as
+        \begin{equation*}
+            x(t) = \begin{cases}
+                1, & |t| <T_1,\\
+                0, & T_1 < |t| < T/2,
+            \end{cases}
+        \end{equation*}
+        This signal is periodically repeats with fundamental period $T$ and fundamental frequency $\omega_0 = 2\pi/T$.
+    \mode<beamer>
+    {
+        \begin{figure}
+          \centering
+          \input{figures/example02_periodic_square_wave }
+          \caption{Periodic square wave}\label{fi:example02_periodic_square_wave }
+        \end{figure}
+    }
+\end{frame}
+
+
+
+\begin{frame}
+    The Fourier series coefficients $a_k$ of this wave are
+    \begin{equation}\label{eq:square_fs}
+        a_k = \frac{2\sin(k\omega_0T_1)}{k\omega_0T}
+    \end{equation}
+    We plotted this for a fixed value of $T_1$ and several values of $T$ (shown in the next slide). An alternative wave of interpreting eq. \ref{eq:square_fs} is as samples of an envelope function:
+    \begin{equation*}
+        Ta_k = \left.\frac{2\sin(\omega T_1)}{\omega}\right|_{\omega=k\omega_0}
+    \end{equation*}
+    For fixed $T_1$, the envelope of $Ta_k$ is independent of $T$.
+
+\end{frame}
+
+\begin{frame}[plain,t]
+    \begin{columns}
+        \column{0.8\textwidth}
+        {
+        \begin{figure}
+          \centering
+          \input{figures/example02_periodic_square_fs}
+          \caption{Plots of scaled Fourier series coefficients $Ta_k$}\label{fi:example02_periodic_square_fs}
+        \end{figure}
+        }
+        \column{0.2\textwidth}
+        {
+            \small
+            Plots of scaled Fourier series coefficients $Ta_k$ for the periodic square wave with $T_1$ fixed and for several values of $T$: $T=4T_1$, $T=8T_1$, $T=16T_1$.
+
+        }
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}[plain,t]
+    \begin{columns}
+        \column{0.8\textwidth}
+        {
+        \begin{figure}
+          \centering
+          \input{figures/periodic_square_fs_samples_of_envilope}
+          \caption{Fourier series coefficients and their envelope for periodic square wave.}\label{fi:periodic_square_fs_samples_of_envilope}
+        \end{figure}
+        }
+        \column{0.2\textwidth}
+        {
+            \small
+            The Fourier series coefficients and their envelope for periodic square wave for several values of $T$ (with $T_1$ fixed): $T=4T_1$, $T=8T_1$, $T=16T_1$. The coefficients are regularly-spaced samples of the envelope $(2\sin \omega T_1)/\omega$, where the spacing between samples, $2\pi/T$ decreases as $T$ increases.
+        }
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Fourier Transform: Synthesis and Analysis Equations}
+    Inverse Fourier transform:
+    \begin{equation}\label{eq:ift}
+        x(t) = \frac{1}{2\pi}\int_{-\infty}^{\infty}X(j\omega)e^{j\omega t} d\omega.
+    \end{equation}
+    Fourier transform or Fourier integral:
+    \begin{equation}\label{eq:ft}
+        X(j\omega) = \int_{-\infty}^{\infty}x(t)e^{-j\omega t} dt.
+    \end{equation}
+    The transform $X(j\omega)$ of an aperiodic signal $x(t)$ is referred to as the spectrum of $x(t)$.
+\end{frame}
+
+\begin{frame}{Relation with $a_k$}
+    Assume that the Fourier transform of $x(t)$ is $X(j\omega)$.\\
+    If we construct a periodic signal $\tilde{x}(t)$ by repeating the aperiodic signals $x(t)$ with period $T$, its Fourier series coefficients are
+    \begin{equation}
+        a_k = \left.\frac{1}{T}X(j\omega)\right|_{\omega=k\omega_0}
+    \end{equation}
+\end{frame}
+
+\begin{frame}[plain]{Convergence of Fourier Transform}
+    Assume that we evaluated $X(j\omega)$ according to eq. \ref{eq:ft}, and left $\hat{x}(t)$ denote the signal obtained by using $X(j\omega)$ in \ref{eq:ift}:
+    \begin{equation*}
+        \hat{x}(t) = \frac{1}{2\pi}\int_{-\infty}^{\infty}X(j\omega)e^{j\omega t} d\omega.
+    \end{equation*}
+    When is $\hat{x}(t)$  a valid representation of the original signal $x(t)$? We define the error between $\hat{x}(t)$ and $x(t)$ as
+    \begin{equation*}
+        e(t) = \hat{x}(t) - x(t).
+    \end{equation*}
+
+    If $x(T)$ has finite energy (square integrable), i.e.,
+    \begin{equation}
+        \int_{-\infty}^{\infty}|x(t)|^2dt < \infty,
+    \end{equation}
+    $X(j\omega)$ is finite, and
+    \begin{equation}
+        \int_{-\infty}^{\infty}|e(t)|^2dt < \infty,
+    \end{equation}
+    Howler, if $x(t)$ has finite energy, then, although $x(t)$ and its Fourier representation  $\hat{x}(t)$ may differ significantly at individual values of $t$, there is no real energy in their difference.
+\end{frame}
+
+\begin{frame}[plain]{Convergence of Fourier Transform: Dirichlet Conditions}
+    There are alternative conditions sufficient to ensure that  $\hat{x}(t)$ is qual to $x(t)$ for any $t$ except at a discontinuity, where it is equal to the average of the values on either side of the discontinuity.
+    \begin{enumerate}
+        \item $x(t)$ is absolutely integrable, i.e.,
+            \begin{equation}
+                \int_{-\infty}^{\infty}|x(t)|dt < \infty,
+            \end{equation}
+        \item $x(t)$ has a finite number of maxima and minima within any finite interval.
+        \item $x(t)$ has a finite number of of discontinuities within any finite interval. Furthermore, each of these discontinuities must be finite.
+    \end{enumerate}
+    Therefore, absolutely integrable signals that are continuous or that have finite number of discontinuities have a Fourier transform.
+\end{frame}
+
+\begin{frame}
+    \begin{example}
+        Find the Fourier transform of the signal
+        \begin{equation*}
+            x(t) = e^{-at}u(t), \quad a> 0.
+        \end{equation*}
+    \end{example}
+    \pause
+    \mode<beamer>
+    {
+        \begin{equation*}
+            \begin{aligned}
+                X(j\omega) &= \int_{-\infty}^{\infty}x(t)e^{-j\omega t} dt.\\ \pause
+                X(j\omega) &= \int_{0}^{\infty} e^{-at}e^{-j\omega t}dt\\ \pause
+                &= \frac{1}{a+j\omega}\left. e^{-(a+j\omega)t}\right|_{0}^{\infty}\\ \pause
+                X(j\omega) &= \frac{1}{a+j\omega}, \quad a>0.
+            \end{aligned}
+        \end{equation*}
+    }
+\end{frame}
+
+\begin{frame}[plain]
+    \mode<beamer>
+    {
+        \begin{figure}
+          \centering
+          \input{figures/eatut}
+          \caption{Fourier transform of the signal $e^{-at}u(t), \quad a> 0$.}\label{fi:eatut}
+        \end{figure}    
+    }
+\end{frame}
+
+\begin{frame}
+    \begin{example}
+        Find the Fourier transform of the signal
+        \begin{equation*}
+            x(t) = e^{-a|t|}, \quad a> 0.
+        \end{equation*}
+    \end{example}
+    \pause
+    \mode<beamer>
+    {
+        \begin{equation*}
+            \begin{aligned}
+                X(j\omega) &= \int_{-\infty}^{\infty}x(t)e^{-j\omega t} dt.\\ \pause
+                &= \int_{-\infty}^{\infty} e^{-a|t|} e^{-j\omega t} dt.\\ \pause
+                X(j\omega) &= \int_{-\infty}^{0} e^{at}e^{-j\omega t}dt + \int_{0}^{\infty} e^{-at}e^{-j\omega t}dt\\ \pause
+                X(j\omega) &= \frac{1}{a-j\omega} + \frac{1}{a+j\omega},\\
+                &= \frac{2a}{a^2+\omega^2}.
+            \end{aligned}
+        \end{equation*}
+    }
+\end{frame}
+
+\begin{frame}[plain]
+    \mode<beamer>
+    {
+        \begin{figure}
+          \centering
+          \input{figures/eamodt}
+          \caption{Fourier transform of the signal $e^{-a|t|}, \quad a> 0$.}\label{fi:eat}
+        \end{figure}    
+    }
+\end{frame}
+
+
+
+
+\begin{frame}
+    \begin{example}
+        Determine the Fourier transform of the unit impulse
+        \begin{equation*}
+            x(t) = \delta(t).
+        \end{equation*}
+    \end{example}
+    \pause
+    \mode<beamer>
+    {
+        \begin{equation*}
+            X(j\omega) = \int_{-\infty}^{\infty} \delta(t)e^{-j\omega t} dt = 1.
+        \end{equation*}
+        The unit impulse has a Fourier transform consisting of qual contributions at all frequencies.
+    }
+\end{frame}
+
+
+\begin{frame}
+    \begin{example}
+        Determine the Fourier transform of the signal
+        \begin{equation*}
+            x(t) = \begin{cases}
+                1,& |t| < T_1,\\
+                0, & |t| > T_1.
+            \end{cases}
+        \end{equation*}
+    \end{example}
+    \pause
+    \mode<beamer>
+    {
+        \begin{figure}
+          \centering
+          \input{figures/square_pulse}
+          \caption{Rectangular pulse and the Fourier transform.}\label{fi:square_pulse}
+        \end{figure} 
+    }
+\end{frame}
+
+\begin{frame}
+    \mode<beamer>
+    {
+        \begin{equation*}
+            \begin{aligned}
+                X(j\omega) &= \int_{-\infty}^{\infty}x(t)e^{-j\omega t} dt.\\ \pause
+                &= \int_{-T_1}^{T_1} e^{-j\omega t} dt.\\ \pause
+                &= \left.\frac{e^{-j\omega t}}{-j\omega}\right|_{-T_1}^{T_1} \\ \pause
+                &= 2\frac{\sin \omega T_1}{\omega}.\\
+            \end{aligned}
+        \end{equation*}
+    }
+\end{frame}
+
+
+\begin{frame}
+    \begin{example}
+        Consider the signal $x(t)$ whose Fourier transform is
+        \begin{equation*}
+            X(j\omega) = \begin{cases}
+                1,& |\omega| < W,\\
+                0, & |\omega| > W.
+            \end{cases}
+        \end{equation*}
+        Determine $x(t)$.
+        \begin{figure}
+          \centering
+          \input{figures/xomega_square}
+          \caption{Fourier transform for $x(t)$.}\label{fi:xomega_square}
+        \end{figure}
+    \end{example}
+    \pause
+    \mode<beamer>
+    {
+       
+    }
+\end{frame}
+
+
+
+\begin{frame}[plain]
+    \mode<beamer>
+    {
+    
+        Using the synthesis equation:
+        \begin{equation*}
+            \begin{aligned}
+                x(t) &= \frac{1}{2\pi}\int_{-\infty}^{\infty}X(j\omega)e^{j\omega t} d\omega.\\ \pause
+                &= \frac{1}{2\pi}\int_{-W}^{W}e^{j\omega t} d\omega.\\ \pause
+                &= \frac{\sin W t}{\pi t}.\\
+            \end{aligned}
+        \end{equation*} 
+        \pause    
+        \begin{figure}
+          \centering
+          \input{figures/rectift}
+          \caption{Time function.}\label{fi:rectift}
+        \end{figure}
+    }
+\end{frame}
+
+
+
+\begin{frame}{The $\mathrm{sinc}$ Function}
+    \begin{equation}\label{eq:sinc_function}
+        \mathrm{sinc}(\theta) = \frac{\sin \pi \theta}{\pi \theta}.
+    \end{equation}
+    \begin{figure}
+      \centering
+      \input{figures/sinc_function}
+      \caption{Fourier transform for $x(t)$.}\label{fi:sinc_function}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    Express
+    \begin{equation*}
+        \frac{2 \sin \omega T_1}{\omega}
+    \end{equation*}
+    and
+    \begin{equation*}
+        \frac{\sin W t}{\pi t}
+    \end{equation*}
+    as $\mathrm{sinc}$ functions.
+    \pause
+    \mode<beamer>
+    {
+        \begin{equation*}
+            \begin{aligned}
+                \frac{2 \sin \omega T_1}{\omega} &= 2T_1 \mathrm{sinc}\left(\frac{\omega T_1}{\pi}\right)\\ \pause
+                \frac{\sin W t}{\pi t} &= \frac{W}{\pi} \mathrm{sinc}\left(\frac{W t}{\pi}\right)\\ \pause
+            \end{aligned}
+        \end{equation*}
+    }
+\end{frame}
+
+%\subsection{The Fourier Transform for Periodic Signals}
+
+\begin{frame}{The Fourier Transform for Periodic Signals: Introduction}
+    In the previous section, we studied the Fourier transform representation, paying attention to aperiodic signals. We can also develop \ftrs~for periodic signals. This allows us to consider periodic and aperiodic signals in a unified context. We can construct the \ft of a periodic signal directly from its \fsr .
+
+    Consider a signal $x(t)$  with \ft~ $X(j\omega)$ that is a single impulse of area $2\pi$ at $\omega=\omega_0$, i.e.,
+    \begin{equation}
+        X(j\omega) = 2\pi \delta(\omega-\omega_0)
+    \end{equation}
+\end{frame}
+
+\begin{frame}
+    Let's determine the signal $x(t)$:
+    \pause
+    \mode<beamer>
+    {
+        \begin{equation*}
+            \begin{split}
+                x(t) &= \frac{1}{2\pi}\int_{-\infty}^{\infty} 2\pi \delta(\omega-\omega_0)e^{j\omega t} d\omega,\\
+                &= e^{j\omega_0 t}.\\
+            \end{split}
+        \end{equation*}
+        \pause
+        More generally, if $X(j\omega)$ is of the form of a linear combination of impulses equally spaced in frequency, i.e.,
+        \begin{equation}
+             X(j\omega) = \sum_{k=-\infty}^{\infty}2\pi a_k \delta(\omega-k\omega_0)
+        \end{equation}
+        \pause
+        then
+        \begin{equation}
+            x(t) = \sum_{k=-\infty}^{\infty}e^{jk\omega_0 t}.
+        \end{equation}
+        which is exactly the \fsr~ of a periodic signal. \\
+        Thus, the \ft of a periodic signal with \fs~coefficients $\{a_k\}$ can be interpreted as a train of impulses occurring at the harmonically related frequencies and for which the area of the impulse at the $k$th harmonic frequency $k\omega_0$ is $2\pi$ times the $k$th \fs~coefficient $a_k$.
+    }
+
+\end{frame}
+
+
+\begin{frame}[plain]
+    \begin{example}
+        Find the \ft of the square wave signal whose \fs~coefficients are
+        \begin{equation*}
+            a_k = \frac{\sin k \omega_0 T_1}{\pi k}.
+        \end{equation*}
+    \end{example}
+\end{frame}
+
+
+\begin{frame}[plain]
+    \begin{equation*}
+        X(j\omega) = \sum_{k=-\infty}^{\infty}\frac{2\sin k\omega_0 T_1}{k}\delta(\omega-k\omega_0).
+    \end{equation*}
+    \pause
+    \begin{figure}
+      \centering
+      %\input{figures/ft_square_wave}
+      \caption{Fourier transform of a symmetric periodic square wave.}\label{fi:ft_square_wave}
+    \end{figure}
+\end{frame}
+
+
+
+\begin{frame}[plain]
+    \begin{example}
+        Find the \ft of
+            \begin{equation*}
+                x(t) = \sin \omega_0 t.
+            \end{equation*}
+            and
+            \begin{equation*}
+                x(t) = \cos \omega_0 t.
+            \end{equation*}
+    \end{example}
+\end{frame}
+
+\begin{frame}[plain]
+    \begin{example}
+        Find the \ft of the impulse train
+        \begin{equation*}
+            x(t) = \sum_{k=-\infty}^{\infty} \delta(t-kT).
+        \end{equation*}
+    \end{example}
+\end{frame}
+
+
+
