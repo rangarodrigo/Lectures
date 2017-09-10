@@ -54,20 +54,25 @@
 \headcommand {\beamer@framepages {56}{56}}
 \headcommand {\slideentry {1}{2}{20}{57/60}{Development of the Fourier Transform Representation}{0}}
 \headcommand {\beamer@framepages {57}{60}}
-\headcommand {\slideentry {1}{2}{21}{61/61}{Development of the Fourier Transform Representation}{0}}
+\headcommand {\sectionentry {2}{The Fourier Transform for Periodic Signals}{61}{The Fourier Transform for Periodic Signals}{0}}
+\headcommand {\beamer@sectionpages {2}{60}}
+\headcommand {\beamer@subsectionpages {17}{60}}
+\headcommand {\slideentry {2}{0}{1}{61/61}{}{0}}
 \headcommand {\beamer@framepages {61}{61}}
-\headcommand {\slideentry {1}{2}{22}{62/65}{Development of the Fourier Transform Representation}{0}}
-\headcommand {\beamer@framepages {62}{65}}
-\headcommand {\slideentry {1}{2}{23}{66/66}{Development of the Fourier Transform Representation}{0}}
-\headcommand {\beamer@framepages {66}{66}}
-\headcommand {\slideentry {1}{2}{24}{67/68}{Development of the Fourier Transform Representation}{0}}
-\headcommand {\beamer@framepages {67}{68}}
-\headcommand {\slideentry {1}{2}{25}{69/69}{Development of the Fourier Transform Representation}{0}}
-\headcommand {\beamer@framepages {69}{69}}
-\headcommand {\slideentry {1}{2}{26}{70/70}{Development of the Fourier Transform Representation}{0}}
+\headcommand {\slideentry {2}{0}{2}{62/62}{}{0}}
+\headcommand {\beamer@framepages {62}{62}}
+\headcommand {\slideentry {2}{0}{3}{63/66}{}{0}}
+\headcommand {\beamer@framepages {63}{66}}
+\headcommand {\slideentry {2}{0}{4}{67/67}{}{0}}
+\headcommand {\beamer@framepages {67}{67}}
+\headcommand {\slideentry {2}{0}{5}{68/69}{}{0}}
+\headcommand {\beamer@framepages {68}{69}}
+\headcommand {\slideentry {2}{0}{6}{70/70}{}{0}}
 \headcommand {\beamer@framepages {70}{70}}
-\headcommand {\beamer@partpages {1}{70}}
-\headcommand {\beamer@subsectionpages {17}{70}}
-\headcommand {\beamer@sectionpages {2}{70}}
-\headcommand {\beamer@documentpages {70}}
-\headcommand {\def \inserttotalframenumber {31}}
+\headcommand {\slideentry {2}{0}{7}{71/71}{}{0}}
+\headcommand {\beamer@framepages {71}{71}}
+\headcommand {\beamer@partpages {1}{71}}
+\headcommand {\beamer@subsectionpages {61}{71}}
+\headcommand {\beamer@sectionpages {61}{71}}
+\headcommand {\beamer@documentpages {71}}
+\headcommand {\def \inserttotalframenumber {32}}

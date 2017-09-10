@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.26)  10 SEP 2017 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.26)  10 SEP 2017 17:05
 entering extended mode
 **"d Signals and Systems Fourier Transform.tex"
 
@@ -2087,23 +2087,145 @@ Package nag Warning: `center' environment in figure.
 
 ] [66
 
-]
-
-Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 459.
-
-[67
+] [67
 
 ]
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/square_wave_ft.tex"
+PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
+vilope_gen.dat}
+PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
+vilope_4t1.dat}
+
+NOTE: coordinate (-17.2788,-0.115749) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-14.1372,0.141471) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-10.9956,-0.181891) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-7.85398,0.254648) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-4.71239,-0.424413) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-1.5708,1.27324) has been dropped because it is unbounded (in
+ y). (see also unbounded coords=jump). 
+NOTE: coordinate (0,2) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (1.5708,1.27324) has been dropped because it is unbounded (in 
+y). (see also unbounded coords=jump). 
+NOTE: coordinate (4.71239,-0.424413) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (7.85398,0.254648) has been dropped because it is unbounded (i
+n y). (see also unbounded coords=jump). 
+NOTE: coordinate (10.9956,-0.181891) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (14.1372,0.141471) has been dropped because it is unbounded (i
+n y). (see also unbounded coords=jump). 
+NOTE: coordinate (17.2788,-0.115749) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
+vilope_4t1.dat}
+NOTE: coordinate (-18.8496,-7.79634e-17) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-15.708,7.79634e-17) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-12.5664,-7.79634e-17) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-9.42478,7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-6.28319,-7.79634e-17) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-3.14159,7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (3.14159,7.79634e-17) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (6.28319,-7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (9.42478,7.79634e-17) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (12.5664,-7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (15.708,7.79634e-17) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (18.8496,-7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+)
 
 Package nag Warning: `center' environment in figure.
 (nag)                Maybe you want \centering instead on input line 459.
 
 [68
 
-] [69
+]
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/square_wave_ft.tex"
+PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
+vilope_gen.dat}
+PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
+vilope_4t1.dat}
+
+NOTE: coordinate (-17.2788,-0.115749) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-14.1372,0.141471) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-10.9956,-0.181891) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-7.85398,0.254648) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-4.71239,-0.424413) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-1.5708,1.27324) has been dropped because it is unbounded (in
+ y). (see also unbounded coords=jump). 
+NOTE: coordinate (0,2) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (1.5708,1.27324) has been dropped because it is unbounded (in 
+y). (see also unbounded coords=jump). 
+NOTE: coordinate (4.71239,-0.424413) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (7.85398,0.254648) has been dropped because it is unbounded (i
+n y). (see also unbounded coords=jump). 
+NOTE: coordinate (10.9956,-0.181891) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (14.1372,0.141471) has been dropped because it is unbounded (i
+n y). (see also unbounded coords=jump). 
+NOTE: coordinate (17.2788,-0.115749) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
+vilope_4t1.dat}
+NOTE: coordinate (-18.8496,-7.79634e-17) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-15.708,7.79634e-17) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-12.5664,-7.79634e-17) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-9.42478,7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-6.28319,-7.79634e-17) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-3.14159,7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (3.14159,7.79634e-17) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (6.28319,-7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (9.42478,7.79634e-17) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (12.5664,-7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (15.708,7.79634e-17) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (18.8496,-7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 459.
+
+[69
 
 ] [70
+
+] [71
 
 ])
 \tf@nav=\write6
@@ -2120,7 +2242,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `"d Signals and Systems Fourier Transform".ou
 t' has not changed.
-(rerunfilecheck)             Checksum: 4C3DDC3E1CE3B296C95DFE089B7BE802;233.
+(rerunfilecheck)             Checksum: 4610833602B8AEA9244A7CA77386B847;311.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2129,10 +2251,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 42719 strings out of 493673
- 1036890 string characters out of 3145554
- 1552459 words of memory out of 3000000
- 44829 multiletter control sequences out of 15000+200000
+ 42804 strings out of 493673
+ 1039200 string characters out of 3145554
+ 1552306 words of memory out of 3000000
+ 44906 multiletter control sequences out of 15000+200000
  109835 words of font info for 210 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  92i,16n,125p,761b,2483s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2150,10 +2272,10 @@ rogram Files/Miktex/fonts/type1/public/cm-super/sfss1000.pfb><C:/Program Files/
 Miktex/fonts/type1/public/cm-super/sfss1200.pfb><C:/Program Files/Miktex/fonts/
 type1/public/cm-super/sfss1440.pfb><C:/Program Files/Miktex/fonts/type1/public/
 cm-super/sftt1000.pfb>
-Output written on "d Signals and Systems Fourier Transform.pdf" (70 pages, 6256
-63 bytes).
+Output written on "d Signals and Systems Fourier Transform.pdf" (71 pages, 6489
+27 bytes).
 PDF statistics:
- 1909 PDF objects out of 2073 (max. 8388607)
- 161 named destinations out of 1000 (max. 500000)
- 51779 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1942 PDF objects out of 2073 (max. 8388607)
+ 164 named destinations out of 1000 (max. 500000)
+ 51787 words of extra memory for PDF output out of 61914 (max. 10000000)
 
