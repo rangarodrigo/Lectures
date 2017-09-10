@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Continuous-Time Fourier Transform}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Development of the Fourier Transform Representation}{17}{0}{1}

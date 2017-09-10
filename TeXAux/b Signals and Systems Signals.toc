@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Signals}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Sinusoids}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Discrete-Time Sinusoidal Signal}{9}{0}{1}
+\beamer@subsectionintoc {1}{3}{Exponentials}{15}{0}{1}
+\beamer@subsectionintoc {1}{4}{CT Complex Exponentials}{20}{0}{1}
+\beamer@subsectionintoc {1}{5}{Step and Impulse Functions}{36}{0}{1}
+\beamer@subsectionintoc {1}{6}{Signal Energy and Power}{56}{0}{1}

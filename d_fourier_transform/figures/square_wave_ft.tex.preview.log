@@ -1,0 +1,113 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=temp_header 2016.4.15)  10 SEP 2017 15:35
+entering extended mode
+**"C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourie
+r_transform/figures/square_wave_ft.tex.preview.tex"
+
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/square_wave_ft.tex.preview.tex"
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+(square_wave_ft.tex.preview.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+ ABD: EveryShipout initializing macros
+("C:\Program Files\Miktex\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count130
+\scratchdimen=\dimen186
+\scratchbox=\box61
+\nofMPsegments=\count131
+\nofMParguments=\count132
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count133
+\MPscratchDim=\dimen187
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
+\everyMPtoPDFconversion=\toks40
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(0.0pt, 614.295pt, 0.0pt)
+* v-part:(T,H,B)=(0.0pt, 794.96999pt, 0.0pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=614.295pt
+* \textheight=794.96999pt
+* \oddsidemargin=-72.26999pt
+* \evensidemargin=-72.26999pt
+* \topmargin=-72.26999pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Preview: Fontsize 10pt
+Preview: PDFoutput 1
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into 
+your preamble.
+ on input line 2.
+
+PGFPlots: reading {periodic_square_fs_samples_of_envilope_gen.dat}
+PGFPlots: reading {periodic_square_fs_samples_of_envilope_4t1.dat}
+LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+("C:\Program Files\Miktex\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+
+("C:\Program Files\Miktex\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+\metadatafile=\write4
+
+Preview: Tightpage -32891 -32891 32891 32891
+[1{C:/Users/Ranga Rodrigo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(square_wave_ft.tex.preview.aux) ) 
+Here is how much of TeX's memory you used:
+ 898 strings out of 469626
+ 21831 string characters out of 2523309
+ 920674 words of memory out of 3000000
+ 27861 multiletter control sequences out of 15000+200000
+ 8096 words of font info for 31 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 69i,10n,115p,592b,2553s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/Miktex/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><C:/Program Files/Miktex/fonts/type1/public/amsfonts/cm/c
+mmi7.pfb><C:/Program Files/Miktex/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/P
+rogram Files/Miktex/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on square_wave_ft.tex.preview.pdf (1 page, 41004 bytes).
+PDF statistics:
+ 25 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+
