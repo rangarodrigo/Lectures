@@ -103,6 +103,8 @@
 
 
 \begin{frame}{Fourier Transform: Synthesis and Analysis Equations}
+\mode<beamer>
+{
     Inverse Fourier transform:
     \begin{equation}\label{eq:ift}
         x(t) = \frac{1}{2\pi}\int_{-\infty}^{\infty}X(j\omega)e^{j\omega t} d\omega.
@@ -112,14 +114,18 @@
         X(j\omega) = \int_{-\infty}^{\infty}x(t)e^{-j\omega t} dt.
     \end{equation}
     The transform $X(j\omega)$ of an aperiodic signal $x(t)$ is referred to as the spectrum of $x(t)$.
+}
 \end{frame}
 
 \begin{frame}{Relation with $a_k$}
     Assume that the Fourier transform of $x(t)$ is $X(j\omega)$.\\
     If we construct a periodic signal $\tilde{x}(t)$ by repeating the aperiodic signals $x(t)$ with period $T$, its Fourier series coefficients are
+\mode<beamer>
+{    
     \begin{equation}
         a_k = \left.\frac{1}{T}X(j\omega)\right|_{\omega=k\omega_0}
     \end{equation}
+}    
 \end{frame}
 
 \begin{frame}[plain]{Convergence of Fourier Transform}
@@ -131,7 +137,8 @@
     \begin{equation*}
         e(t) = \hat{x}(t) - x(t).
     \end{equation*}
-
+\mode<beamer>
+{
     If $x(t)$ has finite energy (square integrable), i.e.,
     \begin{equation}
         \int_{-\infty}^{\infty}|x(t)|^2dt < \infty,
@@ -141,19 +148,23 @@
         \int_{-\infty}^{\infty}|e(t)|^2dt = 0,
     \end{equation}
     If $x(t)$ has finite energy, then, although $x(t)$ and its Fourier representation  $\hat{x}(t)$ may differ significantly at individual values of $t$, there is no  energy in their difference.
+}    
 \end{frame}
 
 \begin{frame}[plain]{Convergence of Fourier Transform: Dirichlet Conditions}
     There are alternative conditions sufficient to ensure that  $\hat{x}(t)$ is qual to $x(t)$ for any $t$ except at a discontinuity, where it is equal to the average of the values on either side of the discontinuity.
+\mode<beamer>
+{    
     \begin{enumerate}
         \item $x(t)$ is absolutely integrable, i.e.,
             \begin{equation}
                 \int_{-\infty}^{\infty}|x(t)|dt < \infty,
             \end{equation}
         \item $x(t)$ has a finite number of maxima and minima within any finite interval.
-        \item $x(t)$ has a finite number of of discontinuities within any finite interval. Furthermore, each of these discontinuities must be finite.
+        \item $x(t)$ has a finite number of discontinuities within any finite interval. Furthermore, each of these discontinuities must be finite.
     \end{enumerate}
     Therefore, absolutely integrable signals that are continuous or that have finite number of discontinuities have a Fourier transform.
+}    
 \end{frame}
 
 \begin{frame}
@@ -267,7 +278,7 @@
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}{Rectangular Pulse}
     \begin{example}
         Determine the Fourier transform of the signal
         \begin{equation*}
@@ -367,11 +378,14 @@
     \begin{equation}\label{eq:sinc_function}
         \mathrm{sinc}(\theta) = \frac{\sin \pi \theta}{\pi \theta}.
     \end{equation}
+\mode<beamer>
+{    
     \begin{figure}
       \centering
       \input{figures/sinc_function}
       \caption{Fourier transform for $x(t)$.}\label{fi:sinc_function}
     \end{figure}
+}    
 \end{frame}
 
 
@@ -391,10 +405,33 @@
         \begin{equation*}
             \begin{aligned}
                 \frac{2 \sin \omega T_1}{\omega} &= 2T_1 \mathrm{sinc}\left(\frac{\omega T_1}{\pi}\right)\\ \pause
-                \frac{\sin W t}{\pi t} &= \frac{W}{\pi} \mathrm{sinc}\left(\frac{W t}{\pi}\right)\\ \pause
+                \frac{\sin W t}{\pi t} &= \frac{W}{\pi} \mathrm{sinc}\left(\frac{W t}{\pi}\right)\\
             \end{aligned}
         \end{equation*}
     }
+\end{frame}
+
+\begin{frame}{What Happens when $W$ Increases?}
+\mode<beamer>
+{
+    \begin{itemize}[<+->]
+      \item As $W$ increases, $X(j\omega)$ becomes broader, while the main peak of $x(t)$ at $t = 0$ becomes higher and the width of the first lobe of this signal (i.e., the part of the signal for $|t| < \pi/W$) becomes narrower.
+      \item In fact, in the limit as $W \rightarrow \infty$, $X(j\omega) = 1$ for all $\omega$, and consequently, we see that $x(t)$ converges to an impulse as $W \rightarrow \infty$.
+      \item The behavior is an example of the inverse relationship that exists between the time and frequency domains.
+    \end{itemize}
+}    
+\end{frame}
+
+\begin{frame}[plain]
+    \mode<beamer>
+    {
+        \begin{figure}
+          \centering
+          \input{figures/time_freq_scaling}
+          \caption{Effect of changing $W$.}\label{fi:time_freq_scaling}
+        \end{figure}
+    }
+
 \end{frame}
 
 \section{The Fourier Transform for Periodic Signals}
@@ -403,9 +440,12 @@
     In the previous section, we studied the Fourier transform representation, paying attention to aperiodic signals. We can also develop \ftrs~for periodic signals. This allows us to consider periodic and aperiodic signals in a unified context. We can construct the \ft of a periodic signal directly from its \fsr .
 
     Consider a signal $x(t)$  with \ft~ $X(j\omega)$ that is a single impulse of area $2\pi$ at $\omega=\omega_0$, i.e.,
+\mode<beamer>
+{    
     \begin{equation}
         X(j\omega) = 2\pi \delta(\omega-\omega_0)
     \end{equation}
+}    
 \end{frame}
 
 \begin{frame}
@@ -447,6 +487,8 @@
 
 
 \begin{frame}[plain]
+\mode<beamer>
+{
     \begin{equation*}
         X(j\omega) = \sum_{k=-\infty}^{\infty}\frac{2\sin k\omega_0 T_1}{k}\delta(\omega-k\omega_0).
     \end{equation*}
@@ -456,6 +498,7 @@
       \input{figures/square_wave_ft}
       \caption{Fourier transform of a symmetric periodic square wave.}\label{fi:square_wave_ft}
     \end{figure}
+}    
 \end{frame}
 
 
@@ -473,13 +516,100 @@
     \end{example}
 \end{frame}
 
+
+\begin{frame}
+\mode<beamer>
+{
+    \begin{columns}
+        \column{0.5\textwidth}
+
+            \begin{equation*}
+                x(t) = \sin \omega_0 t.
+            \end{equation*}
+            The \fs~coefficients for this signal are
+            \begin{align*}
+                a_1 &= \frac{1}{2j}, &
+                a_{-1} &= -\frac{1}{2j},\\
+                a_k &= 0, k \neq 1 \text{ or }1
+            \end{align*}
+            \pause
+            \begin{figure}
+              \centering
+              \input{figures/ft_sin}
+              \caption{Fourier transform of the $x(t) = \sin \omega_0 t$.}\label{fi:ft_sin}
+            \end{figure}
+            \pause
+        \column{0.5\textwidth}
+
+            \begin{equation*}
+                x(t) = \cos \omega_0 t.
+            \end{equation*}
+            The \fs~coefficients for this signal are
+            \begin{align*}
+                a_1 &= \frac{1}{2},&
+                a_{-1} &= -\frac{1}{2},\\
+                a_k &= 0, k \neq 1 \text{ or }1
+            \end{align*}
+            \pause
+            \begin{figure}
+              \centering
+              \input{figures/ft_cos}
+              \caption{Fourier transform of the $x(t) = \cos \omega_0 t$.}\label{fi:ft_cos}
+            \end{figure}
+
+    \end{columns}
+}
+\end{frame}
+
 \begin{frame}[plain]
     \begin{example}
-        Find the \ft of the impulse train
+        Find the \ft~of the impulse train
         \begin{equation*}
             x(t) = \sum_{k=-\infty}^{\infty} \delta(t-kT).
         \end{equation*}
     \end{example}
+\mode<beamer>
+{
+    \begin{figure}
+        \centering
+        \input{figures/pulse_train}
+        \caption{Pulse train.}\label{fi:pulse_train}
+    \end{figure}
+}    
+\end{frame} 
+
+\begin{frame}
+    %\pause
+    \mode<beamer>
+    {
+        The Fourier series coefficients for this signal:
+        \begin{equation*}
+            a_k = \frac{1}{T}\int_{-T/2}^{T/2} \delta{t}e^{-j\omega_0 t}dt = \frac{1}{T}.
+        \end{equation*}
+        That is, every Fourier coefficient of the periodic impulse train has the same value, $1/T$. Substituting this value for $a_k$
+    \pause
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[draw=red!50, fill=red!10, inner sep=2pt,outer sep=2pt, rounded corners=0.1cm, anchor=south east, yshift=7cm, xshift=-1cm, text width=4cm, align=left]  at (current page.south east) {
+        $
+             X(j\omega) = \sum_{k=-\infty}^{\infty}2\pi a_k \delta(\omega-k\omega_0)
+        $
+        } ;
+    \end{tikzpicture}
+    \pause
+        \begin{equation*}
+            X(j\omega) = \frac{2\pi}{T} \sum_{k=-\infty}^{+\infty}\delta\left(\omega - \frac{2\pi k}{T}\right)
+        \end{equation*}
+    \pause
+    Thus, the Fourier transform of a periodic impulse train in the time domain with period $T$ is a periodic impulse train in the frequency domain with period $2\pi/T$,
+    }
+\end{frame}
+
+\begin{frame}
+    \begin{figure}
+        \centering
+        \input{figures/ft_pulse_train}
+        \caption{Periodic impulse train and its Fourier transform.}\label{fi:ft_pulse_train}
+    \end{figure}
 \end{frame}
 
 

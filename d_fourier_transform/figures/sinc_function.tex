@@ -13,7 +13,7 @@
 		 %ytick={-1, 1},
 		 yticklabels=\empty,
 		 every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
-		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
+		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
      ]
 		%\addplot+[red, smooth, mark=none] table [x={n}, y={xn}] {periodic_square_fs_samples_of_envilope_gen.dat};
 		\addplot [red, thick, domain=-5:5, samples=200] plot{sin(pi*deg(x))/(pi*x)};

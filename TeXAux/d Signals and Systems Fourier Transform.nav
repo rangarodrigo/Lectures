@@ -52,27 +52,37 @@
 \headcommand {\beamer@framepages {52}{55}}
 \headcommand {\slideentry {1}{2}{19}{56/56}{Development of the Fourier Transform Representation}{0}}
 \headcommand {\beamer@framepages {56}{56}}
-\headcommand {\slideentry {1}{2}{20}{57/60}{Development of the Fourier Transform Representation}{0}}
-\headcommand {\beamer@framepages {57}{60}}
-\headcommand {\sectionentry {2}{The Fourier Transform for Periodic Signals}{61}{The Fourier Transform for Periodic Signals}{0}}
-\headcommand {\beamer@sectionpages {2}{60}}
-\headcommand {\beamer@subsectionpages {17}{60}}
-\headcommand {\slideentry {2}{0}{1}{61/61}{}{0}}
-\headcommand {\beamer@framepages {61}{61}}
-\headcommand {\slideentry {2}{0}{2}{62/62}{}{0}}
-\headcommand {\beamer@framepages {62}{62}}
-\headcommand {\slideentry {2}{0}{3}{63/66}{}{0}}
-\headcommand {\beamer@framepages {63}{66}}
-\headcommand {\slideentry {2}{0}{4}{67/67}{}{0}}
-\headcommand {\beamer@framepages {67}{67}}
-\headcommand {\slideentry {2}{0}{5}{68/69}{}{0}}
-\headcommand {\beamer@framepages {68}{69}}
-\headcommand {\slideentry {2}{0}{6}{70/70}{}{0}}
+\headcommand {\slideentry {1}{2}{20}{57/59}{Development of the Fourier Transform Representation}{0}}
+\headcommand {\beamer@framepages {57}{59}}
+\headcommand {\slideentry {1}{2}{21}{60/62}{Development of the Fourier Transform Representation}{0}}
+\headcommand {\beamer@framepages {60}{62}}
+\headcommand {\slideentry {1}{2}{22}{63/63}{Development of the Fourier Transform Representation}{0}}
+\headcommand {\beamer@framepages {63}{63}}
+\headcommand {\sectionentry {2}{The Fourier Transform for Periodic Signals}{64}{The Fourier Transform for Periodic Signals}{0}}
+\headcommand {\beamer@sectionpages {2}{63}}
+\headcommand {\beamer@subsectionpages {17}{63}}
+\headcommand {\slideentry {2}{0}{1}{64/64}{}{0}}
+\headcommand {\beamer@framepages {64}{64}}
+\headcommand {\slideentry {2}{0}{2}{65/65}{}{0}}
+\headcommand {\beamer@framepages {65}{65}}
+\headcommand {\slideentry {2}{0}{3}{66/69}{}{0}}
+\headcommand {\beamer@framepages {66}{69}}
+\headcommand {\slideentry {2}{0}{4}{70/70}{}{0}}
 \headcommand {\beamer@framepages {70}{70}}
-\headcommand {\slideentry {2}{0}{7}{71/71}{}{0}}
-\headcommand {\beamer@framepages {71}{71}}
-\headcommand {\beamer@partpages {1}{71}}
-\headcommand {\beamer@subsectionpages {61}{71}}
-\headcommand {\beamer@sectionpages {61}{71}}
-\headcommand {\beamer@documentpages {71}}
-\headcommand {\def \inserttotalframenumber {32}}
+\headcommand {\slideentry {2}{0}{5}{71/72}{}{0}}
+\headcommand {\beamer@framepages {71}{72}}
+\headcommand {\slideentry {2}{0}{6}{73/73}{}{0}}
+\headcommand {\beamer@framepages {73}{73}}
+\headcommand {\slideentry {2}{0}{7}{74/77}{}{0}}
+\headcommand {\beamer@framepages {74}{77}}
+\headcommand {\slideentry {2}{0}{8}{78/78}{}{0}}
+\headcommand {\beamer@framepages {78}{78}}
+\headcommand {\slideentry {2}{0}{9}{79/82}{}{0}}
+\headcommand {\beamer@framepages {79}{82}}
+\headcommand {\slideentry {2}{0}{10}{83/84}{}{0}}
+\headcommand {\beamer@framepages {83}{84}}
+\headcommand {\beamer@partpages {1}{84}}
+\headcommand {\beamer@subsectionpages {64}{84}}
+\headcommand {\beamer@sectionpages {64}{84}}
+\headcommand {\beamer@documentpages {84}}
+\headcommand {\def \inserttotalframenumber {37}}

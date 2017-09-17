@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.26)  10 SEP 2017 17:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.26)  17 SEP 2017 12:12
 entering extended mode
 **"d Signals and Systems Fourier Transform.tex"
 
@@ -1388,56 +1388,76 @@ arymath.code.tex"
 f.sty"
 Package: beamerfontthemeserif 2010/06/17  (rcs-revision d02a7cf4d8ae)
 ))
+("C:\Program Files\Miktex\tex\latex\beamer\base\themes\theme\beamerthemeCambrid
+geUS.sty"
+Package: beamerthemeCambridgeUS 2010/06/17  (rcs-revision d02a7cf4d8ae)
+
+("C:\Program Files\Miktex\tex\latex\beamer\base\themes\inner\beamerinnerthemero
+unded.sty"
+Package: beamerinnerthemerounded 2010/06/17  (rcs-revision d02a7cf4d8ae)
+)
+("C:\Program Files\Miktex\tex\latex\beamer\base\themes\outer\beamerouterthemein
+folines.sty"
+Package: beamerouterthemeinfolines 2012/10/16  (rcs-revision 51a8c72084af)
+)
+("C:\Program Files\Miktex\tex\latex\beamer\base\themes\color\beamercolorthemebe
+aver.sty"
+Package: beamercolorthemebeaver 2010/06/17  (rcs-revision d02a7cf4d8ae)
+))
+("C:\Program Files\Miktex\tex\latex\beamer\base\themes\color\beamercolorthemero
+se.sty"
+Package: beamercolorthemerose 2010/06/17  (rcs-revision d02a7cf4d8ae)
+)
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 9.
+(hyperref)                removing `\\' on input line 11.
 
 ("d Signals and Systems Fourier Transform.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 13.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 15.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 15.
 
 
 ("C:\Program Files\Miktex\tex\latex\fourier\fmlfutm.fd"
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 13.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 13.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 15.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 15.
 
 
 ("C:\Program Files\Miktex\tex\latex\fourier\fmsfutm.fd"
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 13.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 13.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 15.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 15.
 
 
 ("C:\Program Files\Miktex\tex\latex\fourier\fmxfutm.fd"
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 13.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 15.
 
 ("C:\Program Files\Miktex\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    ... okay on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1447,14 +1467,14 @@ LaTeX Font Info:    ... okay on input line 13.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(28.45274pt, 398.3386pt, 28.45274pt)
+* h-part:(L,W,R)=(9.99756pt, 435.24896pt, 9.99756pt)
 * v-part:(T,H,B)=(0.0pt, 256.0748pt, 0.0pt)
 * \paperwidth=455.24408pt
 * \paperheight=256.0748pt
-* \textwidth=398.3386pt
+* \textwidth=435.24896pt
 * \textheight=227.62207pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
+* \oddsidemargin=-62.27243pt
+* \evensidemargin=-62.27243pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -1488,7 +1508,7 @@ LaTeX Font Info:    ... okay on input line 13.
 \everyMPtoPDFconversion=\toks55
 ) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box86
-Package hyperref Info: Link coloring OFF on input line 13.
+Package hyperref Info: Link coloring OFF on input line 15.
 
 ("C:\Program Files\Miktex\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1498,9 +1518,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count201
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
 
 ("d Signals and Systems Fourier Transform.out")
 ("d Signals and Systems Fourier Transform.out")
@@ -1508,41 +1528,41 @@ LaTeX Info: Redefining \nameref on input line 13.
 \symnumbers=\mathgroup9
 \sympureletters=\mathgroup10
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  T1/futs/m/n --> T1/futs/m/n on input line 13.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 13.
+(Font)                  T1/futs/m/n --> T1/futs/m/n on input line 15.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  T1/futs/bx/n --> T1/futs/bx/n on input line 13.
+(Font)                  T1/futs/bx/n --> T1/futs/bx/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/futs/bx/n --> T1/futs/bx/n on input line 13.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 13.
+(Font)                  T1/futs/bx/n --> T1/futs/bx/n on input line 15.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 13.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 13.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 13.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 15.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  T1/futs/m/it --> T1/futs/m/it on input line 13.
+(Font)                  T1/futs/m/it --> T1/futs/m/it on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/futs/m/it --> T1/futs/m/it on input line 13.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 13.
+(Font)                  T1/futs/m/it --> T1/futs/m/it on input line 15.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 13.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 13.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 15.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/futs/m/n --> T1/futs/bx/n on input line 13.
+(Font)                  T1/futs/m/n --> T1/futs/bx/n on input line 15.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/futs/m/it --> T1/futs/bx/it on input line 13.
+(Font)                  T1/futs/m/it --> T1/futs/bx/it on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  T1/futs/m/n --> T1/futs/bx/n on input line 13.
+(Font)                  T1/futs/m/n --> T1/futs/bx/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/futs/bx/n --> T1/futs/bx/n on input line 13.
+(Font)                  T1/futs/bx/n --> T1/futs/bx/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 13.
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/futs/m/it --> T1/futs/bx/it on input line 13.
+(Font)                  T1/futs/m/it --> T1/futs/bx/it on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 13.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 15.
 
 ("C:\Program Files\Miktex\tex\latex\beamer\base\translator\dicts\translator-bas
 ic-dictionary\translator-basic-dictionary-English.dict"
@@ -1568,23 +1588,23 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary\translator-theorem-dictionary-English.dict"
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 13.
-Package nag Info: pgf.sty is broken: disabling dollar check on input line 13.
+LaTeX Info: Redefining \includegraphics on input line 15.
+Package nag Info: pgf.sty is broken: disabling dollar check on input line 15.
 Package nag Info: Command \frontmatter not defined, skipping amendment on input
- line 13.
+ line 15.
 Package nag Info: Command \mainmatter not defined, skipping amendment on input 
-line 13.
+line 15.
 Package nag Info: Command \backmatter not defined, skipping amendment on input 
-line 13.
+line 15.
 Package nag Info: Command \RaggedLeft not defined, skipping amendment on input 
-line 13.
+line 15.
 Package nag Info: Command \RaggedRight not defined, skipping amendment on input
- line 13.
-LaTeX Font Info:    Redeclaring math symbol \iintop on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \iiintop on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \oiintop on input line 13.
+ line 15.
+LaTeX Font Info:    Redeclaring math symbol \iintop on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \iiintop on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \oiintop on input line 15.
 \c@lstlisting=\count202
-LaTeX Info: Redefining \microtypecontext on input line 13.
+LaTeX Info: Redefining \microtypecontext on input line 15.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1599,18 +1619,18 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package nag Info: Command \caption@xlabel not defined, skipping amendment on in
-put line 13.
+put line 15.
 Package nag Info: Command \captionabove not defined, skipping amendment on inpu
-t line 13.
+t line 15.
 Package nag Info: Command \captionbelow not defined, skipping amendment on inpu
-t line 13.
+t line 15.
 Package nag Info: Command \hc@caption not defined, skipping amendment on input 
-line 13.
+line 15.
 Package nag Info: Command \topcaption not defined, skipping amendment on input 
-line 13.
+line 15.
 
 ("d Signals and Systems Fourier Transform.nav")
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 16.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 18.
 
 ("C:\Program Files\Miktex\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1622,7 +1642,7 @@ Package microtype Info: Loading generic settings for font family
 
 
 LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 16.
+(Font)              size <5> substituted on input line 18.
 
 [1
 
@@ -1633,17 +1653,7 @@ _transform/body.tex" [2
 ] ("d Signals and Systems Fourier Transform.toc")
 [3
 
-]
-LaTeX Font Info:    Try loading font information for TS1+cmss on input line 17.
-
- ("C:\Program Files\Miktex\tex\latex\base\ts1cmss.fd"
-File: ts1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `cmss' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [4
+] [4
 
 ] [5
 
@@ -1651,8 +1661,7 @@ Package microtype Info: Loading generic settings for font family
 
 ] [7
 
-]
-[8
+] [8
 
 ] [9
 
@@ -1737,10 +1746,6 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.25598pt on input line 52.
 )
-Overfull \hbox (20.79074pt too wide) in paragraph at lines 54--49
- [] 
- []
-
 
 Package nag Warning: `center' environment in figure.
 (nag)                Maybe you want \centering instead on input line 49.
@@ -1828,9 +1833,9 @@ Package nag Warning: `center' environment in figure.
 
 ]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 123.
+(Font)              scaled to size 13.24796pt on input line 129.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 123.
+(Font)              scaled to size 13.24796pt on input line 129.
  [25
 
 ] [26
@@ -1842,7 +1847,7 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 _transform/figures/eatut_signal.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 190.
+(nag)                Maybe you want \centering instead on input line 201.
 
 [28
 
@@ -1851,7 +1856,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/eatut_signal.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 190.
+(nag)                Maybe you want \centering instead on input line 201.
 
 [29
 
@@ -1860,7 +1865,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/eatut_signal.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 190.
+(nag)                Maybe you want \centering instead on input line 201.
 
 [30
 
@@ -1869,7 +1874,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/eatut_signal.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 190.
+(nag)                Maybe you want \centering instead on input line 201.
 
 [31
 
@@ -1878,7 +1883,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/eatut_signal.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 190.
+(nag)                Maybe you want \centering instead on input line 201.
 
 [32
 
@@ -1887,10 +1892,10 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/eatut.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 201.
+(nag)                Maybe you want \centering instead on input line 212.
 
 
-Overfull \vbox (2.81755pt too high) detected at line 201
+Overfull \vbox (2.81755pt too high) detected at line 212
  []
 
 [33
@@ -1910,7 +1915,7 @@ Overfull \vbox (2.81755pt too high) detected at line 201
 _transform/figures/eamodt.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 234.
+(nag)                Maybe you want \centering instead on input line 245.
 
 [39
 
@@ -1919,7 +1924,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/unit_impulse.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 267.
+(nag)                Maybe you want \centering instead on input line 278.
 
 [40
 
@@ -1928,7 +1933,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/unit_impulse.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 267.
+(nag)                Maybe you want \centering instead on input line 278.
 
 [41
 
@@ -1937,7 +1942,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/unit_impulse.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 267.
+(nag)                Maybe you want \centering instead on input line 278.
 
 [42
 
@@ -1946,7 +1951,11 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/square_pulse.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 289.
+(nag)                Maybe you want \centering instead on input line 300.
+
+
+Overfull \vbox (2.15274pt too high) detected at line 300
+ []
 
 [43
 
@@ -1955,7 +1964,11 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/square_pulse.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 289.
+(nag)                Maybe you want \centering instead on input line 300.
+
+
+Overfull \vbox (2.15274pt too high) detected at line 300
+ []
 
 [44
 
@@ -1964,7 +1977,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/square_pulse_ft.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 315.
+(nag)                Maybe you want \centering instead on input line 326.
 
 [45
 
@@ -1973,7 +1986,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/square_pulse_ft.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 315.
+(nag)                Maybe you want \centering instead on input line 326.
 
 [46
 
@@ -1982,7 +1995,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/square_pulse_ft.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 315.
+(nag)                Maybe you want \centering instead on input line 326.
 
 [47
 
@@ -1991,7 +2004,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/square_pulse_ft.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 315.
+(nag)                Maybe you want \centering instead on input line 326.
 
 [48
 
@@ -2000,7 +2013,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/square_pulse_ft.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 315.
+(nag)                Maybe you want \centering instead on input line 326.
 
 [49
 
@@ -2009,7 +2022,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/xomega_square.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 339.
+(nag)                Maybe you want \centering instead on input line 350.
 
 [50
 
@@ -2018,7 +2031,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/xomega_square.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 339.
+(nag)                Maybe you want \centering instead on input line 350.
 
 [51
 
@@ -2027,7 +2040,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/rectift.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 362.
+(nag)                Maybe you want \centering instead on input line 373.
 
 [52
 
@@ -2036,7 +2049,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/rectift.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 362.
+(nag)                Maybe you want \centering instead on input line 373.
 
 [53
 
@@ -2045,7 +2058,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/rectift.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 362.
+(nag)                Maybe you want \centering instead on input line 373.
 
 [54
 
@@ -2054,7 +2067,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/rectift.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 362.
+(nag)                Maybe you want \centering instead on input line 373.
 
 [55
 
@@ -2063,7 +2076,7 @@ Package nag Warning: `center' environment in figure.
 _transform/figures/sinc_function.tex")
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 375.
+(nag)                Maybe you want \centering instead on input line 389.
 
 [56
 
@@ -2079,7 +2092,18 @@ Package nag Warning: `center' environment in figure.
 
 ] [62
 
-] [63
+]
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/time_freq_scaling.tex")
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 435.
+
+
+Overfull \vbox (21.8835pt too high) detected at line 435
+ []
+
+[63
 
 ] [64
 
@@ -2089,143 +2113,420 @@ Package nag Warning: `center' environment in figure.
 
 ] [67
 
-]
-("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
-_transform/figures/square_wave_ft.tex"
-PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
-vilope_gen.dat}
-PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
-vilope_4t1.dat}
+] [68
 
-NOTE: coordinate (-17.2788,-0.115749) has been dropped because it is unbounded 
-(in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-14.1372,0.141471) has been dropped because it is unbounded (
-in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-10.9956,-0.181891) has been dropped because it is unbounded 
-(in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-7.85398,0.254648) has been dropped because it is unbounded (
-in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-4.71239,-0.424413) has been dropped because it is unbounded 
-(in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-1.5708,1.27324) has been dropped because it is unbounded (in
- y). (see also unbounded coords=jump). 
-NOTE: coordinate (0,2) has been dropped because it is unbounded (in y). (see al
-so unbounded coords=jump). 
-NOTE: coordinate (1.5708,1.27324) has been dropped because it is unbounded (in 
-y). (see also unbounded coords=jump). 
-NOTE: coordinate (4.71239,-0.424413) has been dropped because it is unbounded (
-in y). (see also unbounded coords=jump). 
-NOTE: coordinate (7.85398,0.254648) has been dropped because it is unbounded (i
-n y). (see also unbounded coords=jump). 
-NOTE: coordinate (10.9956,-0.181891) has been dropped because it is unbounded (
-in y). (see also unbounded coords=jump). 
-NOTE: coordinate (14.1372,0.141471) has been dropped because it is unbounded (i
-n y). (see also unbounded coords=jump). 
-NOTE: coordinate (17.2788,-0.115749) has been dropped because it is unbounded (
-in y). (see also unbounded coords=jump). 
-PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
-vilope_4t1.dat}
-NOTE: coordinate (-18.8496,-7.79634e-17) has been dropped because it is unbound
-ed (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-15.708,7.79634e-17) has been dropped because it is unbounded
- (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-12.5664,-7.79634e-17) has been dropped because it is unbound
-ed (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-9.42478,7.79634e-17) has been dropped because it is unbounde
-d (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-6.28319,-7.79634e-17) has been dropped because it is unbound
-ed (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-3.14159,7.79634e-17) has been dropped because it is unbounde
-d (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (3.14159,7.79634e-17) has been dropped because it is unbounded
- (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (6.28319,-7.79634e-17) has been dropped because it is unbounde
-d (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (9.42478,7.79634e-17) has been dropped because it is unbounded
- (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (12.5664,-7.79634e-17) has been dropped because it is unbounde
-d (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (15.708,7.79634e-17) has been dropped because it is unbounded 
-(in y). (see also unbounded coords=jump). 
-NOTE: coordinate (18.8496,-7.79634e-17) has been dropped because it is unbounde
-d (in y). (see also unbounded coords=jump). 
-)
-
-Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 459.
-
-[68
-
-]
-("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
-_transform/figures/square_wave_ft.tex"
-PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
-vilope_gen.dat}
-PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
-vilope_4t1.dat}
-
-NOTE: coordinate (-17.2788,-0.115749) has been dropped because it is unbounded 
-(in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-14.1372,0.141471) has been dropped because it is unbounded (
-in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-10.9956,-0.181891) has been dropped because it is unbounded 
-(in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-7.85398,0.254648) has been dropped because it is unbounded (
-in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-4.71239,-0.424413) has been dropped because it is unbounded 
-(in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-1.5708,1.27324) has been dropped because it is unbounded (in
- y). (see also unbounded coords=jump). 
-NOTE: coordinate (0,2) has been dropped because it is unbounded (in y). (see al
-so unbounded coords=jump). 
-NOTE: coordinate (1.5708,1.27324) has been dropped because it is unbounded (in 
-y). (see also unbounded coords=jump). 
-NOTE: coordinate (4.71239,-0.424413) has been dropped because it is unbounded (
-in y). (see also unbounded coords=jump). 
-NOTE: coordinate (7.85398,0.254648) has been dropped because it is unbounded (i
-n y). (see also unbounded coords=jump). 
-NOTE: coordinate (10.9956,-0.181891) has been dropped because it is unbounded (
-in y). (see also unbounded coords=jump). 
-NOTE: coordinate (14.1372,0.141471) has been dropped because it is unbounded (i
-n y). (see also unbounded coords=jump). 
-NOTE: coordinate (17.2788,-0.115749) has been dropped because it is unbounded (
-in y). (see also unbounded coords=jump). 
-PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
-vilope_4t1.dat}
-NOTE: coordinate (-18.8496,-7.79634e-17) has been dropped because it is unbound
-ed (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-15.708,7.79634e-17) has been dropped because it is unbounded
- (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-12.5664,-7.79634e-17) has been dropped because it is unbound
-ed (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-9.42478,7.79634e-17) has been dropped because it is unbounde
-d (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-6.28319,-7.79634e-17) has been dropped because it is unbound
-ed (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (-3.14159,7.79634e-17) has been dropped because it is unbounde
-d (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (3.14159,7.79634e-17) has been dropped because it is unbounded
- (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (6.28319,-7.79634e-17) has been dropped because it is unbounde
-d (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (9.42478,7.79634e-17) has been dropped because it is unbounded
- (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (12.5664,-7.79634e-17) has been dropped because it is unbounde
-d (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (15.708,7.79634e-17) has been dropped because it is unbounded 
-(in y). (see also unbounded coords=jump). 
-NOTE: coordinate (18.8496,-7.79634e-17) has been dropped because it is unbounde
-d (in y). (see also unbounded coords=jump). 
-)
-
-Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 459.
-
-[69
+] [69
 
 ] [70
 
-] [71
+]
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/square_wave_ft.tex"
+PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
+vilope_gen.dat}
+PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
+vilope_4t1.dat}
+
+NOTE: coordinate (-17.2788,-0.115749) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-14.1372,0.141471) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-10.9956,-0.181891) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-7.85398,0.254648) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-4.71239,-0.424413) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-1.5708,1.27324) has been dropped because it is unbounded (in
+ y). (see also unbounded coords=jump). 
+NOTE: coordinate (0,2) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (1.5708,1.27324) has been dropped because it is unbounded (in 
+y). (see also unbounded coords=jump). 
+NOTE: coordinate (4.71239,-0.424413) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (7.85398,0.254648) has been dropped because it is unbounded (i
+n y). (see also unbounded coords=jump). 
+NOTE: coordinate (10.9956,-0.181891) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (14.1372,0.141471) has been dropped because it is unbounded (i
+n y). (see also unbounded coords=jump). 
+NOTE: coordinate (17.2788,-0.115749) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
+vilope_4t1.dat}
+NOTE: coordinate (-18.8496,-7.79634e-17) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-15.708,7.79634e-17) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-12.5664,-7.79634e-17) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-9.42478,7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-6.28319,-7.79634e-17) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-3.14159,7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (3.14159,7.79634e-17) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (6.28319,-7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (9.42478,7.79634e-17) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (12.5664,-7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (15.708,7.79634e-17) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (18.8496,-7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 502.
+
+[71
+
+]
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/square_wave_ft.tex"
+PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
+vilope_gen.dat}
+PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
+vilope_4t1.dat}
+
+NOTE: coordinate (-17.2788,-0.115749) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-14.1372,0.141471) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-10.9956,-0.181891) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-7.85398,0.254648) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-4.71239,-0.424413) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-1.5708,1.27324) has been dropped because it is unbounded (in
+ y). (see also unbounded coords=jump). 
+NOTE: coordinate (0,2) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (1.5708,1.27324) has been dropped because it is unbounded (in 
+y). (see also unbounded coords=jump). 
+NOTE: coordinate (4.71239,-0.424413) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (7.85398,0.254648) has been dropped because it is unbounded (i
+n y). (see also unbounded coords=jump). 
+NOTE: coordinate (10.9956,-0.181891) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (14.1372,0.141471) has been dropped because it is unbounded (i
+n y). (see also unbounded coords=jump). 
+NOTE: coordinate (17.2788,-0.115749) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+PGFPlots: reading {d_fourier_transform/figures/periodic_square_fs_samples_of_en
+vilope_4t1.dat}
+NOTE: coordinate (-18.8496,-7.79634e-17) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-15.708,7.79634e-17) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-12.5664,-7.79634e-17) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-9.42478,7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-6.28319,-7.79634e-17) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (-3.14159,7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (3.14159,7.79634e-17) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (6.28319,-7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (9.42478,7.79634e-17) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (12.5664,-7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (15.708,7.79634e-17) has been dropped because it is unbounded 
+(in y). (see also unbounded coords=jump). 
+NOTE: coordinate (18.8496,-7.79634e-17) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 502.
+
+[72
+
+] [73
+
+]
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/ft_sin.tex"
+NOTE: coordinate (-1,-3.414) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (1,3.414) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 22.
+
+ [warning /pgfplots/warning/plot without coordinates]
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 562.
+
+
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/ft_cos.tex"
+NOTE: coordinate (-1,3.414) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (1,3.414) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 20.
+
+ [warning /pgfplots/warning/plot without coordinates]
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 562.
+
+
+Overfull \vbox (3.0928pt too high) detected at line 562
+ []
+
+[74
+
+]
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/ft_sin.tex"
+NOTE: coordinate (-1,-3.414) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (1,3.414) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 22.
+
+ [warning /pgfplots/warning/plot without coordinates]
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 562.
+
+
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/ft_cos.tex"
+NOTE: coordinate (-1,3.414) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (1,3.414) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 20.
+
+ [warning /pgfplots/warning/plot without coordinates]
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 562.
+
+
+Overfull \vbox (3.0928pt too high) detected at line 562
+ []
+
+[75
+
+]
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/ft_sin.tex"
+NOTE: coordinate (-1,-3.414) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (1,3.414) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 22.
+
+ [warning /pgfplots/warning/plot without coordinates]
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 562.
+
+
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/ft_cos.tex"
+NOTE: coordinate (-1,3.414) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (1,3.414) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 20.
+
+ [warning /pgfplots/warning/plot without coordinates]
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 562.
+
+
+Overfull \vbox (3.0928pt too high) detected at line 562
+ []
+
+[76
+
+]
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/ft_sin.tex"
+NOTE: coordinate (-1,-3.414) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (1,3.414) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 22.
+
+ [warning /pgfplots/warning/plot without coordinates]
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 562.
+
+
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/ft_cos.tex"
+NOTE: coordinate (-1,3.414) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (1,3.414) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 20.
+
+ [warning /pgfplots/warning/plot without coordinates]
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 562.
+
+
+Overfull \vbox (3.0928pt too high) detected at line 562
+ []
+
+[77
+
+]
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/pulse_train.tex"
+NOTE: coordinate (-2,1) has been dropped because it is unbounded (in y). (see a
+lso unbounded coords=jump). 
+NOTE: coordinate (-1,1) has been dropped because it is unbounded (in y). (see a
+lso unbounded coords=jump). 
+NOTE: coordinate (0,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (1,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (2,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 28.
+
+ [warning /pgfplots/warning/plot without coordinates]
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 579.
+
+[78
+
+] [79
+
+] [80
+
+] [81
+
+] [82
+
+]
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/ft_pulse_train.tex"
+NOTE: coordinate (-2,1) has been dropped because it is unbounded (in y). (see a
+lso unbounded coords=jump). 
+NOTE: coordinate (-1,1) has been dropped because it is unbounded (in y). (see a
+lso unbounded coords=jump). 
+NOTE: coordinate (0,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (1,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (2,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 28.
+
+ [warning /pgfplots/warning/plot without coordinates]
+NOTE: coordinate (-2,1) has been dropped because it is unbounded (in y). (see a
+lso unbounded coords=jump). 
+NOTE: coordinate (-1,1) has been dropped because it is unbounded (in y). (see a
+lso unbounded coords=jump). 
+NOTE: coordinate (0,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (1,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (2,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 69.
+
+ [warning /pgfplots/warning/plot without coordinates]
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 613.
+
+[83
+
+]
+("C:/Users/Ranga Rodrigo/Documents/Teaching/Year 2017/EN1060/Lectures/d_fourier
+_transform/figures/ft_pulse_train.tex"
+NOTE: coordinate (-2,1) has been dropped because it is unbounded (in y). (see a
+lso unbounded coords=jump). 
+NOTE: coordinate (-1,1) has been dropped because it is unbounded (in y). (see a
+lso unbounded coords=jump). 
+NOTE: coordinate (0,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (1,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (2,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 28.
+
+ [warning /pgfplots/warning/plot without coordinates]
+NOTE: coordinate (-2,1) has been dropped because it is unbounded (in y). (see a
+lso unbounded coords=jump). 
+NOTE: coordinate (-1,1) has been dropped because it is unbounded (in y). (see a
+lso unbounded coords=jump). 
+NOTE: coordinate (0,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (1,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+NOTE: coordinate (2,1) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 69.
+
+ [warning /pgfplots/warning/plot without coordinates]
+)
+
+Package nag Warning: `center' environment in figure.
+(nag)                Maybe you want \centering instead on input line 613.
+
+[84
 
 ])
 \tf@nav=\write6
@@ -2233,13 +2534,13 @@ Package nag Warning: `center' environment in figure.
 \tf@snm=\write8
 
 
-Package nag Warning: 31 complaints in total.
+Package nag Warning: 43 complaints in total.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 51.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
 ("d Signals and Systems Fourier Transform.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 51.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
 Package rerunfilecheck Info: File `"d Signals and Systems Fourier Transform".ou
 t' has not changed.
 (rerunfilecheck)             Checksum: 4610833602B8AEA9244A7CA77386B847;311.
@@ -2248,34 +2549,33 @@ t' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
  ) 
 Here is how much of TeX's memory you used:
- 42804 strings out of 493673
- 1039200 string characters out of 3145554
- 1552306 words of memory out of 3000000
- 44906 multiletter control sequences out of 15000+200000
- 109835 words of font info for 210 fonts, out of 3000000 for 9000
+ 43152 strings out of 493673
+ 1050233 string characters out of 3145554
+ 1556436 words of memory out of 3000000
+ 45207 multiletter control sequences out of 15000+200000
+ 109022 words of font info for 197 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 92i,16n,125p,761b,2483s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/Miktex/fonts/enc/dvips/cm-super/cm-super-t1.enc}{C:/Program
- Files/Miktex/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files/Miktex/fonts/en
-c/dvips/cm-super/cm-super-ts1.enc}<C:/Program Files/Miktex/fonts/type1/public/e
-sint/esint10.pfb><C:/Program Files/Miktex/fonts/type1/public/fourier/fourier-me
-x.pfb><C:/Program Files/Miktex/fonts/type1/public/fourier/fourier-mlit.pfb><C:/
-Program Files/Miktex/fonts/type1/public/fourier/fourier-ms.pfb><C:/Program File
-s/Miktex/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/Mikte
-x/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/Miktex/fonts/type1/adob
-e/utopia/putri8a.pfb><C:/Program Files/Miktex/fonts/type1/public/cm-super/sfss0
-700.pfb><C:/Program Files/Miktex/fonts/type1/public/cm-super/sfss0900.pfb><C:/P
-rogram Files/Miktex/fonts/type1/public/cm-super/sfss1000.pfb><C:/Program Files/
-Miktex/fonts/type1/public/cm-super/sfss1200.pfb><C:/Program Files/Miktex/fonts/
-type1/public/cm-super/sfss1440.pfb><C:/Program Files/Miktex/fonts/type1/public/
-cm-super/sftt1000.pfb>
-Output written on "d Signals and Systems Fourier Transform.pdf" (71 pages, 6489
-27 bytes).
+ 92i,17n,125p,761b,2577s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/Miktex/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files/Mi
+ktex/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Program Files/Miktex/fonts/ty
+pe1/public/esint/esint10.pfb><C:/Program Files/Miktex/fonts/type1/public/fourie
+r/fourier-mex.pfb><C:/Program Files/Miktex/fonts/type1/public/fourier/fourier-m
+lit.pfb><C:/Program Files/Miktex/fonts/type1/public/fourier/fourier-ms.pfb><C:/
+Program Files/Miktex/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program
+ Files/Miktex/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/Miktex/font
+s/type1/adobe/utopia/putri8a.pfb><C:/Program Files/Miktex/fonts/type1/public/cm
+-super/sfss0500.pfb><C:/Program Files/Miktex/fonts/type1/public/cm-super/sfss07
+00.pfb><C:/Program Files/Miktex/fonts/type1/public/cm-super/sfss0900.pfb><C:/Pr
+ogram Files/Miktex/fonts/type1/public/cm-super/sfss1000.pfb><C:/Program Files/M
+iktex/fonts/type1/public/cm-super/sfss1440.pfb><C:/Program Files/Miktex/fonts/t
+ype1/public/cm-super/sftt1000.pfb>
+Output written on "d Signals and Systems Fourier Transform.pdf" (84 pages, 8226
+55 bytes).
 PDF statistics:
- 1942 PDF objects out of 2073 (max. 8388607)
- 164 named destinations out of 1000 (max. 500000)
- 51787 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 2471 PDF objects out of 2487 (max. 8388607)
+ 195 named destinations out of 1000 (max. 500000)
+ 49787 words of extra memory for PDF output out of 51595 (max. 10000000)
 

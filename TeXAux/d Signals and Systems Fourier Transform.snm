@@ -14,4 +14,9 @@
 \beamer@slide {fi:rectift}{52}
 \beamer@slide {eq:sinc_function}{56}
 \beamer@slide {fi:sinc_function}{56}
-\beamer@slide {fi:square_wave_ft}{68}
+\beamer@slide {fi:time_freq_scaling}{63}
+\beamer@slide {fi:square_wave_ft}{71}
+\beamer@slide {fi:ft_sin}{74}
+\beamer@slide {fi:ft_cos}{74}
+\beamer@slide {fi:pulse_train}{78}
+\beamer@slide {fi:ft_pulse_train}{83}
