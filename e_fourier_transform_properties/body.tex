@@ -128,7 +128,7 @@ Analysis equation:
                 \begin{equation*}
                     X(-j\omega) = X^\ast(j\omega)\quad [x(t) \text{ real}]
                 \end{equation*}
-            
+
         \end{columns}
 
 
@@ -150,7 +150,7 @@ Analysis equation:
 \begin{frame}
     Expressing $X(j\omega)$ in rectangular form as
     \begin{equation*}
-        X(j\omega) 
+        X(j\omega)
         = \mathfrak{Re}\left\{X(j\omega)\right\} + j\mathfrak{Im}\left\{X(j\omega)\right\},
     \end{equation*}
    % \pause
@@ -182,15 +182,15 @@ Considering
     With the substitution $\tau = -t$
     \begin{equation*}
         X(-j\omega) = \int_{-\infty}^{\infty} x(-\tau)e^{-j\omega \tau}d\tau
-    \end{equation*}    
+    \end{equation*}
     Since $x(-\tau) = x(\tau)$ we have
     \begin{equation*}
         X(-j\omega) = \int_{-\infty}^{\infty} x(\tau)e^{j\omega \tau}d\tau
-    \end{equation*} 
-       
+    \end{equation*}
+
     \begin{equation*}
         X(-j\omega) = X(j\omega)
-    \end{equation*}  
+    \end{equation*}
     In a similar manner, it can be shown that if $x(t)$ is a real and odd function of time, so that $x(t) = - x(- t)$, then $X(j\omega)$ is purely imaginary and odd.
 
 }
@@ -202,7 +202,7 @@ Considering
     \begin{equation*}
         x(t) = x_e(t) + x_o(t),
     \end{equation*}
-    where $x_e(t) = \mathfrak{Ev}\left\{x(t)\right\}$ is the even part of $x(t)$ and $x_o(t) = \mathfrak{Od}\left\{x(t)\right\}$ is the odd part of $x(t)$. Express Fourier transforms of 
+    where $x_e(t) = \mathfrak{Ev}\left\{x(t)\right\}$ is the even part of $x(t)$ and $x_o(t) = \mathfrak{Od}\left\{x(t)\right\}$ is the odd part of $x(t)$. Express Fourier transforms of
     \begin{enumerate}
       \item $x_e(t) = \mathfrak{Ev}\left\{x(t)\right\}$, and
       \item $x_o(t) = \mathfrak{Od}\left\{x(t)\right\}$.
@@ -240,15 +240,15 @@ Considering
             \begin{equation*}
                 e^{-at} \overset{\mathcal{F}}{\longleftrightarrow} \frac{1}{a+j\omega}.
             \end{equation*}
-            
+
             \begin{align*}
                 x(t) &= e^{-a|t|} = e^{-at}u(t) + e^{at}u(-t)\\
                 &= 2\left[\frac{e^{-at}u(t) + e^{at}u(-t)}{2}\right]\\
                 &= 2\mathfrak{Ev}\left\{ e^{-at}u(t)\right\}.
             \end{align*}
-        
-        \column{0.5\textwidth}   
-            Since $e^{-at}u(t)$is real valued, the symmetry properties of the Fourier transform lead us to conclude that     
+
+        \column{0.5\textwidth}
+            Since $e^{-at}u(t)$is real valued, the symmetry properties of the Fourier transform lead us to conclude that
             \begin{equation*}
                 \mathfrak{Ev}\left\{ e^{-at}u(t)\right\} \overset{\mathcal{F}}{\longleftrightarrow} \mathfrak{Re}\left\{ \frac{1}{a+j\omega}\right\}.
             \end{equation*}
@@ -525,7 +525,7 @@ Considering
       \input{figures/conv_prop}
       \caption{Convolution property.}\label{fi:conv_prop}
     \end{figure}
-    
+
 \end{frame}
 
 
@@ -565,7 +565,7 @@ Considering
         Y(j\omega) = j\omega X(j\omega).
     \end{equation*}
     \pause
-    Consequently, the frequency response of the differentiator is 
+    Consequently, the frequency response of the differentiator is
     \begin{equation*}
         H(j\omega) = j\omega.
     \end{equation*}
@@ -574,15 +574,15 @@ Considering
 
 \begin{frame}
     \begin{example}
-        Consider the response of an LTI system with impulse response 
+        Consider the response of an LTI system with impulse response
         \begin{equation*}
             h(t) = e^{-at}u(t), \quad a>0,
         \end{equation*}
-        to the input signal 
+        to the input signal
         \begin{equation*}
             x(t) = e^{-bt}u(t), \quad b>0.
-        \end{equation*}   
-        Rather than computing $y(t) = x(t) \ast h(t)$ directly, find $y(t)$ by transfroming the problem into the frequency domain.     
+        \end{equation*}
+        Rather than computing $y(t) = x(t) \ast h(t)$ directly, find $y(t)$ by transfroming the problem into the frequency domain.
     \end{example}
 \end{frame}
 
@@ -595,12 +595,12 @@ Considering
         \pause
         \begin{equation*}
             X(j\omega) = \frac{1}{a+j\omega}
-        \end{equation*}  
+        \end{equation*}
         \pause
-        Therefore,  
+        Therefore,
         \begin{equation*}
             Y(j\omega) = \frac{1}{(a+j\omega)(b+j\omega)}
-        \end{equation*}          
+        \end{equation*}
         To determine the output $y(t)$, we wish to obtain the inverse transform of $Y(j\omega)$. This is most simply done by expanding $Y(j\omega)$ in a partial-fraction expansion.
     }
 \end{frame}
@@ -634,23 +634,23 @@ Considering
         For the case $a=b$,
         \begin{equation*}
             Y(j\omega) = \frac{1}{(a+j\omega)^2}.
-        \end{equation*}   
+        \end{equation*}
         \pause
         Recognizing this as
         \begin{equation*}
-            \frac{1}{(a+j\omega)^2} = j\frac{d}{d\omega}\left[{1}{a+j\omega}\right],
-        \end{equation*}   
+            \frac{1}{(a+j\omega)^2} = j\frac{d}{d\omega}\left[\frac{1}{a+j\omega}\right],
+        \end{equation*}
         we can use the dual of the differentiation property,
         \begin{equation*}
             e^{-at}u(t) \overset{\mathcal{F}}{\longleftrightarrow} \frac{1}{a+j\omega}
         \end{equation*}
         \begin{equation*}
             te^{-at}u(t) \overset{\mathcal{F}}{\longleftrightarrow} j\frac{d}{d\omega}\left[\frac{1}{a+j\omega}\right] = \frac{1}{(a+j\omega)^2},
-        \end{equation*}    
+        \end{equation*}
         and consequently,
         \begin{equation*}
             y(t) = te^{-at}u(t).
-        \end{equation*}    
+        \end{equation*}
     }
 \end{frame}
 
