@@ -185,7 +185,7 @@ Considering
     \end{equation*}
     Since $x(-\tau) = x(\tau)$ we have
     \begin{equation*}
-        X(-j\omega) = \int_{-\infty}^{\infty} x(\tau)e^{j\omega \tau}d\tau
+        X(-j\omega) = \int_{-\infty}^{\infty} x(\tau)e^{-j\omega \tau}d\tau
     \end{equation*}
 
     \begin{equation*}
@@ -457,7 +457,7 @@ Considering
         X(j\omega) =  \frac{2}{1+\omega^2}.
     \end{equation*}
     \begin{equation*}
-        x(t) = e^{-2|t|} \overset{\mathcal{F}}{\longleftrightarrow}  X(j\omega) =  \frac{2}{1+\omega^2}.
+        x(t) = e^{-|t|} \overset{\mathcal{F}}{\longleftrightarrow}  X(j\omega) =  \frac{2}{1+\omega^2}.
     \end{equation*}
     }
 \end{frame}
@@ -468,22 +468,22 @@ Considering
     {
     The synthesis equation for this Fourier transform pair is \pause
     \begin{equation*}
-        e^{-2|t|} = \frac{1}{2\pi}\int_{-\infty}^{\infty}\left(\frac{2}{1+\omega^2}\right)e^{j\omega t}d\omega.
+        e^{-|t|} = \frac{1}{2\pi}\int_{-\infty}^{\infty}\left(\frac{2}{1+\omega^2}\right)e^{j\omega t}d\omega.
     \end{equation*}
     \pause
     Multiplying this equation by $2\pi$ and replacing $t$ by $-t$\pause
     \begin{equation*}
-        2\pi e^{-2|t|} = \int_{-\infty}^{\infty}\left(\frac{2}{1+\omega^2}\right)e^{-j\omega t}d\omega.
+        2\pi e^{-|t|} = \int_{-\infty}^{\infty}\left(\frac{2}{1+\omega^2}\right)e^{-j\omega t}d\omega.
     \end{equation*}
     \pause
     Now interchanging the names of variables $t$ and $\omega$\pause
     \begin{equation*}
-        2\pi e^{-2|\omega|} = \int_{-\infty}^{\infty}\left(\frac{2}{1+t^2}\right)e^{-j\omega t}dt.
+        2\pi e^{-|\omega|} = \int_{-\infty}^{\infty}\left(\frac{2}{1+t^2}\right)e^{-j\omega t}dt.
     \end{equation*}
     \pause
     The right-hand side of this expression is the Fourier transform analysis equation for $2/(1+t^2)$.   Thus
     \begin{equation*}
-        \mathcal{F}\left\{ \frac{2}{1+t^2}\right\} =  2\pi e^{-2|\omega|}.
+        \mathcal{F}\left\{ \frac{2}{1+t^2}\right\} =  2\pi e^{-|\omega|}.
     \end{equation*}
     }
 \end{frame}
