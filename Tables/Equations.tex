@@ -1,6 +1,6 @@
 \section*{Equations}
 \subsection*{Fourier}
-\centering
+{\centering
 {\renewcommand{\arraystretch}{4}%
     \begin{tabular}{lcc}
 
@@ -40,3 +40,12 @@
         \cline{2-3}
     \end{tabular}
     }
+}
+    \subsection*{Trigonometric Fourier Series}
+
+    \begin{align*}
+        x(t) &= a_0 + \sum_{k=1}^{\infty}a_k \cos(k\omega_0 t) + \sum_{k=1}^{\infty}b_k \sin(k\omega_0 t).\\
+        a_0 &= \frac{1}{T}\int_T x(t)dt.\\
+        a_k &= \frac{2}{T}\int_T x(t)\cos(k\omega_0 t)dt.\\
+        b_k &= \frac{2}{T}\int_T x(t)\sin(k\omega_0 t)dt.
+    \end{align*}
