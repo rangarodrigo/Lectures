@@ -1,3 +1,61 @@
+\section{Introduction}
+\begin{frame}{Systems}
+    \begin{itemize}[<+->]
+        \item A system processes signals.
+        \item Examples of systems:
+            \begin{itemize}
+                \item Dynamics of an aircraft.
+                \item An algorithm for analyzing financial and economic factors to predict bond prices.
+                \item An algorithm for post-flight analysis of a space launch.
+                \item An edge detection algorithm for medical images.
+            \end{itemize}
+    \end{itemize}
+
+\begin{figure}
+    \centering
+    %\begin{subfigure}[t]{0.5\textwidth}
+        %\centering
+        \input{figures/ct_system}
+        %\caption{CT system}
+    %\end{subfigure}%
+    %~
+    %\begin{subfigure}[t]{0.5\textwidth}
+        %\centering
+        \input{figures/dt_system}
+        %\caption{DT system}
+    %\end{subfigure}
+    \caption{CT and DT Systems.}\label{fi:ct_dt_systems}
+\end{figure}
+
+
+\end{frame}
+
+\begin{frame}[plain]{Types of Systems}
+    \begin{figure}
+        \centering
+        \input{figures/system_types}
+        \caption{System types.}\label{fi:system_types}
+    \end{figure}
+    This course is focused on the class of linear, time-invariant (LTI) systems.
+\end{frame}
+
+
+\begin{frame}{Systems Interconnections}
+    \begin{itemize}
+      \item To build more complex systems by interconnecting simpler subsystems.
+      \item To modify the response of a system.
+      \item E.g.: amplifier design, stabilizing unstable systems.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[plain]{Signal-Flow (Block) Diagrams}
+    \begin{figure}
+        \centering
+        \input{figures/sys_interconnections}
+        \caption{System interconnections.}\label{fi:sys_interconnections}
+    \end{figure}
+\end{frame}
+
 \section{Basic System Properties}
 
 \begin{frame}{Systems with and without Memory}
@@ -283,10 +341,10 @@
             \pause
             \begin{align*}
               x[n] &= x[-2]\delta[n+2] \\
-              &  x[-1]\delta[n+1] \\
-              &  x[0]\delta[n] \\
-              &  x[1]\delta[n-1] \\
-              &  x[2]\delta[n-2] \\
+              &  + x[-1]\delta[n+1] \\
+              &  + x[0]\delta[n] \\
+              &  + x[1]\delta[n-1] \\
+              &  + x[2]\delta[n-2] \\
               x[n] &= \sum_{k=-\infty}^{\infty}x[k]\delta[n-k].
             \end{align*}
             A linear combination of weighted delayed impulses.
@@ -2043,7 +2101,7 @@ $z_k$ complex $\Rightarrow$ $z$-transform
 %            \column{0.48\textwidth}
 %        \end{columns}
 %    }
-%\end{frame} 
+%\end{frame}
 
 
 %\begin{frame}{}
