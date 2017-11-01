@@ -3,8 +3,8 @@
 \begin{frame}{Introduction}
     \begin{itemize}[<+->]
         \item Now, we have studied Fourier series and Fourier transform for CT signals.
-        \item In this lesson we will develop similar tool for discrete time.
-        \item Specifically, we consider the representation of discrete-time signals though a decomposition as a linear combination of complex exponentials.
+        \item In this lesson we will develop a similar tool for discrete time.
+        \item Specifically, we consider the representation of discrete-time signals through a decomposition as a linear combination of complex exponentials.
             \begin{itemize}
                 \item DT periodic signals $\rightarrow$ DT Fourier series
                 \item DT aperiodic signals $\rightarrow$ DT Fourier transform
@@ -58,15 +58,25 @@
 \end{frame}
 
 
+
+
 \begin{frame}{Discrete-Time Fourier Series}
     \mode<beamer>
     {
         \begin{columns}
             \column{0.48\textwidth}
-                $x[n]$ periodic\par
-                period $N$\par
-                fundamental frequency $\omega_0 = \frac{2\pi}{N}$\par
+                Consider $x[n]$ to be periodic,\par
+                Period $N$,\par
+                Fundamental frequency $\omega_0 = \frac{2\pi}{N}$\par
+                $e^{jk\omega_0 n}$ are harmonically related, and periodic with the period $N$, although the fundamental period is different.
                 $e^{jk\omega_0 n} = e^{j(k+N)\omega_0 n}$\par
+                \par\pause
+                Consider the complex exponential 
+                \begin{equation*}
+                    e^{jk\omega_0n} = e^{j(k+N)\omega_0n}
+                \end{equation*}  
+                $\Rightarrow$ Only $N$ distinct complex exponentials.              
+            \column{0.48\textwidth}
                 \begin{equation*}
                     x[n] = \sum_k a_k e^{jk\omega_0 n}, \quad k = 0,1, 2, \dots, N-1.
                 \end{equation*}
@@ -76,13 +86,25 @@
                 $N$ equations in $N$ unknowns.
                 \begin{equation*}
                     a_k = \frac{1}{N}\sum_{<N>} x[n]e^{-jk\omega_0 n}.
-                \end{equation*}
+                \end{equation*} 
+                $k = <N>$: $k$ ranges over one period (as $a_k$ periodically repeats).                
+        \end{columns}
+    }
+\end{frame}
+
+
+\begin{frame}{Discrete-Time Fourier Series}
+    \mode<beamer>
+    {
+        \begin{columns}
             \column{0.48\textwidth}
             \textbf{Continuous-Time}\par
             \begin{align*}
                 x(t) &= \sum_{k=-\infty}^{\infty}a_k e^{jk\omega_0 t}\\
                 a_k &= \frac{1}{T} \int_{T} x(t)e^{-jk\omega_0 t}dt
             \end{align*}
+            \column{0.48\textwidth}
+
             \textbf{Discrete-Time Fourier Series}
             \mode<beamer>
             {
@@ -93,10 +115,13 @@
                 \text{Analysis} &\\
                 a_k &= \frac{1}{N}\sum_{n=<N>} x[n]e^{-jk\omega_0 n}  = \frac{1}{N}\sum_{n=<N>} x[n]e^{-jk(2\pi/N) n}.
             \end{align*}
+            \pause
+            Note the duality.
             }
         \end{columns}
     }
 \end{frame}
+
 
 
 \begin{frame}
@@ -109,10 +134,10 @@
             \textbf{Periodicity}
                 \begin{equation*}
                     \begin{array}{lll}
-                        x[n] & \text{periodic in } n & \text{true for CT}\\
-                        e^{jk\omega_0 n} & \text{periodic in } n &\text{true for CT}\\
-                        e^{jk\omega_0 n} & \text{periodic in } k &\text{not true for CT}\\
-                        a_k &  \text{periodic in } k &\text{not true for CT}
+                        x[n] & \text{periodic in } n, & \text{true for CT}\\
+                        e^{jk\omega_0 n} & \text{periodic in } n, &\text{true for CT}\\
+                        e^{jk\omega_0 n} & \text{periodic in } k, &\text{\alert{not true for CT}}\\
+                        a_k &  \text{periodic in } k, &\text{\alert{not true for CT}}
                     \end{array}
                 \end{equation*}
             \column{0.48\textwidth}
@@ -136,6 +161,46 @@
             There is no issue of convergence in DT.
         \end{columns}
     }
+\end{frame}
+
+\begin{frame}
+    \begin{example}
+        Consider the signal 
+        \begin{enumerate}
+            \item When is this signal periodic?
+            \item If it is periodic, what are discrete-time Forrier series coefficients?
+        \end{enumerate}
+    \end{example}
+    \pause
+    \mode<beamer>
+    {
+        This is the DT counterpart of $x(t) = \sin \omega_0 t$. $x[n]$ is periodic only if $2\pi/\omega_0$ is an integer or a ratio of integers. For the case when $2\pi/\omega_0$ is an integer $N$, i.e., when 
+        \begin{equation*}
+            \omega_0 = \frac{2\pi}{N},
+        \end{equation*}
+        $x[n]$ is periodic with fundamental period $N$.
+    }
+    \pause
+    \mode<beamer>
+    {
+        Expanding the signal as a sum of two complex exponentials, 
+        \begin{equation}
+            x[n] = \frac{1}{2j}e^{j(2\pi/N)n} - \frac{1}{2j}e^{-j(2\pi/N)n}.
+        \end{equation}
+        \pause
+        \begin{equation*}
+            a_1 = \frac{1}{2j}, \quad a_{-1} = -\frac{1}{2j}.
+        \end{equation*}
+    }    
+    
+\end{frame}
+
+\begin{frame}{Fourier Coefficients for $x[n] = \sin(2\pi/N)n$ for $N=5$ }
+    \begin{figure}
+        \centering
+        \input{figures/example31}
+        \caption{Fourier coefficients for $x[n] = \sin(2\pi/5)n$.}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Example}
@@ -167,7 +232,7 @@
     \begin{figure}
         \centering
         \input{figures/dtfs_square_wave}
-    \end{figure}   
+    \end{figure}
 \end{frame}
 
 %\begin{frame}{}
