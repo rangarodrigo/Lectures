@@ -71,11 +71,11 @@
                 $e^{jk\omega_0 n}$ are harmonically related, and periodic with the period $N$, although the fundamental period is different.
                 $e^{jk\omega_0 n} = e^{j(k+N)\omega_0 n}$\par
                 \par\pause
-                Consider the complex exponential 
+                Consider the complex exponential
                 \begin{equation*}
                     e^{jk\omega_0n} = e^{j(k+N)\omega_0n}
-                \end{equation*}  
-                $\Rightarrow$ Only $N$ distinct complex exponentials.              
+                \end{equation*}
+                $\Rightarrow$ Only $N$ distinct complex exponentials.
             \column{0.48\textwidth}
                 \begin{equation*}
                     x[n] = \sum_k a_k e^{jk\omega_0 n}, \quad k = 0,1, 2, \dots, N-1.
@@ -86,8 +86,8 @@
                 $N$ equations in $N$ unknowns.
                 \begin{equation*}
                     a_k = \frac{1}{N}\sum_{<N>} x[n]e^{-jk\omega_0 n}.
-                \end{equation*} 
-                $k = <N>$: $k$ ranges over one period (as $a_k$ periodically repeats).                
+                \end{equation*}
+                $k = <N>$: $k$ ranges over one period (as $a_k$ periodically repeats).
         \end{columns}
     }
 \end{frame}
@@ -165,7 +165,7 @@
 
 \begin{frame}
     \begin{example}
-        Consider the signal 
+        Consider the signal
         \begin{enumerate}
             \item When is this signal periodic?
             \item If it is periodic, what are discrete-time Forrier series coefficients?
@@ -174,7 +174,7 @@
     \pause
     \mode<beamer>
     {
-        This is the DT counterpart of $x(t) = \sin \omega_0 t$. $x[n]$ is periodic only if $2\pi/\omega_0$ is an integer or a ratio of integers. For the case when $2\pi/\omega_0$ is an integer $N$, i.e., when 
+        This is the DT counterpart of $x(t) = \sin \omega_0 t$. $x[n]$ is periodic only if $2\pi/\omega_0$ is an integer or a ratio of integers. For the case when $2\pi/\omega_0$ is an integer $N$, i.e., when
         \begin{equation*}
             \omega_0 = \frac{2\pi}{N},
         \end{equation*}
@@ -183,7 +183,7 @@
     \pause
     \mode<beamer>
     {
-        Expanding the signal as a sum of two complex exponentials, 
+        Expanding the signal as a sum of two complex exponentials,
         \begin{equation}
             x[n] = \frac{1}{2j}e^{j(2\pi/N)n} - \frac{1}{2j}e^{-j(2\pi/N)n}.
         \end{equation}
@@ -191,8 +191,8 @@
         \begin{equation*}
             a_1 = \frac{1}{2j}, \quad a_{-1} = -\frac{1}{2j}.
         \end{equation*}
-    }    
-    
+    }
+
 \end{frame}
 
 \begin{frame}{Fourier Coefficients for $x[n] = \sin(2\pi/N)n$ for $N=5$ }
@@ -227,6 +227,38 @@
     \pause
 \end{frame}
 
+
+\begin{frame}
+    \mode<beamer>
+    {
+        \begin{align*}
+                a_k &= \frac{1}{N}\sum_{n=-N_1}^{N_1}e^{-jk(2\pi/N)n}\\
+                \text{Letting~} m = n+N_1&\pause\\
+                &= \frac{1}{N}\sum_{m=0}^{2N_1}e^{-jk(2\pi/N)/(m- N_1)}\\
+                2N_1 + 1\text{~terms in a geometric series}&\\
+                &= \frac{1}{N}e^{jk(2\pi/N)N_1}\left[\frac{1 - e^{-jk(2\pi/N)(2N_1 + 1)}}{1 - e^{-jk(2\pi/N)}}\right]\pause\\
+                &=  \frac{1}{N} e^{jk(2\pi/N)N_1} \cdot
+                \frac{
+                    e^{-j\frac{k(2\pi/N)(2N_1+1)}{2}}
+                }{
+                e^{-j\frac{k(2\pi/N)}{2}}
+                } \left[
+                \frac{e^{j\frac{k(2\pi/N)(2N_1+1)}{2}}  - e^{-j\frac{k(2\pi/N)(2N_1+1)}{2}} }
+                {e^{j\frac{k(2\pi/N)}{2}} - e^{-j\frac{k(2\pi/N)}{2}}}\right]\pause\\
+                &=  \frac{1}{N} \frac{\sin\left[ \frac{k(2\pi/N)(2N_1+1)}{2} \right]}{\sin\left[\frac{k(2\pi/N)}{2}\right]}\pause\\
+        \end{align*}
+    }
+\end{frame}
+
+\begin{frame}
+    \mode<beamer>
+    {
+        \begin{align*}
+                a_k &=  \frac{1}{N} \frac{\sin\left[ 2\pi k(N_1+1/2)/N \right]}{\sin(\pi k/N)}\quad k \neq 0, \pm N, \pm 2N, \dots\\
+                a_k &= \frac{2N_1+1}{N}\quad k = 0, \pm N, \pm 2N, \dots.
+        \end{align*}
+    }
+\end{frame} 
 
 \begin{frame}
     \begin{figure}

@@ -1,18 +1,20 @@
+%& C:\Users\RANGAR~1\AppData\Roaming\TikzEdt\TikzEdt\023~1.0\TEMP_H~1
+\begin{document}
 \begin{tikzpicture}[scale=1]	
 
 
     \begin{axis}[
     		name=axis1,
-		y=0.25cm,
+		y=0.4cm,
 		x=0.8cm,
 		 clip=false,
 		 xmin=-3.5,xmax=10,
-		 xlabel= $k$,
+		 xlabel= $\omega$,
 		 ylabel={$Na_k$},
 		 ymin=-1.5,ymax=6,
 		 axis lines=middle,
-         xtick={-3.1416, -2.513, -1.885, -1.257, -0.6283, 0, 0.6283, 1.257, 1.885, 2.513, 3.1416, 6.2832},
-         xticklabels={-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 10 },
+         	xtick={-3.1416, 3.1416, 6.2832},
+         	xticklabels={$-\pi$, $\pi$, $2\pi$},
 		 %ytick={-1, 1},
 		 yticklabels=\empty,
 		 every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
@@ -28,17 +30,16 @@
 %\pause
     \begin{axis}[
     	name=axis2,
-        	at={($(axis1.south east)+(0,-0.5cm)$)},anchor=north east,    
-		y=0.25cm,
+		y=0.4cm,
 		x=0.8cm,
 		 clip=false,
 		 xmin=-3.5,xmax=10,
-		 xlabel= $k$,
+		 xlabel= $\omega$,
 		 ylabel={$Na_k$},
 		 ymin=-1.5,ymax=6,
 		 axis lines=middle,
-         xtick={-3.1416, -2.513, -1.885, -1.257, -0.6283, 0, 0.6283, 1.257, 1.885, 2.513, 3.1416, 6.2832},
-         xticklabels={-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 20 },
+         	xtick={-3.1416, 3.1416, 6.2832},
+         	xticklabels={$-\pi$, $\pi$, $2\pi$},
 		 %ytick={-1, 1},
 		 yticklabels=\empty,
 		 every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
@@ -53,17 +54,17 @@
 %\pause
         \begin{axis}[
     	name=axis3,
-    	at={($(axis2.south east)+(0,-0.5cm)$)},anchor=north east,
-		y=0.25cm,
+    	at={($(axis2.south east)+(0,-1.1cm)$)},anchor=north east,
+		y=0.4cm,
 		x=0.8cm,
 		 clip=false,
 		 xmin=-3.5,xmax=10,
-		 xlabel= $k$,
+		 xlabel= $\omega$,
 		 ylabel={$Na_k$},
 		 ymin=-1.5,ymax=6,
 		 axis lines=middle,
-         xtick={-3.1416, -2.513, -1.885, -1.257, -0.6283, 0, 0.6283, 1.257, 1.885, 2.513, 3.1416, 6.2832},
-         xticklabels={-20, -16, -12, -8, -4, 0, 4, 8, 12, 16, 20, 40 },
+         	xtick={-3.1416, 3.1416, 6.2832},
+         	xticklabels={$-\pi$, $\pi$, $2\pi$},
 		 %ytick={-1, 1},
 		 yticklabels=\empty,
 		 every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
@@ -75,4 +76,35 @@
 		\node at (axis cs:10, 3) [anchor=east] { $N=40$ };
     \end{axis}
 
+
+\usetikzlibrary{calc}
+\pgftransformreset
+\node[inner sep=0pt,outer sep=0pt,minimum size=0pt,line width=0pt,text width=0pt,text height=0pt] at (current bounding box) {};
+%add border to avoid cropping by pdflibnet
+\foreach \border in {0.1}
+  \useasboundingbox (current bounding box.south west)+(-\border,-\border) rectangle (current bounding box.north east)+(\border,\border);
+\newwrite\metadatafile
+\immediate\openout\metadatafile=\jobname_BB.txt
+\path
+  let
+    \p1=(current bounding box.south west),
+    \p2=(current bounding box.north east)
+  in
+  node[inner sep=0pt,outer sep=0pt,minimum size=0pt,line width=0pt,text width=0pt,text height=0pt,draw=white] at (current bounding box) {
+\immediate\write\metadatafile{\p1,\p2}
+};
+\immediate\closeout\metadatafile
 \end{tikzpicture} 
+
+\end{document}
+\p1,\p2}
+};
+\immediate\closeout\metadatafile
+\end{tikzpicture} 
+
+\end{document}
+
+iate\closeout\metadatafile
+\end{tikzpicture} 
+
+\end{document}
