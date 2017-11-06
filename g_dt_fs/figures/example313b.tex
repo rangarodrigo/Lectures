@@ -1,25 +1,25 @@
 \begin{tikzpicture}[scale=1]	
 
 
-\begin{filecontents}{example313.dat}
+\begin{filecontents}{example313b.dat}
 o    xo
--8 1
--7 1
--6 2
--5 2
--4 2
--3 1
--2 1
--1 2
-0 2
-1 2
-2 1
-3 1
-4 2
-5 2
-6 2
-7 1
-8 1
+-8 0
+-7 0
+-6 1
+-5 1
+-4 1
+-3 0
+-2 0
+-1 1
+0 1
+1 1
+2 0
+3 0
+4 1
+5 1
+6 1
+7 0
+8 0
 \end{filecontents}
 
     \begin{axis}[
@@ -29,18 +29,18 @@ o    xo
 		 clip=false,
 		 xmin=-8.5,xmax=8.5,
 		 xlabel= $n$,
-		 ylabel={$x[n]$},
+		 ylabel={$x_1[n]$},
 		 ymin=0,ymax=3,
 		 axis lines=middle,
          %xtick={-3.1416, -2.513, -1.885, -1.257, -0.6283, 0, 0.6283, 1.257, 1.885, 2.513, 3.1416, 6.2832},
          %xticklabels={-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 10 },
-		 ytick={1, 2},
-		 yticklabels={1,2},
+		 ytick={1},
+		 yticklabels={1},
 		 every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
 		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
      ]
 		%\addplot [red, smooth, mark=none] table [x={o}, y={xo}] {example313.dat;%
-		\addplot [blue, ycomb, mark=*] table [x={o}, y={xo}] {example313.dat};%
+		\addplot [blue, ycomb, mark=*] table [x={o}, y={xo}] {example313b.dat};%
 
 		\node at (axis cs:8.5, 1) [anchor=west] { $\cdots$ };
 		\node at (axis cs:-8.5, 1) [anchor=east] { $\cdots$ };		
