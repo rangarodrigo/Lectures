@@ -281,15 +281,67 @@
 \end{frame}
 
 
+\begin{frame}<beamer>
+        Denoting the Fourier series coefficients of $x_1[n]$ by $b_k$ and those of $x_2[n]$ by $c_k$. We use the linearity property of to conclude that
+        \begin{equation*}
+            a_k = b_k + c_k.
+        \end{equation*}
+    \begin{figure}
+        \centering
+        \input{figures/example313b}
+    \end{figure}
+    \begin{figure}
+        \centering
+        \input{figures/example313c}
+    \end{figure}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \mode<beamer>
+    {
+        From the previous work, (with $N_1 = 1$ and $N = 5$), the Fourier series coefficients $b_k$ corresponding to $x_1[n]$ can be expressed as
+        \begin{equation*}
+            b_k = \begin{cases}\frac{1}{5}\frac{\sin(3\pi k/5)}{\sin(\pi k/5)}, & \text{for~} k \neq 0, \pm 5, \pm 10, \dots\\\frac{3}{5}, & \text{for~} k = 0, \pm 5, \pm 10, \dots\end{cases}
+        \end{equation*}
+        \pause
+        The sequence $x_2[n]$ has only a de value, which is captured by its zeroth Fourier series coefficient:
+        \begin{equation*}
+            c_0 = \frac{1}{5}\sum_{n=0}^{4}x_2[n] = 1.
+        \end{equation*}
+        Since the discrete-time Fourier series coefficients are periodic, it follows that $c_k = 1$ whenever $k$ is an integer multiple of 5. The remaining coefficients of $x_2[n]$ must be zero, because $x_2[n]$ contains only a de component.
+        \pause
+        So,
+        \begin{equation*}
+            a_k = \begin{cases}b_k = \frac{1}{5}\frac{\sin(3\pi k/5)}{\sin(\pi k/5)}, & \text{for~} k \neq 0, \pm 5, \pm 10, \dots\\\frac{8}{5}, & \text{for~} k = 0, \pm 5, \pm 10, \dots\end{cases}
+        \end{equation*}
+
+    }
+\end{frame}
+
 \begin{frame}{Example}
     Suppose that we are given the following facts about a sequence $x[n]$:
     \begin{enumerate}
         \item $x[n]$ is periodic with period $n=6$.
         \item $\sum_{n=0}^{5}x[n] = 2$.
         \item $\sum_{n=2}^{7}(-1)^nx[n] = 1$.
-        \item $x[n]$ has the minimum power per period among the set of signals satisfying the proceeding three conditions.  
+        \item $x[n]$ has the minimum power per period among the set of signals satisfying the proceeding three conditions.
     \end{enumerate}
     Determine the sequence $x[n]$.
+\end{frame}
+
+\begin{frame}
+    \mode<beamer>
+    {
+        We denote the Fourier series coefficients of $x[n]$ by $a_k$. From Fact 2, we conclude that $a_0 = 1/3$.\par \pause
+        Noting that $(-1)^n  = e^{-j\pi n}= e^{-j(2\pi/6)3n}$, we see from Fact 3 that $a_3 = 1/6$.\par\pause From Parseval's relation, the average power in $x[n]$ is
+        \begin{equation*}
+            P = \sum_{k=0}^{5}|a_k|^2.
+        \end{equation*}
+        Since each nonzero coefficient contributes a positive amount to $P$, and since the values of $a_0$ and $a3$ are pre-specified, the value of $P$ is minimized by choosing $a_1 = a_2 = a_4 = a5 = 0$. It then follows that
+        \begin{equation*}
+            x[n] = a_0 + a_3 e^{j\pi n} = (1/3) + (1/6)(-1)^n.
+        \end{equation*}       
+    }
 \end{frame}
 
 
