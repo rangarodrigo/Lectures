@@ -94,8 +94,8 @@
 
 
 \begin{frame}{Discrete-Time Fourier Series}
-    \mode<beamer>
-    {
+    %\mode<beamer>
+    %{
         \begin{columns}
             \column{0.48\textwidth}
             \textbf{Continuous-Time}\par
@@ -119,7 +119,7 @@
             Note the duality.
             }
         \end{columns}
-    }
+    %}
 \end{frame}
 
 
@@ -168,7 +168,7 @@
         Consider the signal
         \begin{enumerate}
             \item When is this signal periodic?
-            \item If it is periodic, what are discrete-time Forrier series coefficients?
+            \item If it is periodic, what are discrete-time Fourier series coefficients?
         \end{enumerate}
     \end{example}
     \pause
@@ -204,7 +204,7 @@
 \end{frame}
 
 \begin{frame}{Example}
-    Determine and sketch the DTFT of
+    Determine and sketch the DTFS of
     \begin{equation*}
         x[n] = 1 + \sin \omega_0 n + 3 \cos \omega_0 n + \cos\left(2\omega_0 n + \frac{\pi}{2}\right).
     \end{equation*}
@@ -219,7 +219,7 @@
 \end{frame}
 
 \begin{frame}{Example}
-    Determine and sketch the DTFT of $x[n]$ of which is shown in the figure.
+    Determine and sketch the DTFS of $x[n]$ of which is shown in the figure.
     \begin{figure}
         \centering
         \input{figures/example53}
@@ -258,7 +258,7 @@
                 a_k &= \frac{2N_1+1}{N}\quad k = 0, \pm N, \pm 2N, \dots.
         \end{align*}
     }
-\end{frame} 
+\end{frame}
 
 \begin{frame}
     \begin{figure}
@@ -266,6 +266,33 @@
         \input{figures/dtfs_square_wave}
     \end{figure}
 \end{frame}
+
+
+
+\section{Properties of Discrete-Time Fourier Series}
+
+
+\begin{frame}{Example}
+    Find the Fourier series coefficients $a_k$ of $x[n]$.
+    \begin{figure}
+        \centering
+        \input{figures/example313a}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Example}
+    Suppose that we are given the following facts about a sequence $x[n]$:
+    \begin{enumerate}
+        \item $x[n]$ is periodic with period $n=6$.
+        \item $\sum_{n=0}^{5}x[n] = 2$.
+        \item $\sum_{n=2}^{7}(-1)^nx[n] = 1$.
+        \item $x[n]$ has the minimum power per period among the set of signals satisfying the proceeding three conditions.  
+    \end{enumerate}
+    Determine the sequence $x[n]$.
+\end{frame}
+
+
 
 %\begin{frame}{}
 %    \begin{enumerate}
