@@ -1,10 +1,10 @@
-\begin{tikzpicture}[scale=0.3]	
+\begin{tikzpicture}[scale=0.8]	
 
 
     \begin{axis}[
     		name=axis1,
-		y=1cm,
-		x=1cm,
+		y=0.3cm,
+		x=0.7cm,
 		 clip=false,
 		 xmin=-3.5,xmax=10,
 		 xlabel= $\omega$,
@@ -18,8 +18,10 @@
 		 every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
 		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
      ]
-		\addplot [red, smooth, mark=none] table [x={o}, y={xo}] {./g_dt_fs/figures/dtfs_square_N10.dat};
-		\addplot [blue, ycomb, mark=*] table [x={o}, y={xo}] {./g_dt_fs/figures/dtfs_square_stem_N10.dat};
+		\addplot [red, smooth, mark=none] table [x={o}, y={xo}] {h_dtft/figures/dtfs_square_N10.dat};
+		\addplot [blue, ycomb, mark=*] table [x={o}, y={xo}] {h_dtft/figures/dtfs_square_stem_N10.dat};
+		%\addplot [red, smooth, mark=none] table [x={o}, y={xo}] {dtfs_square_N10.dat};
+		%\addplot [blue, ycomb, mark=*] table [x={o}, y={xo}] {dtfs_square_stem_N10.dat};		
 
 		\node at (axis cs:10, 3) [anchor=east] { $N=10$ };
     \end{axis}
@@ -29,8 +31,8 @@
     \begin{axis}[
     	name=axis2,
     	at={($(axis1.south east)+(0,-1.1cm)$)},anchor=north east,
-		y=1cm,
-		x=1cm,
+		y=0.3cm,
+		x=0.7cm,
 		 clip=false,
 		 xmin=-3.5,xmax=10,
 		 xlabel= $\omega$,
@@ -44,9 +46,10 @@
 		 every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
 		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
      ]
-		\addplot [red, smooth, mark=none] table [x={o}, y={xo}] {./g_dt_fs/figures/dtfs_square_N20.dat};
-		\addplot [blue, ycomb, mark=*] table [x={o}, y={xo}] {./g_dt_fs/figures/dtfs_square_stem_N20.dat};
-
+		\addplot [red, smooth, mark=none] table [x={o}, y={xo}] {h_dtft/figures/dtfs_square_N20.dat};
+		\addplot [blue, ycomb, mark=*] table [x={o}, y={xo}] {h_dtft/figures/dtfs_square_stem_N20.dat};
+		%\addplot [red, smooth, mark=none] table [x={o}, y={xo}] {dtfs_square_N20.dat};
+		%\addplot [blue, ycomb, mark=*] table [x={o}, y={xo}] {dtfs_square_stem_N20.dat};
 		\node at (axis cs:10, 3) [anchor=east] { $N=20$ };
     \end{axis}
 
@@ -54,8 +57,8 @@
         \begin{axis}[
     	name=axis3,
     	at={($(axis2.south east)+(0,-1.1cm)$)},anchor=north east,
-		y=1cm,
-		x=1cm,
+		y=0.3cm,
+		x=0.7cm,
 		 clip=false,
 		 xmin=-3.5,xmax=10,
 		 xlabel= $\omega$,
@@ -69,9 +72,10 @@
 		 every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
 		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
      ]
-		\addplot [red, smooth, mark=none] table [x={o}, y={xo}] {./g_dt_fs/figures/dtfs_square_N40.dat};
-		\addplot [blue, ycomb, mark=*] table [x={o}, y={xo}] {./g_dt_fs/figures/dtfs_square_stem_N40.dat};
-
+		\addplot [red, smooth, mark=none] table [x={o}, y={xo}] {h_dtft/figures/dtfs_square_N40.dat};
+		\addplot [blue, ycomb, mark=*] table [x={o}, y={xo}] {h_dtft/figures/dtfs_square_stem_N40.dat};
+		%\addplot [red, smooth, mark=none] table [x={o}, y={xo}] {dtfs_square_N40.dat};
+		%\addplot [blue, ycomb, mark=*] table [x={o}, y={xo}] {dtfs_square_stem_N40.dat};
 		\node at (axis cs:10, 3) [anchor=east] { $N=40$ };
     \end{axis}
 

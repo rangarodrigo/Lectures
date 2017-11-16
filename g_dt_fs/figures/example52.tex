@@ -44,7 +44,7 @@ o reak akmag imak argak
 % 		x=1cm,
 		 clip=false,
 		 xmin=-12,xmax=12,
-		 xlabel= $\omega$,
+		 xlabel= $k$,
 		 ylabel={$\mathfrak{Re}\{a_k\}$},
 		 ymin=-1.5,ymax=2,
 		axis lines=middle,
@@ -55,7 +55,9 @@ o reak akmag imak argak
 		 every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
 		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
      ]
-	\addplot [black,very thick, ycomb] table [x={o}, y={reak}] {\ninivina};
+	\addplot [red,very thick, ycomb] table [x={o}, y={reak}] {\ninivina};
+	\node at (axis cs:0,1) [anchor= west] {\small $1$};
+	\node at (axis cs:1,1.5) [anchor= west] {\small $\dfrac{3}{2}$};	
 	\end{axis}
 	
     \begin{axis}[
@@ -65,7 +67,7 @@ o reak akmag imak argak
 % 		x=1cm,
 		 clip=false,
 		 xmin=-12,xmax=12,
-		 xlabel= $\omega$,
+		 xlabel= $k$,
 		 ylabel={$|a_k|$},
 		 ymin=-1.5,ymax=2,
 		axis lines=middle,
@@ -76,7 +78,10 @@ o reak akmag imak argak
 		 every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
 		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
      ]
-	\addplot [black,very thick, ycomb] table [x={o}, y={akmag}] {\ninivina};
+	\addplot [red,very thick, ycomb] table [x={o}, y={akmag}] {\ninivina};
+	\node at (axis cs:0,1) [anchor= west] {\small $1$};
+	\node at (axis cs:1,1.5) [anchor= west] {\small $\dfrac{\sqrt{10}}{2}$};		
+	\node at (axis cs:2,.5) [anchor= west] {\small $\dfrac{1}{2}$};			
 	\end{axis}	
 	
     \begin{axis}[
@@ -86,7 +91,7 @@ o reak akmag imak argak
 % 		x=1cm,
 		 clip=false,
 		 xmin=-12,xmax=12,
-		 xlabel= $\omega$,
+		 xlabel= $k$,
 		 ylabel={$\mathfrak{Im}\{a_k\}$},
 		 ymin=-1.5,ymax=2,
 		axis lines=middle,
@@ -97,7 +102,9 @@ o reak akmag imak argak
 		 every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
 		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
      ]
-	\addplot [black,very thick, ycomb] table [x={o}, y={imak}] {\ninivina};
+	\addplot [red,very thick, ycomb] table [x={o}, y={imak}] {\ninivina};
+	\node at (axis cs:-1,.5) [anchor= east] {\small $\dfrac{1}{2}$};
+	\node at (axis cs:1,-.5) [anchor= west] {\small $-\dfrac{1}{2}$};
 	\end{axis}	
 	
     \begin{axis}[
@@ -107,7 +114,7 @@ o reak akmag imak argak
 % 		x=1cm,
 		 clip=false,
 		 xmin=-12,xmax=12,
-		 xlabel= $\omega$,
+		 xlabel= $k$,
 		 ylabel={$\angle a_k$},
 		 ymin=-1.5,ymax=2,
 		axis lines=middle,
@@ -118,6 +125,8 @@ o reak akmag imak argak
 		 every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
 		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
      ]
-	\addplot [black,very thick, ycomb] table [x={o}, y={argak}] {\ninivina};
+	\addplot [red,very thick, ycomb] table [x={o}, y={argak}] {\ninivina};
+	\node at (axis cs:2,1.5) [anchor= west] {\small $\dfrac{\pi}{2}$};
+	\node at (axis cs:-2,-1.5) [anchor= east] {\small $-\dfrac{\pi}{2}$};	
 	\end{axis}		
 \end{tikzpicture} 
