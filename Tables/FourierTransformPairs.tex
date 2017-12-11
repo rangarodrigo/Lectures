@@ -1,13 +1,13 @@
 \renewcommand{\arraystretch}{2}
 \begin{table}
     \centering
-    \caption{Basic Fourier Transform Pairs}\label{ta:ft_properties}    
+    \caption{Basic Fourier Transform Pairs}\label{ta:ft_properties}
         \begin{tabular}{@{}LLL@{}}
             \toprule
-                \text{Signal} & \text{Fourier transform} & \text{Fourier series coefficients}\\
+                \text{Signal} & \text{Fourier transform} & \text{Fourier series coefficients (if periodic)}\\
             \midrule
             \sum_{k=-\infty}^{\infty}a_ke^{jk\omega_0t}         & 2\pi\sum_{k=-\infty}^{\infty}a_k\delta(\omega - k\omega_0)        &a_k\\
-            \midrule            
+            \midrule
             e^{j\omega_0t}                                      & 2\pi\delta(\omega - \omega_0)                                    &\begin{aligned}&a_1 = 1\\ &a_k = 0, \:\text{otherwise} \end{aligned}\\
             \midrule
             \cos\omega_0t                                       & \pi[\delta(\omega - \omega_0) + \delta(\omega + \omega_0)]      &\begin{aligned}&a_1 = a_{-1} = \frac{1}{2}\\ &a_k = 0, \:\text{otherwise} \end{aligned}\\
@@ -22,26 +22,26 @@
                 &\text{and } x(t+T) = x(t)
             \end{aligned}
             &\sum_{k=-\infty}^{\infty}\frac{2\sin k\omega_0 T_1}{k}\delta(\omega - k\omega_0)   & \frac{\omega_0 T_1}{\pi}\mathrm{sinc}\left(\frac{k\omega_0 T_1}{\pi}\right) = \frac{\sin k\omega_0 T_1}{k\pi}\\
-            
+
             \midrule
             \sum_{n=-\infty}^{\infty}\delta(t-nT)                                               & \frac{2\pi}{T}\sum_{k=-\infty}^{\infty}\delta\left(\omega - \frac{2\pi k}{T}\right) & a_k = \frac{1}{T}\quad \text{for all } k\\
             \midrule
             x(t) = \begin{cases}1, & |t|<T_1\\0, & |t|>T_1\end{cases}                           & \frac{2\sin \omega T_1}{\omega} & -\\
-            
+
             \midrule
-            \frac{\sin Wt}{\pi t}                                                               &   X(j\omega) = \begin{cases}1, & |\omega|<W\\0, & |\omega|>W\end{cases}  &\\   
+            \frac{\sin Wt}{\pi t}                                                               &   X(j\omega) = \begin{cases}1, & |\omega|<W\\0, & |\omega|>W\end{cases}  &\\
             \midrule
             \delta(t)   & 1 & -\\
             \midrule
-            u(t)   & \frac{1}{j\omega} + \pi\delta(\omega) & -\\            
+            u(t)   & \frac{1}{j\omega} + \pi\delta(\omega) & -\\
             \midrule
-            \delta(t-t_0)   & e^{-j\omega t_0} & -\\  
+            \delta(t-t_0)   & e^{-j\omega t_0} & -\\
             \midrule
-            e^{-at}u(t),\quad \mathfrak{Re}\{a\}>0   & \frac{1}{a+j\omega} & -\\                      
-            \midrule                                                                  
+            e^{-at}u(t),\quad \mathfrak{Re}\{a\}>0   & \frac{1}{a+j\omega} & -\\
+            \midrule
             te^{-at}u(t),\quad \mathfrak{Re}\{a\}>0   & \frac{1}{(a+j\omega)^2} & -\\
-            \midrule  
-            \frac{t^{n-1}}{(n-1)!}e^{-at}u(t),\quad \mathfrak{Re}\{a\}>0   & \frac{1}{(a+j\omega)^n} & -\\                       
+            \midrule
+            \frac{t^{n-1}}{(n-1)!}e^{-at}u(t),\quad \mathfrak{Re}\{a\}>0   & \frac{1}{(a+j\omega)^n} & -\\
             \bottomrule
         \end{tabular}
 \end{table}
