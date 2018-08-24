@@ -1,0 +1,10 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",		
+            "name": "EN1060Lectures",
+            "file_exclude_patterns": ["*.toc", "*.aux", "*.log", "*.snm", "*.gz", "*.out", "*.nav"]	
+        }	
+	]
+}

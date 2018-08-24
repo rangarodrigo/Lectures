@@ -1,12 +1,12 @@
-\begin{tikzpicture}[scale=0.5]
+\begin{tikzpicture}
 \begin{scope}	
     \begin{axis}[
-		y=4cm,
-		x=1cm,
+		y=2cm,
+		x=0.5cm,
 		 clip=false,
 		 xmin=-5.5,xmax=5.5,
 		 xlabel= $t$,
-		 ylabel={$x_2t)$},
+		 ylabel={$x_2(t)$},
 		 ymin=-0.5,ymax=1.2,
 		 axis lines=middle,
          	%xtick={-5, -4, ..., 5},
@@ -19,19 +19,19 @@
 		%\addplot+[red, smooth, mark=none] table [x={n}, y={xn}] {periodic_square_fs_samples_of_envilope_gen.dat};
 		\addplot [red, thick, domain=-5:5, samples=200] plot{sin(pi*deg(x))/(pi*x)};
 		\node at (axis cs:0, 1) [anchor=east] { $W/\pi$ };
-		\draw[latex-] (axis cs:pi/3, 0) --(axis cs:0.6,-0.3) node  [anchor=north] { $\pi/W$ } ;
-		\draw[latex-] (axis cs:-pi/3, 0) --(axis cs:-0.6,-0.3) node  [anchor=north] { $-\pi/W$ } ;		
+		\draw[latex-] (axis cs:pi/3, 0) --(axis cs:pi/3,-0.3) node  [anchor=north] { $\pi/W$ } ;
+		\draw[latex-] (axis cs:-pi/3, 0) --(axis cs:-pi/3,-0.3) node  [anchor=north] { $-\pi/W$ } ;		
     \end{axis}
 \end{scope}	
-\begin{scope}[xshift=16cm, yshift=2cm]
+\begin{scope}[xshift=10cm, yshift=1cm]
 
-	\def\xmin{-3}
-	\def\xmax{3}
+	\def\xmin{-2}
+	\def\xmax{2}
 	\def\ymin{0}
 	\def\ymax{2}
 	\def\period{2.0}
-	\def\T1{1}
-	\def\A{1}
+	\def\T1{0.5}
+	\def\A{0.5}
 	
 	\edef\pulse{|- ++(2*\T1, \A) |- ++( \period - \T1, -\A)}
 

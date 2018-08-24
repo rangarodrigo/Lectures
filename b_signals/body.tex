@@ -51,8 +51,33 @@
     }
 \end{frame}
 
+\begin{frame}[t]
+\frametitle{Even and Odd Signals}
+    A signal $x(t)$ or $x[n]$ is referred to as an \emph{even} signal if it is identical to its time-reversed counterpart, i.e., with its reflection about the origin:
+    \begin{align*}
+        x(-t) &= x(t)\\
+        x[-n] &= x[n]
+    \end{align*}
+    A is referred to as an \emph{odd} if
+    \begin{align*}
+        x(-t) &= -x(t)\\
+        x[-n] &= -x[n]
+    \end{align*}   
+    An odd signal must be ) at $t=0$ or $n=0$. 
 
-\begin{frame}[plain]{Phase of a Sinusoidal: $\phi = 0$}
+    A signal can be broken into a sum of two signals, one of which is even adn one fo which is odd.
+    Even part of $x(t)$ is
+    \begin{equation*}
+        \mathfrak{Ev}\{x(t)\} = \frac{1}{2}[x(t)+x(-t)]
+    \end{equation*}
+    Odd part of $x(t)$ is
+    \begin{equation*}
+        \mathfrak{Od}\{x(t)\} = \frac{1}{2}[x(t)-x(-t)]
+    \end{equation*}   
+\end{frame}
+
+
+\begin{frame}[plain]\frametitle{Phase of a Sinusoidal: $\phi = 0$}
     \mode<beamer>
     {
         \begin{columns}[t]
@@ -104,7 +129,7 @@
             \column{0.4\textwidth}
             {
                 \noindent The independent variable is an integer.\\
-                The sequence takes values only at integer values of he argument.\\
+                The sequence takes values only at integer values of the argument.\\
                 This signal is \alert{even}. \\[12pt]
                 Even: $x[n] = x[-n]$.\\
                 Periodic: $x[n] = x[n+N]$. Here, $N=16$\\
@@ -316,6 +341,21 @@
 
 
 
+
+
+\begin{frame}[plain]{DT Complex Exponentials Plot}
+    \mode<beamer>
+    {
+        {
+            \centering
+            \input{figures/dt_complex_exp}
+        }
+    }
+\end{frame}
+
+
+
+
 \begin{frame}{Periodicity Properties of Discrete-Time Complex Exponentials $e^{j\omega_0 n}$}
     \begin{itemize}[<+-| alert@+>]
       \item For the CT counterpart  $e^{j\omega_0 t}$,
@@ -334,15 +374,6 @@
     
 \end{frame}
 
-\begin{frame}[plain]{DT Complex Exponentials Plot}
-    \mode<beamer>
-    {
-        {
-            \centering
-            \input{figures/dt_complex_exp}
-        }
-    }
-\end{frame}
 
 \begin{frame}[plain]{Discrete-Time Unit Step  $u[n]$}
     \begin{equation}
@@ -360,10 +391,9 @@
     }
 \end{frame}
 
-
 \begin{frame}[plain]{Discrete-Time Unit Impulse (Unit Sample) $\delta[n]$}
     \begin{equation}
-        u[n] = \begin{cases}
+        \delta[n] = \begin{cases}
                  1, & n = 0,\\
                  0, & n \neq 0.
                \end{cases}
@@ -485,6 +515,14 @@
                     \centering
                     \input{figures/ct_impulse}
                 }
+                \pause
+                \begin{equation*}
+                    x(t)\delta(t) = x(0)\delta(t)
+                \end{equation*}
+                \begin{equation*}
+                    x(t)\delta(t -t_0) = x(t_0)\delta(t-t_0)
+                \end{equation*}
+                
             }
         }
     \end{columns}
@@ -526,7 +564,7 @@
     \end{equation}
     Total energy  over an infinite interval in a DT signal:
     \begin{equation}
-      E_\infty \triangleq \lim_{N \rightarrow \infty} \sum_{n = -N}^{+N}|x[n]|^2 =  \int_{n=-\infty}^{+\infty}|x[n]|^2.
+      E_\infty \triangleq \lim_{N \rightarrow \infty} \sum_{n = -N}^{+N}|x[n]|^2 =  \sum_{n=-\infty}^{+\infty}|x[n]|^2.
     \end{equation}
     Note that this integral and may not converge for some signals. Such signals have infinite energy, while signals with $E_\infty < \infty$ have finite energy.
 \end{frame}

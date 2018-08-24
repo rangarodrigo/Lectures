@@ -25,11 +25,11 @@
       \addplot[domain=-2:2,samples=200,red]{\C*exp(\a*x)}
                                 node[right,pos=1,font=\footnotesize, black]{\scriptsize $x(t)=Ce^{at}$};
 
-	\node at (axis cs:1, 1) [anchor=east] {\scriptsize $a > 0$  };
-
+	\node at (axis cs:-1, 1) [anchor=east] {\scriptsize $a > 0, t_0 = 0$  };
+	\node at (axis cs:0, \C) [anchor=south east] {\scriptsize $1$  };
     \end{axis}
 
-    \begin{scope}[xshift=8cm]
+    \begin{scope}
       \def\a{-0.8}
   \def\C{0.2}
     \begin{axis}[
@@ -37,6 +37,7 @@
      xmin=-3,xmax=3,
      xlabel= $t$,
      ylabel=$ x(t)$,
+     xshift=8cm,
      ymin=-0.2,ymax=1.5,
      axis lines=middle,
      %axis x line=middle,
@@ -53,7 +54,8 @@
       \addplot[domain=-2:2,samples=200,red]{\C*exp(\a*x)}
                                 node[right,pos=0,font=\footnotesize, black]{\scriptsize $x(t)=Ce^{at}$};
 
-	\node at (axis cs:1, 1) [anchor=east] {\scriptsize $a < 0$  };
+	\node at (axis cs:1, 1) [anchor=west] {\scriptsize $a < 0, t_0 = 0$  };
+	\node at (axis cs:0, \C) [anchor=north east] {\scriptsize $1$  };
 
     \end{axis}
 \end{scope}

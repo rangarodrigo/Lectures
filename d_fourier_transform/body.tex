@@ -121,11 +121,11 @@
     Assume that the Fourier transform of $x(t)$ is $X(j\omega)$.\\
     If we construct a periodic signal $\tilde{x}(t)$ by repeating the aperiodic signals $x(t)$ with period $T$, its Fourier series coefficients are
 \mode<beamer>
-{    
+{
     \begin{equation}
         a_k = \left.\frac{1}{T}X(j\omega)\right|_{\omega=k\omega_0}
     \end{equation}
-}    
+}
 \end{frame}
 
 \begin{frame}[plain]{Convergence of Fourier Transform}
@@ -148,13 +148,13 @@
         \int_{-\infty}^{\infty}|e(t)|^2dt = 0,
     \end{equation}
     If $x(t)$ has finite energy, then, although $x(t)$ and its Fourier representation  $\hat{x}(t)$ may differ significantly at individual values of $t$, there is no  energy in their difference.
-}    
+}
 \end{frame}
 
 \begin{frame}[plain]{Convergence of Fourier Transform: Dirichlet Conditions}
     There are alternative conditions sufficient to ensure that  $\hat{x}(t)$ is qual to $x(t)$ for any $t$ except at a discontinuity, where it is equal to the average of the values on either side of the discontinuity.
 \mode<beamer>
-{    
+{
     \begin{enumerate}
         \item $x(t)$ is absolutely integrable, i.e.,
             \begin{equation}
@@ -164,7 +164,7 @@
         \item $x(t)$ has a finite number of discontinuities within any finite interval. Furthermore, each of these discontinuities must be finite.
     \end{enumerate}
     Therefore, absolutely integrable signals that are continuous or that have finite number of discontinuities have a Fourier transform.
-}    
+}
 \end{frame}
 
 \begin{frame}
@@ -379,13 +379,13 @@
         \mathrm{sinc}(\theta) = \frac{\sin \pi \theta}{\pi \theta}.
     \end{equation}
 \mode<beamer>
-{    
+{
     \begin{figure}
       \centering
       \input{figures/sinc_function}
       \caption{Fourier transform for $x(t)$.}\label{fi:sinc_function}
     \end{figure}
-}    
+}
 \end{frame}
 
 
@@ -419,7 +419,7 @@
       \item In fact, in the limit as $W \rightarrow \infty$, $X(j\omega) = 1$ for all $\omega$, and consequently, we see that $x(t)$ converges to an impulse as $W \rightarrow \infty$.
       \item The behavior is an example of the inverse relationship that exists between the time and frequency domains.
     \end{itemize}
-}    
+}
 \end{frame}
 
 \begin{frame}[plain]
@@ -434,18 +434,18 @@
 
 \end{frame}
 
-\section{The Fourier Transform for Periodic Signals}
+\subsection{The Fourier Transform for Periodic Signals}
 
 \begin{frame}{The Fourier Transform for Periodic Signals: Introduction}
     In the previous section, we studied the Fourier transform representation, paying attention to aperiodic signals. We can also develop \ftrs~for periodic signals. This allows us to consider periodic and aperiodic signals in a unified context. We can construct the \ft of a periodic signal directly from its \fsr .
 
     Consider a signal $x(t)$  with \ft~ $X(j\omega)$ that is a single impulse of area $2\pi$ at $\omega=\omega_0$, i.e.,
 \mode<beamer>
-{    
+{
     \begin{equation}
         X(j\omega) = 2\pi \delta(\omega-\omega_0)
     \end{equation}
-}    
+}
 \end{frame}
 
 \begin{frame}
@@ -487,6 +487,17 @@
 
 
 \begin{frame}[plain]
+Method: Multiply the \fs coefficients $a_k$ by $2\pi$, place them using the impulse function $\delta(\omega - k\omega_0)$, and sum.
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[draw=red!50, fill=red!10, inner sep=2pt,outer sep=2pt, rounded corners=0.1cm, anchor=south east, yshift=7cm, xshift=-1cm, text width=4cm, align=left]  at (current page.south east) {
+        $
+             X(j\omega) = \sum_{k=-\infty}^{\infty}2\pi a_k \delta(\omega-k\omega_0)
+        $
+    } ;
+\end{tikzpicture}
+
+
 \mode<beamer>
 {
     \begin{equation*}
@@ -498,7 +509,7 @@
       \input{figures/square_wave_ft}
       \caption{Fourier transform of a symmetric periodic square wave.}\label{fi:square_wave_ft}
     \end{figure}
-}    
+}
 \end{frame}
 
 
@@ -507,7 +518,7 @@
     \begin{example}
         Find the \ft of
             \begin{equation*}
-                x(t) = \sin \omega_0 t.
+                x(t) = \sin \omega_0 t,
             \end{equation*}
             and
             \begin{equation*}
@@ -575,8 +586,8 @@
         \input{figures/pulse_train}
         \caption{Pulse train.}\label{fi:pulse_train}
     \end{figure}
-}    
-\end{frame} 
+}
+\end{frame}
 
 \begin{frame}
     %\pause

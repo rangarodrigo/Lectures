@@ -1,13 +1,13 @@
-\begin{tikzpicture}[scale=0.5]
+\begin{tikzpicture}
 \begin{scope}[xshift=0cm, yshift=0cm]
 
-	\def\xmin{-3}
-	\def\xmax{3}
+	\def\xmin{-2}
+	\def\xmax{2}
 	\def\ymin{0}
 	\def\ymax{2}
 	\def\period{2.0}
-	\def\T1{1}
-	\def\A{1}
+	\def\T1{0.5}
+	\def\A{0.5}
 	
 	\edef\pulse{|- ++(2*\T1, \A) |- ++( \period - \T1, -\A)}
 
@@ -20,11 +20,11 @@
 		\node at (\T1, 0) [anchor=north] {\small $T_1$};
 		\node at (0, 1) [anchor=south east] {\small $1$};
 \end{scope}		
-\pause
-\begin{scope}[xshift=6cm, yshift=-2cm]	
+%\pause
+\begin{scope}[xshift=5cm, yshift=-1cm]	
     \begin{axis}[
-		y=4cm,
-		x=1cm,
+		y=2cm,
+		x=0.5cm,
 		 clip=false,
 		 xmin=-5.5,xmax=5.5,
 		 xlabel= $\omega$,
@@ -41,21 +41,21 @@
 		%\addplot+[red, smooth, mark=none] table [x={n}, y={xn}] {periodic_square_fs_samples_of_envilope_gen.dat};
 		\addplot [red, thick, domain=-5:5, samples=200] plot{sin(pi*deg(x))/(pi*x)};
 		\node at (axis cs:0, 1) [anchor=east] { $2T_1$ };
-		\draw[latex-] (axis cs:pi/3, 0) --(axis cs:0.6,-0.3) node  [anchor=north] { $\pi/T_1$ } ;
-		\draw[latex-] (axis cs:-pi/3, 0) --(axis cs:-0.6,-0.3) node  [anchor=north] { $-\pi/T_1$ } ;		
+		\draw[latex-] (axis cs:pi/3, 0) --(axis cs:pi/3,-0.3) node  [anchor=north] { $\pi/T_1$ } ;
+		\draw[latex-] (axis cs:-pi/3, 0) --(axis cs:-pi/3,-0.3) node  [anchor=north] { $-\pi/T_1$ } ;		
     \end{axis}
 \end{scope}		
 
-\pause
+%\pause
 
-\begin{scope}[xshift=-5.5cm, yshift=-9cm]
+\begin{scope}[xshift=-2.7cm, yshift=-6cm]
     \begin{axis}[
-		y=4cm,
-		x=1cm,
+		y=2cm,
+		x=0.5cm,
 		 clip=false,
 		 xmin=-5.5,xmax=5.5,
 		 xlabel= $t$,
-		 ylabel={$x_2t)$},
+		 ylabel={$x_2(t)$},
 		 ymin=-0.5,ymax=1.2,
 		 axis lines=middle,
          	%xtick={-5, -4, ..., 5},
@@ -68,20 +68,20 @@
 		%\addplot+[red, smooth, mark=none] table [x={n}, y={xn}] {periodic_square_fs_samples_of_envilope_gen.dat};
 		\addplot [red, thick, domain=-5:5, samples=200] plot{sin(pi*deg(x))/(pi*x)};
 		\node at (axis cs:0, 1) [anchor=east] { $W/\pi$ };
-		\draw[latex-] (axis cs:pi/3, 0) --(axis cs:0.6,-0.3) node  [anchor=north] { $\pi/W$ } ;
-		\draw[latex-] (axis cs:-pi/3, 0) --(axis cs:-0.6,-0.3) node  [anchor=north] { $-\pi/W$ } ;		
+		\draw[latex-] (axis cs:pi/3, 0) --(axis cs:pi/3,-0.3) node  [anchor=north] { $\pi/W$ } ;
+		\draw[latex-] (axis cs:-pi/3, 0) --(axis cs:-pi/3,-0.3) node  [anchor=north] { $-\pi/W$ } ;		
     \end{axis}
 \end{scope}	
-\pause
-\begin{scope}[xshift=11.5cm, yshift=-7cm]
+%\pause
+\begin{scope}[xshift=7.75cm, yshift=-5cm]
 
-	\def\xmin{-3}
-	\def\xmax{3}
+	\def\xmin{-2}
+	\def\xmax{2}
 	\def\ymin{0}
 	\def\ymax{2}
 	\def\period{2.0}
-	\def\T1{1}
-	\def\A{1}
+	\def\T1{0.5}
+	\def\A{0.5}
 	
 	\edef\pulse{|- ++(2*\T1, \A) |- ++( \period - \T1, -\A)}
 
@@ -95,13 +95,13 @@
 		\node at (0, 1) [anchor=south east] {\small $1$};
 
 \end{scope}
-\pause
+%\pause
 
-\node at (5,2) {$\overset{\mathcal{F}}{\longleftrightarrow}$};
-\node at (5,-5.5) {$\overset{\mathcal{F}}{\longleftrightarrow}$};
-\pause
-\draw[double, orange, very thick, -latex] (5, -3) -- ++(45:2);
-\draw[double, orange, very thick, -latex] (5, -3) -- ++(-45:2);
-\draw[double, orange, very thick, -latex] (5, -3) -- ++(135:2);
-\draw[double, orange, very thick, -latex] (5, -3) -- ++(-135:2);
+\node at (4,2) {$\overset{\mathcal{F}}{\longleftrightarrow}$};
+\node at (4,-4) {$\overset{\mathcal{F}}{\longleftrightarrow}$};
+%\pause
+\draw[double, orange, very thick, -latex] (4, -2.5) -- ++(45:2);
+\draw[double, orange, very thick, -latex] (4, -2.5) -- ++(-45:2);
+\draw[double, orange, very thick, -latex] (4, -2.5) -- ++(135:2);
+\draw[double, orange, very thick, -latex] (4, -2.5) -- ++(-135:2);
 \end{tikzpicture}

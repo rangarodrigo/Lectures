@@ -252,7 +252,7 @@
 \end{frame}
 
 
-\section{Properties of the Continuous-Time Fourier Series}
+\subsection{Properties of the Continuous-Time Fourier Series}
 
 \begin{frame}
     Suppose that $x(t)$ is a periodic signal with period $T$ and fundamental frequency $\omega_0 = 2\pi/T$. Then if the Fourier series coefficients are denoted by $a_k$, then
@@ -267,7 +267,7 @@
         x(t) &\overset{\mathcal{FS}}{\longleftrightarrow} a_k,\\
         y(t) &\overset{\mathcal{FS}}{\longleftrightarrow} b_k.\\
     \end{align*}
-    Any linear combination of the two signals will also be periodic with period $T$. Fourier series coefficients $c_k$ of the linear combination of $X(t)$ and $y(t)$, $z(t) = Ax(t) + By(t)$, are given by the same linear combination:
+    Any linear combination of the two signals will also be periodic with period $T$. Fourier series coefficients $c_k$ of the linear combination of $x(t)$ and $y(t)$, $z(t) = Ax(t) + By(t)$, are given by the same linear combination:
     \pause
     \mode<beamer>
     {
@@ -289,7 +289,7 @@
             \begin{aligned}
           x(t) &\overset{\mathcal{FS}}{\longleftrightarrow} a_k, \quad x(t-t_0) \overset{\mathcal{FS}}{\longleftrightarrow} b_k,\\
                 b_k &=  \frac{1}{T}\int_{T}x(t-t_0)e^{-jk\omega_0 t}dt,\\
-                &= \frac{1}{T}\int_{T}x(\tau)e^{-jk\omega_0(\tau + t_0)}dt,\\
+                &= \frac{1}{T}\int_{T}x(\tau)e^{-jk\omega_0(\tau + t_0)}d\tau,\\
                 &= e^{-jk\omega_0  t_0}\frac{1}{T}\int_{T}x(\tau)e^{-jk\omega_0\tau}d\tau,\\
                 &= e^{-jk\omega_0  t_0}a_k.
             \end{aligned}
@@ -306,23 +306,37 @@
 
 \begin{frame}[plain]{Time Reversal}
     If
-    \begin{equation}
+    \begin{equation*}
         x(t) \overset{\mathcal{FS}}{\longleftrightarrow} a_k
-    \end{equation}
+    \end{equation*}
     then
-    \begin{equation}
+    \begin{equation*}
         x(-t) \overset{\mathcal{FS}}{\longleftrightarrow} a_{-k}.
-    \end{equation}
+    \end{equation*}
     \mode<beamer>
     {
-        \begin{equation}
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[draw=red!50, fill=red!10, inner sep=2pt,outer sep=2pt, rounded corners=0.1cm, anchor=south east, yshift=5cm, xshift=-1cm, text width=3cm, align=left]  at (current page.south east)
+            {
+                Fourier series:\\
+                $x(t) = \sum_{k=-\infty}^{+\infty}a_k e^{jk\omega_0 t}$
+                $a_k = \frac{1}{T} \int_{T}x(t)e^{-jk\omega_0 t}dt$
+
+            } ;
+        \end{tikzpicture}
+
+        \begin{equation*}
             x(-t) =  \sum_{k=-\infty}^{\infty}a_ke^{-jk2\pi t/T}.
-        \end{equation}
+        \end{equation*}
         Substitution: $k=-m$
         \begin{equation*}
             x(-t) = \sum_{m=-\infty}^{\infty}a_{-m}e^{-jm2\pi t/T}.
         \end{equation*}
         %\pause
+        Right-hand side of this equation has the form of the \fs synthesis equation for $x(-t)$, where the \fs coefficients  $b_k$ are
+        \begin{equation*}
+            b_k = a_{-k}.
+        \end{equation*}
 
     }
 \end{frame}
@@ -336,7 +350,7 @@
 \end{frame}
 
 
-\begin{frame}[plain]{Time Scaling}
+\begin{frame}[plain]\frametitle{Time Scaling}
     \mode<beamer>
     {
         Time scaling, in general, changes the period.\\
@@ -350,7 +364,7 @@
 \end{frame}
 
 
-\begin{frame}[plain]{Multiplication}
+\begin{frame}[plain]\frametitle{Multiplication}
     \mode<beamer>
     {
         Let $x(t)$ and $y(t)$ denote two periodic signals with period $T$.
@@ -360,20 +374,20 @@
         \end{align*}
         Since the product $x(t)y(t)$ is also periodic with period $T$, its Fourier series coefficients $h_k$ are
         \begin{equation}
-            x(t)y(t) \overset{\mathcal{FS}}{\longleftrightarrow} \sum_{l=-\infty}^{\infty}a_l b_{k-l}.
+            x(t)y(t) \overset{\mathcal{FS}}{\longleftrightarrow} h_k = \sum_{l=-\infty}^{\infty}a_l b_{k-l}.
         \end{equation}
 
     }
 \end{frame}
 
 
-\begin{frame}[plain]{Conjugation and Conjugate Symmetry}
+\begin{frame}[plain]\frametitle{Conjugation and Conjugate Symmetry}
     \mode<beamer>
     {
 
         \begin{itemize}[<+->]
           \item Taking the complex conjugate of a periodic signal $x(t)$ has the effect of complex conjugation and \alert{time reversal} on the corresponding Fourier series coefficients.
-          \item If $x(t)$ is real---$x(t) = x^\ast(t)$: Fourier series coefficients conjugate symmetric,i.e., $a_{-k} = a^\ast_k$.
+          \item If $x(t)$ is real---$x(t) = x^\ast(t)$: Fourier series coefficients conjugate symmetric, i.e., $a_{-k} = a^\ast_k$.
           \item If $x(t)$ is real, then $a_0$ is real and $|a_k| = |a_{-k}|$.
           \item If $x(t)$ is real and even, we know that $a_k = a_{-k}$. From above, $a^\ast_k = a_{-k}$, so that $a_{k} = a^\ast_k$. That is if $x(t)$ is real and even, so are its Fourier series coefficients.
           \item If $x(t)$ is real and odd, its Fourier series coefficients are purely imaginary and odd. Thus, e.g., $a_0 = 0$.% do probelm 3.42 in tutorial.
@@ -382,7 +396,7 @@
 \end{frame}
 
 
-\begin{frame}{Parseval's Relation for Continuous-Time Periodic Signals}
+\begin{frame}\frametitle{Parseval's Relation for Continuous-Time Periodic Signals}
     \begin{equation}\label{eq:parseval}
         \frac{1}{T}\int_{T} |x(t)|^2dt = \sum_{k=-\infty}^{\infty}|a_k|^2.
     \end{equation}
@@ -395,7 +409,7 @@
             \frac{1}{T}\int_{T} \left| a_k e^{jk\omega_0 t}\right|^2dt = \frac{1}{T}\int_{T} \left| a_k \right|^2dt = |a_k|^2.
         \end{equation}
         So, $|a_k|^2$ is the average power in the $k$th harmonic component of $x(k)$.\\
-        Thus, what Parseval's relation states is that the total power in a periodic signal equals the sum of the average powers in all of its harmonic components.
+        Thus, what Parseval's relation states is that the total average power in a periodic signal equals the sum of the average powers in all of its harmonic components.
     }
 \end{frame}
 
@@ -642,7 +656,7 @@
 \end{frame}
 
 
-\section{Convergence of Fourier Series}
+\subsection{Convergence of Fourier Series}
 
 \begin{frame}{Convergence of Fourier Series}
     Fourier series representation:
