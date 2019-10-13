@@ -171,7 +171,7 @@
             \item Plot the magnitude and phase of $a_k$ for the case $T=4T_1$.
         \end{enumerate}
     \end{example}
-    
+
 \end{frame}
 
 \begin{frame}[plain,t]
@@ -284,6 +284,15 @@
     \end{equation}
     \mode<beamer>
     {
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[draw=red!50, fill=red!10, inner sep=2pt,outer sep=2pt, rounded corners=0.1cm, anchor=south east, yshift=5cm, xshift=-1cm, text width=3cm, align=left]  at (current page.south east)
+            {
+                Fourier series:\\
+                $x(t) = \sum_{k=-\infty}^{+\infty}a_k e^{jk\omega_0 t}$\par
+                $a_k = \frac{1}{T} \int_{T}x(t)e^{-jk\omega_0 t}dt$
+
+            } ;
+        \end{tikzpicture}    
         \noindent Proof:\\%Page 203
         \pause
         \begin{equation*}
@@ -320,7 +329,7 @@
             \node[draw=red!50, fill=red!10, inner sep=2pt,outer sep=2pt, rounded corners=0.1cm, anchor=south east, yshift=5cm, xshift=-1cm, text width=3cm, align=left]  at (current page.south east)
             {
                 Fourier series:\\
-                $x(t) = \sum_{k=-\infty}^{+\infty}a_k e^{jk\omega_0 t}$
+                $x(t) = \sum_{k=-\infty}^{+\infty}a_k e^{jk\omega_0 t}$\par
                 $a_k = \frac{1}{T} \int_{T}x(t)e^{-jk\omega_0 t}dt$
 
             } ;
@@ -331,7 +340,7 @@
         \end{equation*}
         Substitution: $k=-m$
         \begin{equation*}
-            x(-t) = \sum_{m=-\infty}^{\infty}a_{-m}e^{-jm2\pi t/T}.
+            x(-t) = \sum_{m=-\infty}^{\infty}a_{-m}e^{jm2\pi t/T}.
         \end{equation*}
         %\pause
         Right-hand side of this equation has the form of the \fs synthesis equation for $x(-t)$, where the \fs coefficients  $b_k$ are
@@ -345,20 +354,21 @@
 \begin{frame}<beamer>
     \begin{itemize}[<+->]
       \item Time reversal applied to a continuous-time signal results in a time reversal of the corresponding sequence of Fourier series coefficients.
-      \item If $x(t)$ is even---$x(-t) = x(t)$---then its Fourier series coefficients are also even, i.e., $a_{-k}=a_k$.
-      \item If $x(t)$ is odd---$x(-t) = -x(t)$---then its Fourier series coefficients are also odd, i.e., $a_{-k}=-a_k$.
+      \item If $x(t)$ is even, i.e., $x(-t) = x(t)$, then its Fourier series coefficients are also even, i.e., $a_{-k}=a_k$.
+      \item If $x(t)$ is odd, i.e., $x(-t) = -x(t)$, then its Fourier series coefficients are also odd, i.e., $a_{-k}=-a_k$.
     \end{itemize}
 \end{frame}
 
 
 \begin{frame}[plain]\frametitle{Time Scaling}
+    Time scaling, in general, changes the period.\\
+    If $x(t)$ is a periodic with period $T$ and fundamental frequency $\omega_0 = 2\pi/T$, then $x(\alpha t)$, where $\alpha$ is a positive real number, is periodic with period $T/\alpha$ and fundamental frequency $\alpha \omega_0$.
+    \begin{equation}
+        x(\alpha t) = \sum_{k=-\infty}^{\infty} a_k e^{jk(\alpha \omega_0)t}
+    \end{equation}
     \mode<beamer>
     {
-        Time scaling, in general, changes the period.\\
-        If $x(t)$ is a periodic with period $T$ and fundamental frequency $\omega_0 = 2\pi/T$, then $x(\alpha t)$, where $\alpha$ is a positive real number, is periodic with period $T/\alpha$ and fundamental frequency $\alpha \omega_0$.
-        \begin{equation}
-            x(\alpha t) = \sum_{k=-\infty}^{\infty} a_k e^{jk(\alpha \omega_0)t}
-        \end{equation}
+
         While Fourier coefficients have not changes, the Fourier series representation \alert{has} changed because of the change in the fundamental frequency.
 
     }
@@ -383,12 +393,12 @@
 
 
 \begin{frame}[plain]\frametitle{Conjugation and Conjugate Symmetry}
-    \mode<beamer>
+    %\mode<beamer>
     {
 
         \begin{itemize}[<+->]
           \item Taking the complex conjugate of a periodic signal $x(t)$ has the effect of complex conjugation and \alert{time reversal} on the corresponding Fourier series coefficients.
-          \item If $x(t)$ is real---$x(t) = x^\ast(t)$: Fourier series coefficients conjugate symmetric, i.e., $a_{-k} = a^\ast_k$.
+          \item If $x(t)$ is real, i.e., $x(t) = x^\ast(t)$: Fourier series coefficients conjugate symmetric, i.e., $a_{-k} = a^\ast_k$.
           \item If $x(t)$ is real, then $a_0$ is real and $|a_k| = |a_{-k}|$.
           \item If $x(t)$ is real and even, we know that $a_k = a_{-k}$. From above, $a^\ast_k = a_{-k}$, so that $a_{k} = a^\ast_k$. That is if $x(t)$ is real and even, so are its Fourier series coefficients.
           \item If $x(t)$ is real and odd, its Fourier series coefficients are purely imaginary and odd. Thus, e.g., $a_0 = 0$.% do probelm 3.42 in tutorial.
@@ -435,7 +445,7 @@
 
 \begin{frame}{Solution: Direct}
  \mode<beamer>
-{  
+{
     \begin{equation*}
         a_0 = 0, \quad a_k = \frac{1}{2\pi jk}\left(1-\cos k\pi\right)
     \end{equation*}

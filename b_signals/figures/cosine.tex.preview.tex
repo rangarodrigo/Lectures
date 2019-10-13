@@ -1,3 +1,5 @@
+%& C:\Users\RANGAR~1\AppData\Roaming\TikzEdt\TikzEdt\023~1.0\TEMP_H~1
+\begin{document}
 \pgfplotsset{compat=1.12}
 \pgfplotsset{every tick label/.append style={font=\scriptsize}}
   \begin{tikzpicture}
@@ -21,7 +23,7 @@
         x label style={at={(current axis.right of origin)},anchor=west},
         y label style={at={(current axis.above origin)}, anchor=south},
      ]
-      \addplot[domain=-pi:3*pi,samples=200,EntcMaroonDef]{cos(deg(x) + \phase)}
+      \addplot[domain=-pi:3*pi,samples=200,red]{cos(deg(x) + \phase)}
                                 node[right,pos=1,font=\footnotesize, black]{\scriptsize $x(t)=1\cos (t - \pi/6)$};
 
 
@@ -34,4 +36,27 @@
     \end{axis}
 
 
-  \end{tikzpicture} 
+  
+\usetikzlibrary{calc}
+\pgftransformreset
+\node[inner sep=0pt,outer sep=0pt,minimum size=0pt,line width=0pt,text width=0pt,text height=0pt] at (current bounding box) {};
+%add border to avoid cropping by pdflibnet
+\foreach \border in {0.1}
+  \useasboundingbox (current bounding box.south west)+(-\border,-\border) rectangle (current bounding box.north east)+(\border,\border);
+\newwrite\metadatafile
+\immediate\openout\metadatafile=\jobname_BB.txt
+\path
+  let
+    \p1=(current bounding box.south west),
+    \p2=(current bounding box.north east)
+  in
+  node[inner sep=0pt,outer sep=0pt,minimum size=0pt,line width=0pt,text width=0pt,text height=0pt,draw=white] at (current bounding box) {
+\immediate\write\metadatafile{\p1,\p2}
+};
+\immediate\closeout\metadatafile
+\end{tikzpicture} 
+
+\end{document}
+
+
+

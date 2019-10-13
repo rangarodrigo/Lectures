@@ -40,8 +40,8 @@
         \item In this course we study signals and systems that process these signals.
         \item Categories of signals:
             \begin{itemize}
-                \item Continuous-time signals: independent variable is continuous, $x(t)$
-                \item Discrete-time signals:independent variable is an integer,  $x[n]$
+                \item Continuous-time signals: independent variable is continuous, \fillblank{$x(t)$}
+                \item Discrete-time signals:independent variable is an integer,  \fillblank{$x[n]$}
             \end{itemize}
         \item There are some very strong similarities and also some very important differences between discrete-time signals and systems and continuous-time signals and systems.
     \end{itemize}
@@ -53,7 +53,7 @@
         \item The independent variable is continuous.
         \item E.g., sound pressure at a microphone as a function of time (one-dimensional signal).
         \item E.g., image brightness as a function of two spatial variables (two-dimensional signal).
-        \item Con convenience, we refer to the independent variable as time.
+        \item For convenience, we refer to the independent variable as time.
     \end{itemize}
 \end{frame}
 
@@ -161,7 +161,7 @@
     \begin{itemize}
       \item What is a digital signal?
         \begin{itemize}
-            \item A quantized discrete-time signal. I.e., $x[n,m]$ can take only a value from a finite set of values.
+            \item A quantized discrete-time signal. I.e., \fillblank{$x[n,m]$}. The signal can take only a value from a finite set of values.
         \end{itemize}
 
       \item What is a digital image?
@@ -185,25 +185,24 @@
                 \item An edge detection algorithm for medical images.
             \end{itemize}
     \end{itemize}
+    \pause
+    \begin{figure}
+        \centering
+        %\begin{subfigure}[t]{0.5\textwidth}
+            %\centering
+            \input{figures/ct_system}
+            %\caption{CT system}
+        %\end{subfigure}%
+        %~
+        %\begin{subfigure}[t]{0.5\textwidth}
+            %\centering
+            \input{figures/dt_system}
+            %\caption{DT system}
+        %\end{subfigure}
+        \caption{CT and DT Systems.}\label{fi:ct_dt_systems}
+    \end{figure}
 \end{frame}
 
-\begin{frame}[plain]{CT and DT Systems}
-\begin{figure}
-    \centering
-    %\begin{subfigure}[t]{0.5\textwidth}
-        %\centering
-        \input{figures/ct_system}
-        %\caption{CT system}
-    %\end{subfigure}%
-    %~
-    %\begin{subfigure}[t]{0.5\textwidth}
-        %\centering
-        \input{figures/dt_system}
-        %\caption{DT system}
-    %\end{subfigure}
-    \caption{CT and DT Systems.}\label{fi:ct_dt_systems}
-\end{figure}
-\end{frame}
 
 \begin{frame}[plain]{Types of Systems}
     \begin{figure}
@@ -215,14 +214,14 @@
 \end{frame}
 
 
-\begin{frame}{Examples of Systems}
-    \begin{itemize}
-      \item Dynamics of an aircraft.
-      \item An algorithm for analyzing financial and economic factors to predict bond prices.
-      \item An algorithm for post-flight analysis of a space launch.
-      \item An edge detection algorithm for medical images.
-    \end{itemize}
-\end{frame}
+%\begin{frame}{Examples of Systems}
+%    \begin{itemize}
+%      \item Dynamics of an aircraft.
+%      \item An algorithm for analyzing financial and economic factors to predict bond prices.
+%      \item An algorithm for post-flight analysis of a space launch.
+%      \item An edge detection algorithm for medical images.
+%    \end{itemize}
+%\end{frame}
 
 \begin{frame}{Systems Interconnections}
     \begin{itemize}

@@ -2,6 +2,7 @@
     declare function={
     unitstep(\x)= (\x>-0.1)*(1);
     impulse(\x,\nn)  = and((\nn-0.5) < \x, \x < \nn)*1;
+    unitstepd(\x,\nn)= ((\nn-1)<\x)*(1);
   }
 ]
 \begin{axis}
@@ -14,7 +15,7 @@
 	    xmin=-12,
 	    xmax=12,
 	    xlabel={$n$},
-	    ylabel={$\delta[n]$},
+	    ylabel={$u[n]$},
 	    xticklabel=\empty,
 	    y=1.2cm,
 	    x=0.3cm,
@@ -24,7 +25,7 @@
         x label style={at={(current axis.right of origin)},anchor=west},
         y label style={at={(current axis.above origin)}, anchor=south},
 	]
-	\addplot+[ycomb,domain=-10:10, blue, mark size=1pt ] {impulse(x,0)};
+	\addplot+[ycomb,domain=-10:10, blue, mark size=1pt ] {unitstep(x)};
 \end{axis}
 
 \pause
@@ -41,7 +42,7 @@
 	    xmin=-12,
 	    xmax=12,
 	    xlabel={$n$},
-	    ylabel={$\delta[n-1]$},
+	    ylabel={$u[n-1]$},
 	    xticklabel=\empty,
 	    y=1.2cm,
 	    x=0.3cm,
@@ -51,7 +52,7 @@
         x label style={at={(current axis.right of origin)},anchor=west},
         y label style={at={(current axis.above origin)}, anchor=south},
 	]
-	\addplot+[ycomb,domain=-10:10, blue, mark size=1pt] {impulse(x,1)};
+	\addplot+[ycomb,domain=-10:10, blue, mark size=1pt] {unitstepd(x,1)};
 	\end{axis}
 %\end{scope}
 %
@@ -69,7 +70,7 @@
 	    xmin=-12,
 	    xmax=12,
 	    xlabel={$n$},
-	    ylabel={$\delta[n-2]$},
+	    ylabel={$\delta[n]$},
 	    xticklabel=\empty,
 	    y=1.2cm,
 	    x=0.3cm,
@@ -79,36 +80,6 @@
         x label style={at={(current axis.right of origin)},anchor=west},
         y label style={at={(current axis.above origin)}, anchor=south},
 	]
-	\addplot+[ycomb,domain=-10:10, blue, mark size=1pt] {impulse(x, 2)};
+	\addplot+[ycomb,domain=-10:10, blue, mark size=1pt] {impulse(x, 0)};
 	\end{axis}
-%\end{scope}
-%
-%
-\pause
-%
-% \begin{scope}[yshift=-7.5cm]
-	\begin{axis}
-	[
-		name=unassum,
-		at=(deltanminus2.below south), anchor=above north,		
-	    scale=0.6,
-	    axis x line=middle,
-	    axis y line=middle,
-	    every axis plot post/.style={mark options={fill=black}},
-	    xmin=-12,
-	    xmax=12,
-	    xlabel={$n$},
-	    ylabel={$u[n] = \delta[n] + \delta[n-1] + \delta[n-2] + \dots$},
-	    xticklabel=\empty,
-	    y=1.2cm,
-	    x=0.3cm,
-	    ymin=-0.2,
-	    ymax=1.2,
-	    clip=false,
-        x label style={at={(current axis.right of origin)},anchor=west},
-        y label style={at={(current axis.above origin)}, anchor=south},
-	]
-	\addplot+[ycomb,domain=-10:10, red, mark size=1pt] {unitstep(x)};
-	\end{axis}
-% \end{scope}
 \end{tikzpicture} 

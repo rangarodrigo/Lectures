@@ -2,6 +2,7 @@
 \begin{tikzpicture}
 \begin{axis}
 [
+    name=plot1,
     scale=1,
     axis x line=middle,
     axis y line=middle,
@@ -19,10 +20,11 @@
 \node at (axis cs: 8, -2) {$\alpha < 0, | \alpha | < 1$};
 \end{axis}
 
-\begin{scope}[xshift=8cm]
+%\begin{scope}
 \begin{axis}
 [
     scale=1,
+    at=(plot1.right of south east), anchor=left of south west,
     axis x line=middle,
     axis y line=middle,
     x label style={at={(current axis.right of origin)},anchor=west},
@@ -38,7 +40,7 @@
 \addplot+[ycomb,blue, mark options={black, mark size=1}] table [x={n}, y={xn}] {b_signals/figures/dt_exp_alpha_neg_greater_than_one.dat};
 \node at (axis cs: -18, -2) {$\alpha < 0, | \alpha | > 1$};
 \end{axis}
-\end{scope}
+%\end{scope}
 
 
 \end{tikzpicture} 

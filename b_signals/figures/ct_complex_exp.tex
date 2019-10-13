@@ -5,6 +5,7 @@
   \def\phase{-45}
   \def\r{0.4}
     \begin{axis}[
+    name=plot1,
     scale=0.8,
      clip=false,
      xmin=-6,xmax=6,
@@ -33,13 +34,14 @@
     \end{axis}
 
 
-    \begin{scope}[xshift=9cm]
+    %\begin{scope}[xshift=9cm]
 
   \def\omwga0{2*pi}
   \def\phase{-45}
   \def\r{-0.4}
     \begin{axis}[
-    scale=0.8,    
+    scale=0.8,
+    at=(plot1.right of south east), anchor=left of south west,
      clip=false,
      xmin=-6,xmax=6,
      xlabel= $t$,
@@ -66,7 +68,7 @@
        \node at (axis cs:2, 8) [anchor=west] {\scriptsize $r<0$ };
     \end{axis}
 
-	\end{scope}
+	%\end{scope}
 
 
   \end{tikzpicture} 

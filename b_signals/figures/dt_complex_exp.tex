@@ -4,6 +4,7 @@
 \begin{axis}
 [
     scale=1,
+    name = plot1,
     axis x line=middle,
     axis y line=middle,
     x label style={at={(current axis.right of origin)},anchor=west},
@@ -24,11 +25,12 @@
 \node at (axis cs: -16, -4) {$| \alpha | >1$};
 \end{axis}
 
-\begin{scope}[xshift=8cm]
+%\begin{scope}[xshift=8cm]
 \def\r{0.92}
 \begin{axis}
 [
     scale=1,
+    at=(plot1.right of south east), anchor=left of south west,
     axis x line=middle,
     axis y line=middle,
     x label style={at={(current axis.right of origin)},anchor=west},
@@ -48,7 +50,7 @@
                                 node[right,pos=1,font=\footnotesize, black]{\scriptsize $-e^{rt}$};
 \node at (axis cs: -16, -4) {$| \alpha | < 1$};
 \end{axis}
-\end{scope}
+%\end{scope}
 
 
 \end{tikzpicture}

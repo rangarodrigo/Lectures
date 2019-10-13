@@ -23,7 +23,7 @@
     \end{equation}
     for all values of $t$. Under an appropriate time-shift the signal repeats itself. In this case we say that $x(t)$ is periodic with period $T$.\\
     \alert{Fundamental period $T_0$} = smallest positive value of $T$ for which \ref{eq:period} holds.\\
-    A signal that is not periodic is referred to as aperiodic. \\
+    A signal that is not periodic is referred to as \alert{aperiodic}. \\
     E.g.: Consider $A\cos(\omega_0t + \phi)$\\
     \begin{equation*}
         \begin{split}
@@ -31,7 +31,7 @@
                                     &= A\cos(\omega_0t + \phi)\\
         \end{split}
     \end{equation*}
-    $T = \frac{2\pi m}{\omega_0} \Rightarrow $ fundamental period $T_0 = \frac{2\pi}{\omega_0}$.
+    \fillblank{$T = \frac{2\pi m}{\omega_0} \Rightarrow $ fundamental period $T_0 = \frac{2\pi}{\omega_0}$.}
 
 \end{frame}
 
@@ -53,19 +53,19 @@
 
 \begin{frame}[t]
 \frametitle{Even and Odd Signals}
-    A signal $x(t)$ or $x[n]$ is referred to as an \emph{even} signal if it is identical to its time-reversed counterpart, i.e., with its reflection about the origin:
+    A signal $x(t)$ or $x[n]$ is referred to as an \alert{even} signal if it is identical to its time-reversed counterpart, i.e., with its reflection about the origin:
     \begin{align*}
         x(-t) &= x(t)\\
         x[-n] &= x[n]
     \end{align*}
-    A is referred to as an \emph{odd} if
+    A is referred to as an \alert{odd} if
     \begin{align*}
         x(-t) &= -x(t)\\
         x[-n] &= -x[n]
-    \end{align*}   
-    An odd signal must be ) at $t=0$ or $n=0$. 
+    \end{align*}
+    An odd signal must be ) at $t=0$ or $n=0$.
 
-    A signal can be broken into a sum of two signals, one of which is even adn one fo which is odd.
+    A signal can be broken into a sum of two signals, one of which is even and one for which is odd.
     Even part of $x(t)$ is
     \begin{equation*}
         \mathfrak{Ev}\{x(t)\} = \frac{1}{2}[x(t)+x(-t)]
@@ -73,7 +73,37 @@
     Odd part of $x(t)$ is
     \begin{equation*}
         \mathfrak{Od}\{x(t)\} = \frac{1}{2}[x(t)-x(-t)]
-    \end{equation*}   
+    \end{equation*}
+\end{frame}
+
+\begin{frame}[t]{Even and Odd Signals Contd.}
+    \begin{example}
+        Show that $\mathfrak{Ev}\{x(t)\} = \frac{1}{2}[x(t)+x(-t)]$.
+    \end{example}
+    Notation: $x_e(t)$ is even part of $x(t)$, $x_o(t)$ is odd part of $x(t)$.
+    \mode<beamer>
+    {
+        \begin{equation*}
+            x(t) = x_e(t) + x_o(t).
+        \end{equation*}
+        \pause
+        \begin{equation*}
+            x(-t) = x_e(-t) + x_o(-t).
+        \end{equation*}
+        \pause
+        \begin{equation*}
+            x(-t) = x_e(t) - x_o(t).
+        \end{equation*}
+        \pause
+        Adding,
+        \begin{equation*}
+            x(t) + x(-t) = x_e(t) + x_o(t) + x_e(t) - x_o(t).
+        \end{equation*}
+        \pause
+        \begin{equation*}
+            \mathfrak{Ev}\{x(t)\} =  x_e(t) = \frac{1}{2}[x(t)+x(-t)]
+        \end{equation*}
+    }
 \end{frame}
 
 
@@ -88,7 +118,7 @@
             }
             \column{0.4\textwidth}
             {
-                \noindent This signal is \alert{even}. If we mirror an even signal about the time origin, it would look exactly the same.\\[12pt]
+                This signal is \alert{even}. If we mirror an even signal about the time origin, it would look exactly the same.\\[12pt]
                 Periodic: $x(t) = x(t+ T)$.\\
                 Even: $x(t) = x(-t)$.
             }
@@ -107,7 +137,7 @@
             }
             \column{0.4\textwidth}
             {
-                \noindent This signal is \alert{odd}. If we flip an odd signal about the time origin, we also multiply it by a ($-$) sign to get the original signal.\\[12pt]
+                This signal is \alert{odd}. If we flip an odd signal about the time origin, we also multiply it by a ($-$) sign to get the original signal.\\[12pt]
                 Periodic: $x(t) = x(t+ T)$.\\
                 Odd: $x(t) = -x(-t)$.
             }
@@ -128,7 +158,7 @@
             }
             \column{0.4\textwidth}
             {
-                \noindent The independent variable is an integer.\\
+                The independent variable is an integer.\\
                 The sequence takes values only at integer values of the argument.\\
                 This signal is \alert{even}. \\[12pt]
                 Even: $x[n] = x[-n]$.\\
@@ -169,8 +199,10 @@
 \end{frame}
 
 
+
+
 \begin{frame}{Phase Change and Time Shift in DT}
-    \begin{block}{Q}
+    \begin{block}{Question}
         Does a phase change always correspond to a time shift in discrete-time signals?
     \end{block}
     \pause
@@ -178,9 +210,9 @@
     {
         Answer: No.\\
         \begin{align*}
-          A\cos[\omega_0n+ \phi)] &=  A\cos[\omega_0(n+n_0)]\\
+          A\cos[\omega_0n+ \phi)] &\stackrel{?}{=}  A\cos[\omega_0(n+n_0)]\\
           \omega_0n + \omega_0n_0 &= \omega_0n + \phi \\
-          \omega_0n_0 &= \phi\quad n_0 \text{ is an integer}.
+          \omega_0n_0 &= \phi,\quad n_0 \text{ is an integer}.
         \end{align*}
 
         \begin{itemize}
@@ -211,6 +243,18 @@
     }
 \end{frame}
 
+
+\begin{frame}{Periodicity of a DT Signal Cntd.}
+    \centering
+    \input{figures/dt_sinusoid_n_12_phi_0}
+    %
+    \input{figures/dt_sinusoid_n_6_phi_0}
+    %
+    \input{figures/dt_sinusoid_n_831_phi_0}
+    %
+    \input{figures/dt_sinusoid_n_115_phi_0}
+\end{frame}
+
 \subsection{Exponentials}
 
 \begin{frame}[plain]{CT Real Exponentials}
@@ -236,7 +280,7 @@
 \end{frame}
 
 \begin{frame}[plain]
-    \mode<beamer>
+    %\mode<beamer>
     {
         {
             \centering
@@ -324,13 +368,13 @@
 
 
 \begin{frame}[plain]{DT Complex Exponentials}
-    \begin{align}
+    \begin{align*}
         x[n] &= C\alpha^n, \quad C \text{ and } \alpha \text{ are complex numbers.}\\
         C &= |C|e^{j\theta}\\
         \alpha &= |\alpha|e^{j\omega_0}\\
         x[n] &= |C|e^{j\theta}\left(|\alpha|e^{j\omega_0}\right)^n\\
         &= |C||\alpha|^n\cos(\omega_0n + \theta) + j|C||\alpha|^n\sin(\omega_0n + \theta)\\
-    \end{align}
+    \end{align*}
     Comments:
     \begin{itemize}
       \item When $|\alpha| = 1$: sinusoidal real and imaginary parts.
@@ -363,18 +407,18 @@
             \item The larger the magnitude of $\omega_0$, the higher is the rate of oscillation in the signal.
             \item $e^{j\omega_0 t}$ is periodic for any value of $\omega_0$.
         \end{enumerate}
-      \item In DT, as 
+      \item In DT, as
         \begin{equation*}
             e^{j(\omega_0 + 2\pi)n} = e^{j2\pi n}e^{j\omega_0n} = e^{j\omega_0n}
         \end{equation*}
         the exponential at frequency $\omega_0 + 2\pi$ is the same as that at frequency $\omega_0$ .
-      \item Although in CT  $e^{j\omega_0 t}$ are all distinct for distinct values of $\omega_0$. In DT, these signals are not distinct, as the signal with frequency $\omega_0$ is identical to the signals with frequencies $\omega_0 + 2\pi$, $\omega_0 + 4\pi$, and so on. Therefore, in considering DT complex exponentials, we need only consider a frequency interval of length $2\pi$ in which to choose $\omega_0$.
+      \item Although in CT  $e^{j\omega_0 t}$ are all distinct for distinct values of $\omega_0$, In DT, these signals are not distinct, as the signal with frequency $\omega_0$ is identical to the signals with frequencies $\omega_0 + 2\pi$, $\omega_0 + 4\pi$, and so on. Therefore, in considering DT complex exponentials, we need only consider a frequency interval of length $2\pi$ in which to choose $\omega_0$.
       \item In DT, as we increase $\omega_0$ from 0, we obtain signals that oscillate more and more rapidly until we reach $\omega_0 = \pi$. As we continue to increase $\omega_0$, we decrease the rate of oscillation until we reach $\omega_0 = 2\pi$. Note: $e^{j\pi n} = \left(e^{j\pi}\right)^n = (-1)^n$.
     \end{itemize}
-    
+
 \end{frame}
 
-
+\subsection{Step and Impulse Functions}
 \begin{frame}[plain]{Discrete-Time Unit Step  $u[n]$}
     \begin{equation}
         u[n] = \begin{cases}
@@ -408,7 +452,7 @@
 \end{frame}
 
 
-\subsection{Step and Impulse Functions}
+
 \begin{frame}[plain]{DT Step and Impulse}
     Unit impulse is the first backward difference of the unit step sequence.
     \begin{equation}
@@ -503,7 +547,7 @@
                 }
             }
         }
-        \pause
+        %\pause
         \column{0.4\textwidth}
         {
             \begin{equation}
@@ -515,14 +559,14 @@
                     \centering
                     \input{figures/ct_impulse}
                 }
-                \pause
+                %\pause
                 \begin{equation*}
                     x(t)\delta(t) = x(0)\delta(t)
                 \end{equation*}
                 \begin{equation*}
                     x(t)\delta(t -t_0) = x(t_0)\delta(t-t_0)
                 \end{equation*}
-                
+
             }
         }
     \end{columns}
@@ -581,9 +625,12 @@
       P_\infty \triangleq \lim_{N \rightarrow \infty} \frac{1}{2N+1}\sum_{n = -N}^{+N}|x[n]|^2.
     \end{equation}
     With these definitions, we can identify three important classes of signals:
+    \mode<beamer>
+    {
     \begin{enumerate}
         \item Energy signals: Signals with finite total energy $E_\infty < \infty$. These have zero average power.
         \item Power signals: Signals with finite average power $0 < P_\infty < \infty$. As $P_\infty > 0$, $E_\infty = \infty$.
         \item Signals with neither $E_\infty$ nor $P_\infty$ are finite.
     \end{enumerate}
+    }
 \end{frame} 
