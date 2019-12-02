@@ -21,8 +21,8 @@
           \item In the last lecture, we represented a periodic signal as a linear combination of complex exponentials.
           \item We use Fourier transform to represent aperiodic signals. A larger class of signals, including all signals with finite energy, can be represented through a linear combination of complex exponentials.
           \item Whereas for periodic signals the complex exponential building blocks are harmonically related, for aperiodic signals they are infinitesimally close in frequency, and the representation in terms of a linear combination takes the form of an integral rather than a sum.
-          \item The resulting spectrum of coefficients in this representation is called the Fourier transform.
-          \item The synthesis integral itself, which uses these coefficients to represent the signal as a linear combination of complex exponentials, is called the inverse Fourier transform.
+          \item The resulting spectrum of coefficients in this representation is called the \alert{Fourier transform}.
+          \item The synthesis integral itself, which uses these coefficients to represent the signal as a linear combination of complex exponentials, is called the \alert{inverse Fourier transform}.
       \end{itemize}
 \end{frame}
 
@@ -137,15 +137,15 @@
     \begin{equation*}
         e(t) = \hat{x}(t) - x(t).
     \end{equation*}
-\mode<beamer>
+%\mode<beamer>
 {
     If $x(t)$ has finite energy (square integrable), i.e.,
     \begin{equation}
-        \int_{-\infty}^{\infty}|x(t)|^2dt < \infty,
+        \fillblank{\int_{-\infty}^{\infty}|x(t)|^2dt < \infty,}
     \end{equation}
     $X(j\omega)$ is finite, and
     \begin{equation}
-        \int_{-\infty}^{\infty}|e(t)|^2dt = 0,
+        \fillblank{\int_{-\infty}^{\infty}|e(t)|^2dt = 0,}
     \end{equation}
     If $x(t)$ has finite energy, then, although $x(t)$ and its Fourier representation  $\hat{x}(t)$ may differ significantly at individual values of $t$, there is no  energy in their difference.
 }
@@ -153,12 +153,12 @@
 
 \begin{frame}[plain]{Convergence of Fourier Transform: Dirichlet Conditions}
     There are alternative conditions sufficient to ensure that  $\hat{x}(t)$ is qual to $x(t)$ for any $t$ except at a discontinuity, where it is equal to the average of the values on either side of the discontinuity.
-\mode<beamer>
+%\mode<beamer>
 {
     \begin{enumerate}
         \item $x(t)$ is absolutely integrable, i.e.,
             \begin{equation}
-                \int_{-\infty}^{\infty}|x(t)|dt < \infty,
+                \fillblank{\int_{-\infty}^{\infty}|x(t)|dt < \infty,}
             \end{equation}
         \item $x(t)$ has a finite number of maxima and minima within any finite interval.
         \item $x(t)$ has a finite number of discontinuities within any finite interval. Furthermore, each of these discontinuities must be finite.
@@ -167,7 +167,7 @@
 }
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Example}
     \begin{example}
         Find the Fourier transform of the signal
         \begin{equation*}
@@ -200,7 +200,7 @@
     }
 \end{frame}
 
-\begin{frame}[plain]
+\begin{frame}[plain]{Example Cntd. FT of $e^{-at}u(t), \quad a> 0$}
     \mode<beamer>
     {
         \begin{figure}
