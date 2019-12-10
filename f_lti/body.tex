@@ -83,7 +83,7 @@
             \textbf{Examples of systems with memory}\par
             Accumulator or summer:
             \begin{equation*}
-                y[n] = \sum_{k=-\infty}^{\infty}x[k].
+                y[n] = \sum_{k=-\infty}^{n}x[k].
             \end{equation*}
             Delay:
             \begin{equation*}
@@ -232,7 +232,7 @@
             \textbf{ Example}\par
             Modulator:
             \begin{equation*}
-                y(t) = (\sin(t)x(t)
+                y(t) = \sin(t)x(t)
             \end{equation*}
         \end{columns}
     }
@@ -274,7 +274,7 @@
 
 \subsection{Convolution}
 
-\begin{frame}{Introduction (From Oppenheim)}
+\begin{frame}{Introduction (from Oppenheim)}
     \begin{itemize}
         \item A linear system: the response to a linear combination of inputs is the same linear combination of the individual responses.
         \item Time invariance: the system is not sensitive to the time origin. If the input is shifted in time by some amount, then the output is simply shifted by the same amount.
