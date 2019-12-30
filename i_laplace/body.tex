@@ -683,7 +683,19 @@ Instead of having to reevaluate the transform of a given signal, we can simply r
 \end{frame}
 
 \begin{frame}<beamer>
-    Take $x(t) = v_i(t)$, and $y(t) = v_o(t)$.
+    Take $x(t) = v_i(t)$, and $y(t) = v_C(t) = v_o(t)$.
+    \begin{equation*}
+        v_R(t) + v_L(t) + v_C(t) = x(t).
+    \end{equation*}
+    \pause
+    \begin{equation*}
+        i(t) = C\dfrac{d v_C(t)}{dt} = C\dfrac{dy(t)}{dt}.
+    \end{equation*}
+
+    \begin{equation*}
+        v_L(t) = L\dfrac{d i(t)}{dt} = LC\dfrac{d^2y(t)}{dt^2}.
+    \end{equation*}
+    \pause    
     \begin{equation*}
         RC\dfrac{dy(t)}{dt} + LC \dfrac{d^2y(t)}{dt^2} + y(t) = x(t).
     \end{equation*}
