@@ -358,7 +358,7 @@ Instead of having to reevaluate the transform of a given signal, we can simply r
             -u(-t) & {\dfrac{1}{s}} & \mathrm{Re}(s) < 0\\
             tu(t) & {\dfrac{1}{s^2}} & \mathrm{Re}(s) > 0\\
             \dfrac{t^{n-1}}{(n-1)!}u(t) & {\dfrac{1}{s^{n}}} & \mathrm{Re}(s) > 0\\
-            -\dfrac{t^{n-1}}{(n-1)!}u(-t) & {\dfrac{1}{s^{n}}} & \mathrm{Re}(s) < 0\\                       
+            -\dfrac{t^{n-1}}{(n-1)!}u(-t) & {\dfrac{1}{s^{n}}} & \mathrm{Re}(s) < 0\\
             e^{-at}u(t) & {\dfrac{1}{s+a}} & \mathrm{Re}(s) > - a\\
             -e^{-at}u(-t) & {\dfrac{1}{s+a}} & \mathrm{Re}(s) < - a\\
             te^{-at}u(t) & \dfrac{1}{(s+a)^2} & \mathrm{Re}(s) > - a\\
@@ -546,7 +546,7 @@ Instead of having to reevaluate the transform of a given signal, we can simply r
 \mode<beamer>
 {
     \begin{align*}
-        Y(s) &= \dfrac{1}{s+a}X(s), \quad \mathrm{Re}\{s\}>a\\
+        Y(s) &= \dfrac{1}{s+a}X(s), \quad \mathrm{Re}\{s\}> -a\\
         h(t) &\xleftrightarrow{\mathcal{L}} H(s)
     \end{align*}
     \pause
@@ -661,7 +661,7 @@ Instead of having to reevaluate the transform of a given signal, we can simply r
 
 \begin{frame}
     \begin{example}
-        Consider an $RLC$ series network.
+        Consider an $RLC$ series network in which the capacitor voltage and inductor current are initially zero. 
         \begin{circuitikz}[scale=1]
 %--------start graphics code --------
 %\draw[step=0.5,very thin,black!20] (-1,-0.5) grid (6,2.5);
@@ -676,10 +676,26 @@ Instead of having to reevaluate the transform of a given signal, we can simply r
 \end{circuitikz}
 \begin{enumerate}
     \item Obtain the voltage transfer function.
-    \item If $\omega_n = 2000\:\mathrm{rad/s}$ and $zeta=0.25, 0.50, 0.75$, and $1.0$, sketch the pole-zero plots.
+    \item If $\omega_n = 2000\:\mathrm{rad/s}$ and $\zeta=0.25, 0.50, 0.75$, and $1.0$, sketch the pole-zero plots.
     \item Sketch the step response for each case.
 \end{enumerate}
     \end{example}
+\end{frame}
+
+\begin{frame}<beamer>
+    Take $x(t) = v_i(t)$, and $y(t) = v_o(t)$.
+    \begin{equation*}
+        RC\dfrac{dy(t)}{dt} + LC \dfrac{d^2y(t)}{dt^2} + y(t) = x(t).
+    \end{equation*}
+    \pause
+    Taking the LT of both the sides
+    \begin{equation*}
+        RCsY(s) + LC s^2LCY(s) + Y(s) = X(s).
+    \end{equation*}   
+    \pause
+     \begin{equation*}
+        H(s) = \dfrac{1/LC}{s^2 + (R/L)s + (1/LC)}.
+    \end{equation*}    
 \end{frame}
 
 
