@@ -7,7 +7,7 @@
     hide axis,
     unit vector ratio*=1 2 1,
     xtick=\empty, ytick=\empty, ztick=\empty,
-    clip=false, 
+    clip=false,
     scale = 2,
 ]
 \def\sumcurve{0}
@@ -20,7 +20,7 @@
 }
 \addplot3 [red, samples=200] (x,0,{\sumcurve});
 
-\draw [on layer=axis foreground]  (axis cs:0,0,0) -- (axis cs:10,0,0);
-\draw (axis cs:10.5,0.25,0) -- (axis cs:10.5,5.5,0);
+\draw [on layer=axis foreground]  (axis cs:0,0,0) node [anchor=east] {$t$} -- (axis cs:10,0,0);
+\draw (axis cs:10.5,0.25,0) -- (axis cs:10.5,5.5,0) node [anchor=west] {$\omega$};
 \end{axis}
-\end{tikzpicture}
+\end{tikzpicture} 
