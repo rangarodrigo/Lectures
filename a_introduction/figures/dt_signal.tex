@@ -1,4 +1,4 @@
-\begin{filecontents}{data.dat}
+\begin{filecontents}{\subfolder/dt_signal.dat}
  n   xn
 -4   -1.0
 -3   0.5
@@ -38,6 +38,6 @@
 %    %at={(ticklabel* cs:1.05)},
 %    anchor=south,},
 ]
-\addplot+[ycomb,black, thick] table [x={n}, y={xn}] {data.dat};
+\addplot+[ycomb,black, thick] table [x={n}, y={xn}] {\subfolder/dt_signal.dat};
 \end{axis}
 \end{tikzpicture} 
