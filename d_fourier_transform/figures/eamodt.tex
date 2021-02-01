@@ -17,7 +17,7 @@
 		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
      ]
 		%\addplot+[red, smooth, mark=none] table [x={n}, y={xn}] {periodic_square_fs_samples_of_envilope_gen.dat};
-		\addplot [red, thick, domain=-5:5, samples=200] plot{exp(-abs(x))};
+		\addplot [red!70!black, thick, domain=-5:5, samples=200] plot{exp(-abs(x))};
 		\node at (axis cs:-0.5, 1) [anchor=east] { $1$ };
     \end{axis}
 \end{scope}
@@ -39,7 +39,7 @@
 		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
      ]
 		%\addplot+[red, smooth, mark=none] table [x={n}, y={xn}] {periodic_square_fs_samples_of_envilope_gen.dat};
-		\addplot [red, thick, domain=-5:5, samples=200] plot{2/(x*x + 1))};
+		\addplot [red!70!black, thick, domain=-5:5, samples=200] plot{2/(x*x + 1))};
 		\node at (axis cs:-0.5, 2) [anchor=east] { $2/a$ };
 		\draw[dashed, blue] (axis cs:-1, 0) node[anchor=north] { $-a$} -- (axis cs:-1, 1) node[anchor=east] { $1/a$} --  (axis cs:1, 1)  --  (axis cs:1, 0) node[anchor=north] { $a$} ;
     \end{axis}

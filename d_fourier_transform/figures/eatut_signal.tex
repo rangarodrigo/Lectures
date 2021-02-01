@@ -17,8 +17,8 @@
 		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
      ]
 		%\addplot+[red, smooth, mark=none] table [x={n}, y={xn}] {periodic_square_fs_samples_of_envilope_gen.dat};
-		\addplot [red, thick, domain=0:5, samples=200] plot{exp(-0.8*x)};
-		\addplot[red, thick, mark=none] coordinates {(-5,0) (0,0) (0,1)};
+		\addplot [red!70!black, thick, domain=0:5, samples=200] plot{exp(-0.8*x)};
+		\addplot[red!70!black, thick, mark=none] coordinates {(-5,0) (0,0) (0,1)};
 		\node at (axis cs:-0.5, 1) [anchor=east] { $1$ };
 		%\draw[dashed, blue] (axis cs:-1, 0) node[anchor=north] { $-a$} -- (axis cs:-1, 0.707) node[anchor=east] { $\sqrt{2} a/2$} --  (axis cs:1, 0.707)  --  (axis cs:1, 0) node[anchor=north] { $a$} ;
     \end{axis}

@@ -16,7 +16,7 @@
 		every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
      ]
 		%\addplot+[red, smooth, mark=none] table [x={n}, y={xn}] {periodic_square_fs_samples_of_envilope_gen.dat};
-		\addplot [red, thick, domain=-5:5, samples=200] plot{sin(pi*deg(x))/(pi*x)};
+		\addplot [red!70!black, thick, domain=-5:5, samples=200] plot{sin(pi*deg(x))/(pi*x)};
 		\node at (axis cs:0, 1) [anchor=east] { $2T_1$ };
 		\draw[latex-] (axis cs:pi/3, 0) --(axis cs:0.6,-0.3) node  [anchor=north] { $\pi/T_1$ } ;
 		\draw[latex-] (axis cs:-pi/3, 0) --(axis cs:-0.6,-0.3) node  [anchor=north] { $-\pi/T_1$ } ;		

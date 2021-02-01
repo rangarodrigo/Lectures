@@ -30,7 +30,7 @@
 		enlargelimits=true,
  ]
 	%\addplot+[red, smooth, mark=none] table [x={n}, y={xn}] {periodic_square_fs_samples_of_envilope_gen.dat};
-	\addplot [red, thick, domain=-3*pi:3*pi, samples=200] plot{\Wa/pi*sin(deg(\Wa*x))/(pi*x)};
+	\addplot [red!70!black, thick, domain=-3*pi:3*pi, samples=200] plot{\Wa/pi*sin(deg(\Wa*x))/(pi*x)};
 	\node at (axis cs:-0.5, \Wa/pi) [anchor=east] { $W_1/\pi$ };
 	\draw [latex-]  (axis cs:pi/\Wa, 0) ++ (0, -0.1cm) -- ++(0, -0.3cm) node [anchor=north] {$\dfrac{\pi}{W_1}$};
 	\draw [latex-]  (axis cs:-pi/\Wa, 0) ++ (0, -0.1cm) -- ++(0, -0.3cm) node [anchor=north] {$-\dfrac{\pi}{W_1}$};
@@ -54,7 +54,7 @@
 	every axis y label/.style={at={(ticklabel* cs:1.0)}, anchor=west,},	
 		enlargelimits=true,
 	]
-	\addplot [red, thick] coordinates  {(-5,0) (-\Wa, 0) (-\Wa,1) (\Wa, 1) (\Wa, 0) (5, 0)};
+	\addplot [red!70!black, thick] coordinates  {(-5,0) (-\Wa, 0) (-\Wa,1) (\Wa, 1) (\Wa, 0) (5, 0)};
 \end{axis}
 
 
@@ -80,7 +80,7 @@
 		enlargelimits=true,
  ]
 	%\addplot+[red, smooth, mark=none] table [x={n}, y={xn}] {periodic_square_fs_samples_of_envilope_gen.dat};
-	\addplot [red, thick, domain=-3*pi:3*pi, samples=200] plot{\Wb/pi*sin(deg(\Wb*x))/(pi*x)};
+	\addplot [red!70!black, thick, domain=-3*pi:3*pi, samples=200] plot{\Wb/pi*sin(deg(\Wb*x))/(pi*x)};
 	\node at (axis cs:-0.5, \Wb/pi) [anchor=east] { $W_2/\pi$ };
 	\draw [latex-]  (axis cs:pi/\Wb, 0) ++ (0, -0.1cm) -- ++(0, -0.3cm) node [anchor=north] {$\dfrac{\pi}{W_2}$};
 	\draw [latex-]  (axis cs:-pi/\Wb, 0) ++ (0, -0.1cm) -- ++(0, -0.3cm) node [anchor=north] {$-\dfrac{\pi}{W_2}$};
@@ -104,7 +104,7 @@
 	every axis y label/.style={at={(ticklabel* cs:1.0)}, anchor=west,},	
 		enlargelimits=true,
 	]
-	\addplot [red, thick] coordinates  {(-5,0) (-\Wb, 0) (-\Wb,1) (\Wb, 1) (\Wb, 0) (5, 0)};
+	\addplot [red!70!black, thick] coordinates  {(-5,0) (-\Wb, 0) (-\Wb,1) (\Wb, 1) (\Wb, 0) (5, 0)};
 \end{axis}
 
 
@@ -129,7 +129,7 @@
 	enlargelimits=true,
  ]
 	%\addplot+[red, smooth, mark=none] table [x={n}, y={xn}] {periodic_square_fs_samples_of_envilope_gen.dat};
-	\addplot [red, thick, domain=-3*pi:3*pi, samples=200] plot{\Wc/pi*sin(deg(\Wc*x))/(pi*x)};
+	\addplot [red!70!black, thick, domain=-3*pi:3*pi, samples=200] plot{\Wc/pi*sin(deg(\Wc*x))/(pi*x)};
 	\node at (axis cs:-0.5, \Wc/pi) [anchor=east] { $W_3/\pi$ };
 	\draw [latex-]  (axis cs:pi/\Wc, 0) ++ (0, -0.1cm) -- ++(0, -0.3cm) node [anchor=north] {$\dfrac{\pi}{W_3}$};
 	\draw [latex-]  (axis cs:-pi/\Wc, 0) ++ (0, -0.1cm) -- ++(0, -0.3cm) node [anchor=north] {$-\dfrac{\pi}{W_3}$};
@@ -153,7 +153,7 @@
 	every axis y label/.style={at={(ticklabel* cs:1.0)}, anchor=west,},	
 		enlargelimits=true,
 	]
-	\addplot [red, thick] coordinates  {(-4,0) (-\Wc, 0) (-\Wc,1) (\Wc, 1) (\Wc, 0) (4, 0)};
+	\addplot [red!70!black, thick] coordinates  {(-4,0) (-\Wc, 0) (-\Wc,1) (\Wc, 1) (\Wc, 0) (4, 0)};
 \end{axis}
 
 \end{tikzpicture} 

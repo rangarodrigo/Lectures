@@ -22,7 +22,7 @@
           \item We use Fourier transform to represent aperiodic signals. A larger class of signals, including all signals with finite energy, can be represented through a linear combination of complex exponentials.
           \item Whereas for periodic signals the complex exponential building blocks are harmonically related, for aperiodic signals they are infinitesimally close in frequency, and the representation in terms of a linear combination takes the form of an integral rather than a sum.
           \item The resulting spectrum of coefficients in this representation is called the \alert{Fourier transform}.
-          \item The synthesis integral itself, which uses these coefficients to represent the signal as a linear combination of complex exponentials, is called the \alert{inverse Fourier transform}.
+          \item The synthesis integral itself, which uses the Fourier transform to represent the signal as a linear combination (integral) of complex exponentials, is called the \alert{inverse Fourier transform}.
       \end{itemize}
 \end{frame}
 
@@ -70,13 +70,13 @@
         \begin{figure}
           \centering
           \input{figures/example02_periodic_square_fs}
-          \caption{Plots of scaled Fourier series coefficients $Ta_k$}\label{fi:example02_periodic_square_fs}
+          \caption{Plots of scaled Fourier series coefficients $a_k$}\label{fi:example02_periodic_square_fs}
         \end{figure}
         }
         \column{0.2\textwidth}
         {
             \small
-            \noindent Plots of scaled Fourier series coefficients $Ta_k$ for the periodic square wave with $T_1$ fixed and for several values of $T$: $T=4T_1$, $T=8T_1$, $T=16T_1$.
+            \noindent Plots of scaled Fourier series coefficients $a_k$ for the periodic square wave with $T_1$ fixed and for several values of $T$: $T=4T_1$, $T=8T_1$, $T=16T_1$.
 
         }
     \end{columns}
@@ -115,6 +115,17 @@
     \end{equation}
     The transform $X(j\omega)$ of an aperiodic signal $x(t)$ is referred to as the spectrum of $x(t)$.
 }
+\begin{tikzpicture}[remember picture,overlay]
+    \node[draw=blue!50, fill=blue!10, inner sep=2pt,outer sep=2pt, rounded corners=0.1cm, anchor=south east, yshift=0cm, xshift=-1cm, text width=5cm]  at (current page.south east) {
+        FS synthesis and analysis equations:
+        \begin{equation*}
+            \begin{aligned}
+                x(t) &= \sum_{k=-\infty}^{+\infty}a_k e^{jk\omega_0 t}\\
+                a_k &= \frac{1}{T} \int_{T}x(t)e^{-jk\omega_0 t}dt
+            \end{aligned}
+        \end{equation*}
+    } ;
+\end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Relation with $a_k$}
@@ -126,6 +137,25 @@
         a_k = \left.\frac{1}{T}X(j\omega)\right|_{\omega=k\omega_0}
     \end{equation}
 }
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[draw=blue!50, fill=blue!10, inner sep=2pt,outer sep=2pt, rounded corners=0.1cm, anchor=south east, yshift=0cm, xshift=-1cm, text width=5cm]  at (current page.south east) {
+        FS synthesis and analysis equations:
+        \begin{equation*}
+            \begin{aligned}
+                x(t) &= \sum_{k=-\infty}^{+\infty}a_k e^{jk\omega_0 t}\\
+                a_k &= \frac{1}{T} \int_{T}x(t)e^{-jk\omega_0 t}dt
+            \end{aligned}
+        \end{equation*}
+        FT synthesis and analysis equations:
+        \begin{equation*}
+            \begin{aligned}        
+                x(t) &= \frac{1}{2\pi}\int_{-\infty}^{\infty}X(j\omega)e^{j\omega t} d\omega\\
+                X(j\omega) &= \int_{-\infty}^{\infty}x(t)e^{-j\omega t} dt\\    
+            \end{aligned}
+        \end{equation*}           
+    } ;
+\end{tikzpicture}
 \end{frame}
 
 \begin{frame}[plain]{Convergence of Fourier Transform}
