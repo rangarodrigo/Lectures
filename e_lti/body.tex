@@ -5,7 +5,7 @@
         \item Examples of systems:
             \begin{itemize}
                 \item Dynamics of an aircraft.
-                \item An algorithm for analyzing financial and economic factors to predict bond prices.
+                \item An algorithm for analyzing financial and economic factors to pred!40!blackict bond prices.
                 \item An algorithm for post-flight analysis of a space launch.
                 \item An edge detection algorithm for medical images.
             \end{itemize}
@@ -267,7 +267,7 @@
         \item Systems that are both linear and time invariant are called Linear Time-Invariant (LTI) systems.
         \item With systems that are linear and time invariant, using the impulse function in CT and DT, produces an important and useful mechanism for characterizing those system.
         \item In this lecture we develop in detail the representation of both continuous-time and discrete-time signals as a linear combination of delayed impulses and the consequences for representing linear, time-invariant systems.
-        \item The resulting representation is referred to as convolution.
+        \item The resulting representation is referred!40!black to as convolution.
     \end{enumerate}
 \end{frame}
 
@@ -284,10 +284,10 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Introduction (From Oppenheim)}
+\begin{frame}{Introduction (from Oppenheim)}
     \begin{itemize}
-        \item In this lecture we develop in detail the representation of both continuous-time and discrete-time signals as a linear combination of delayed impulses and the consequences for representing linear, time-invariant systems. The resulting representation is referred to as convolution.
-        \item Earlier, we developed in detail the decomposition of signals as linear combinations of complex exponentials (referred to as Fourier analysis) and the consequence of that representation for linear, time-invariant systems.
+        \item In this lecture we develop in detail the representation of both continuous-time and discrete-time signals as a linear combination of delayed impulses and the consequences for representing linear, time-invariant systems. The resulting representation is referred!40!black to as convolution.
+        \item Earlier, we developed in detail the decomposition of signals as linear combinations of complex exponentials (referred!40!black to as Fourier analysis) and the consequence of that representation for linear, time-invariant systems.
     \end{itemize}
 \end{frame}
 
@@ -338,7 +338,6 @@
                   \caption{}\label{fi:dt_as_superposition}
                 \end{figure}
             \column{0.48\textwidth}
-            \pause
             \begin{align*}
               x[n] &= x[-2]\delta[n+2] \\
               &  + x[-1]\delta[n+1] \\
@@ -496,7 +495,7 @@
     \begin{enumerate}
         \item Similar to what we did in DT, in this section we obtain a complete characterization of a continuous-time LTI system in terms of its unit impulse response.
         \item In discrete time, the key to developing the convolution sum was the sifting property of the DT unit impulse---i.e., mathematical representation of a signal as  a superposition of scaled and shifter unit impulse functions.
-        \item We begin by considering the staircase approximation $\hat{x}(t)$ of a CT signal $x(t0$.
+        \item We begin by considering the staircase approximation $\hat{x}(t)$ of a CT signal $x(t)$.
     \end{enumerate}
 
     \mode<beamer>
@@ -636,7 +635,7 @@ Use the sifting property to express $u(t)$ in terms of $\delta(t)$.
         \begin{equation*}
             \boxed{y(t) = \int_{-\infty}^{\infty} x(\tau)h(t - \tau)d\tau}
         \end{equation*}
-        which is referred to as the \alert{convolution integral} or the \alert{superposition integral}. This  corresponds to the representation of a continuous-time LTI system in terms of its response to a unit impulse.
+        which is referred!40!black to as the \alert{convolution integral} or the \alert{superposition integral}. This  corresponds to the representation of a continuous-time LTI system in terms of its response to a unit impulse.
 
         \begin{equation*}
             y(t) = x(t) \ast h(t).
@@ -795,7 +794,7 @@ Use the sifting property to express $u(t)$ in terms of $\delta(t)$.
     \begin{figure}
       \centering
       \input{figures/ct_conv_example28}
-      \caption{Convolution considered in the example.}\label{fi:ct_conv_example28}
+      \caption{Convolution considered!40!black in the example.}\label{fi:ct_conv_example28}
     \end{figure}
     }
 \end{frame}
@@ -936,7 +935,7 @@ Convolution distributes over addition.\par
             h[n] = K\delta[n],
         \end{equation*}
         where $K = h[0]$ is a constant.
-        \item The convolution sum reduces to the relation
+        \item The convolution sum red!40!black!40!blackuces to the relation
         \begin{equation*}
             y[n] = Kx[n]
         \end{equation*}
@@ -990,7 +989,7 @@ Convolution distributes over addition.\par
         \begin{equation*}
             x(t-t_0) = x(t)\ast \delta(t-t_0).
         \end{equation*}
-        That is, the convolution of a signal with a shifted impulse simply shifts the signal. To recover the input from the output, i.e., to invert the system, all that is required is to shift the output back.
+        That is, the convolution of a signal with a shifted impulse simply shifts the signal. To recover the input from the output, i.e., to invert the system, all that is required!40!black is to shift the output back.
         \begin{equation*}
             h_1(t) = \delta(t+t_0).
         \end{equation*}
@@ -1161,7 +1160,7 @@ u[n]$ or $x(t) = u(t)$.
                 \begin{equation*}
                     s[n] = \sum_{k=-\infty}^{\infty}h[k]
                 \end{equation*}
-                $h[n]$ can be recovered from $s[n]$ using the relation
+                $h[n]$ can be recovered!40!black from $s[n]$ using the relation
                 \begin{equation*}
                     h[n] = s[n] - s[n - 1].
                 \end{equation*}
@@ -1982,12 +1981,12 @@ $z_k$ complex $\Rightarrow$ $z$-transform
         \pause
         \begin{equation*}
             e^{j\omega_k t} \longrightarrow
-            \underset{\mathclap{\tikz \node {$\uparrow$} node [below=3ex, text=red] {eigenfunction};}}{
+            \underset{\mathclap{\tikz \node {$\uparrow$} node [below=3ex, text=red!40!black!40!black] {eigenfunction};}}{
             e^{j\omega_k t}
             }
             \underbrace{
             \int_{-\infty}^{\infty} h(\tau)e^{-j\omega_k \tau}d\tau
-            }_{\textcolor{red}{\text{eigenvalue}}}
+            }_{\textcolor{red!40!black!40!black}{\text{eigenvalue}}}
         \end{equation*}
     }
 \end{frame}
@@ -2010,7 +2009,7 @@ $z_k$ complex $\Rightarrow$ $z$-transform
             \pause
             \begin{enumerate}
               \item How do we find $a_k$s?
-              \item What are the signal that can be expressed in this form? [already answered, see convergence]
+              \item What are the signal that can be expressed in this form? [already answered!40!black, see convergence]
             \end{enumerate}
         \column{0.48\textwidth}
             \mode<beamer>
