@@ -21,9 +21,10 @@
 	clip=false,
 ]
 	\addplot [dashed, blue] coordinates {(-3,0) (0,0) (0,1) (1,1) (1,0) (4,0)};
-	\addplot [thick, red] coordinates {(-3,0) (0,0) (0,0.25) (0.5, 0) (4,0)};
+	\addplot [thick, red!60!black] coordinates {(-3,0) (0,0) (0,0.25) (0.5, 0) (4,0)};
 
 	\node at (axis cs:3,0.8) {$0<t<T$};	
+	\node at (axis cs:3,0.4) {$y(t) = \frac{1}{2}t^2$};	
 \end{axis}
 
 \begin{axis}[
@@ -46,8 +47,9 @@
 	clip=false,
 ]
 	\addplot [dashed, blue] coordinates {(-3,0) (0,0) (0,1) (1,1) (1,0) (4,0)};
-	\addplot [thick, red] coordinates {(-3,0) (0,0) (0,0.75) (1,0.25) (1, 0) (4,0)};
-	\node at (axis cs:3,0.8) {$T<t<2T$};	
+	\addplot [thick, red!60!black] coordinates {(-3,0) (0,0) (0,0.75) (1,0.25) (1, 0) (4,0)};
+	\node at (axis cs:3,0.8) {$T<t<2T$};
+	\node at (axis cs:3,0.4) {$y(t) = Tt - \frac{1}{2}T^2$};	
 \end{axis}
 
 \begin{axis}[
@@ -70,8 +72,9 @@
 	clip=false,
 ]
 	\addplot [dashed, blue] coordinates {(-3,0) (0,0) (0,1) (1,1) (1,0) (4,0)};
-	\addplot [thick, red] coordinates {(-3,0) (.5,0) (.5,1) (1, 0.75) (1,0) (4,0)};
+	\addplot [thick, red!60!black] coordinates {(-3,0) (.5,0) (.5,1) (1, 0.75) (1,0) (4,0)};
 	\node at (axis cs:3,0.8) {$2T<t<3T$};	
+		\node at (axis cs:3,0.4) {$y(t) = - \frac{1}{2}t^2 + Tt + \frac{3}{2}T^2$};
 \end{axis}
 
 \end{tikzpicture} 

@@ -16,7 +16,7 @@
 	every axis y label/.style={at={(ticklabel* cs:1.05)},    anchor=south},	
 	clip=false,
 ]
-	\addplot [thick, red] coordinates {(-3,0) (0,0) (0,1) (3,1)};
+	\addplot [thick, red!60!black] coordinates {(-3,0) (0,0) (0,1) (3,1)};
 \end{axis}
 \pause
 \begin{axis}[
@@ -36,8 +36,8 @@
 	every axis y label/.style={at={(ticklabel* cs:1.05)},    anchor=south},	
 	clip=false,
 ]
-	\addplot [thick, red, domain=0:3]  {exp(-x)};
-	\addplot [thick, red] coordinates {(-3,0) (0,0) (0,1)};
+	\addplot [thick, red!60!black, domain=0:3]  {exp(-x)};
+	\addplot [thick, red!60!black] coordinates {(-3,0) (0,0) (0,1)};
 \end{axis}
 \pause
 \begin{axis}[
@@ -58,7 +58,7 @@
 	every axis y label/.style={at={(ticklabel* cs:1.05)},    anchor=south},	
 	clip=false,
 ]
-\addplot [thick, red] coordinates {(-3,1) (-1,1) (-1,0) (3,0)};
+\addplot [thick, red!60!black] coordinates {(-3,1) (-1,1) (-1,0) (3,0)};
 \node at (axis cs:2,0.5) {$t<0$};
 \end{axis}
 
@@ -81,7 +81,7 @@
 	every axis y label/.style={at={(ticklabel* cs:1.05)},    anchor=south},	
 	clip=false,
 ]
-\addplot [thick, red] coordinates {(-3,1) (1,1) (1,0) (3,0)};
+\addplot [thick, red!60!black] coordinates {(-3,1) (1,1) (1,0) (3,0)};
 \node at (axis cs:2,0.5) {$t>0$};
 \end{axis}
 \end{tikzpicture} 

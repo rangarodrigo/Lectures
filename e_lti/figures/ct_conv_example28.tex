@@ -20,7 +20,7 @@
 	every axis y label/.style={at={(ticklabel* cs:1.05)},    anchor=west},	
 	clip=false,
 ]
-	\addplot [thick, red, domain=-3:0]  {exp(2*x)};
+	\addplot [thick, red!60!black, domain=-3:0]  {exp(2*x)};
 \end{axis}
 
 \pause
@@ -43,7 +43,7 @@
 	every axis y label/.style={at={(ticklabel* cs:1.05)},    anchor=west},	
 	clip=false,
 ]
-	\addplot [thick, red, domain=-3:0]  coordinates {(-4, 1) (-3,1) (-3, 0) (4,0)};
+	\addplot [thick, red!60!black, domain=-3:0]  coordinates {(-4, 1) (-3,1) (-3, 0) (4,0)};
 \end{axis}
 
 \pause
@@ -66,8 +66,8 @@
 	every axis y label/.style={at={(ticklabel* cs:1.05)},    anchor=west},	
 	clip=false,
 ]
-	\addplot [thick, red, domain=-3:3]  {0.5*exp(2*(x-3))};
-	\addplot [thick, red, domain=-3:0]  coordinates {(3, 0.5) (4, 0.5)};	
+	\addplot [thick, red!60!black, domain=-3:3]  {0.5*exp(2*(x-3))};
+	\addplot [thick, red!60!black, domain=-3:0]  coordinates {(3, 0.5) (4, 0.5)};	
 \end{axis}
 
 \end{tikzpicture} 

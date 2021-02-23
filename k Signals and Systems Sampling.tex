@@ -1,8 +1,8 @@
 \documentclass[t, aspectratio=169,xcolor={svgnames}, 10pt]{beamer}
 \usepackage{rangapreamble}
 
-\usetheme{CambridgeUS}
-\usecolortheme{crane}
+%\usetheme{CambridgeUS}
+%\usecolortheme{crane}
 %\import{}{Contents}
 
 \title{EN1060 Signals and Systems: Sampling}
@@ -10,6 +10,17 @@
 \author[]{Ranga Rodrigo\\\texttt{ranga@uom.lk}}
 \institute[]{The University of Moratuwa, Sri Lanka}
 \date{\today}
+\titlegraphic{\includegraphics[width=2cm]{entc.png}}
+
+ \tikzmath{
+   function sinc(\x) {
+     if  abs(\x) < .001 then { % (|x| < .001) ~ (x = 0)
+       return 1;
+     } else {
+       return sin(\x r)/\x;
+     };
+   };
+ }
 
 \begin{document}
     \begin{frame}
