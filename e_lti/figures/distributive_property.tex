@@ -3,7 +3,7 @@
 
 \begin{tikzpicture}[node distance=2.5cm,auto,>=latex']
 
-	\begin{scope}[node distance=1cm and 0.5cm,auto,>=latex']
+	\begin{scope}[node distance=0.5cm and 0.5cm,auto,>=latex']
 		\node (a) at (0,0) {$x(t)$};
 		\node (b) [right of=a, coordinate] {};
 		\node (c) [int, above right = of b] {$h_1(t)$};
@@ -18,7 +18,7 @@
 		\draw[-latex] (e.east) |- (f);	
 	\end{scope}
 	
-	\begin{scope}[yshift=-3cm,
+	\begin{scope}[yshift=-2.5cm,
 		start chain,
 		node distance=5mm,
 		every node/.style={int, draw,on chain,join,inner sep=2mm},

@@ -855,7 +855,7 @@ Use the sifting property to express $u(t)$ in terms of $\delta(t)$.
                 y[n] &= \sum_{k=-\infty}^{\infty}x[k]h[n-k] = x[n]\ast h[n]\\
                 y(t) &= \int_{-\infty}^{\infty}x(\tau)h(t-\tau)d\tau = x(t)\ast h(t)\\
             \end{align*}
-        \item Characteristics of an LTI system are completely determined by its impulse response.
+        \item Characteristics of an LTI system are completely determined by its impulse response ($h(t)$ in CT, $h[n]$ in DT.).
     \end{enumerate}
 
 \end{frame}
@@ -884,7 +884,7 @@ Use the sifting property to express $u(t)$ in terms of $\delta(t)$.
                 Substituting $r = n-k$, or equivalently $k = n-r$
                 \pause
                 \begin{equation*}
-                    x[n]\ast h[n] = \sum_{k=-\infty}^{\infty}x[n-r]h[r] = h[n]\ast x[n].
+                    x[n]\ast h[n] = \sum_{r=-\infty}^{\infty}x[n-r]h[r] = h[n]\ast x[n].
                 \end{equation*}
             \column{0.48\textwidth}
         \end{columns}
@@ -969,7 +969,7 @@ Convolution distributes over addition.\par
         where $K = h[0]$ is a constant.
         \item The convolution sum reduces to the relation
         \begin{equation*}
-            y[n] = Kx[n]
+            y[n] = Kx[n].
         \end{equation*}
         \item If a discrete-time LTI system has an impulse response $h[n]$ that is not identically zero for $n \neq 0$, then the system has memory.
         \item For CT:
@@ -986,9 +986,8 @@ Convolution distributes over addition.\par
 
 
 \begin{frame}{lnvertibility of LTI Systems}
-    \begin{enumerate}
-        \item An LTI system is invertible only if an inverse system exists that, when connected in series with the original system, produces an output equal to the input to the first system.
-    \end{enumerate}
+    An LTI system is invertible only if an inverse system exists that, when connected in series with the original system, produces an output equal to the input to the first system.
+
 
     \mode<beamer>
     {
@@ -1002,16 +1001,16 @@ Convolution distributes over addition.\par
 
 
 \begin{frame}{}
-    \textbf{ Example}\par
+    \noindent\textbf{Example}\par
     Consider the following relationship of a pure time shift:
     \begin{equation*}
         y(t) = x(t-t_0)
     \end{equation*}
-    Is the corresponding system memoryless? What is the inverse system of the system? \pause
-
+    Is the corresponding system memoryless? What is the inverse system of the system?\par \pause
+    \vspace{0.1cm}
     \mode<beamer>
     {
-        Delay if $t_0 > 0$, and advance if $t_0 < 0$. E.g., if $t_0 > 0$ then the output at time $t$ equals the input at the earlier time $t-t_0$. If $t_0 = 0$, the system is the identity system  and that is memoryless. For any other value of $t_0$, the system has memory. \par
+        \noindent Delay if $t_0 > 0$, and advance if $t_0 < 0$. E.g., if $t_0 > 0$ then the output at time $t$ equals the input at the earlier time $t-t_0$. If $t_0 = 0$, the system is the identity system  and that is memoryless. For any other value of $t_0$, the system has memory. \par
         \pause
         Setting the input equal to $\delta(t)$, the impulse response can be obtained:
         \begin{equation*}
@@ -1033,16 +1032,48 @@ Convolution distributes over addition.\par
 \end{frame}
 
 \begin{frame}{}
-    \textbf{ Example}\par
-    Consider the LTI system with impulse response
+    \textbf{Example}\par
+    Determine $y[n]$, and find the inverse system of the following LTI system with impulse response
     \begin{equation*}
         h[n] = u[n].
     \end{equation*}
-    Determine $y[n]$. Find the inverse system.
+    \pause
     \mode<beamer>
     {
-        %TODO: Type answer from example 2.12
+        \begin{equation*}
+            y[n] = x[n]\ast h[n] = \sum_{k=-\infty}^{\infty}x[k]h[n-k].
+        \end{equation*}
+        \pause
+        \begin{equation*}
+            y[n] = \sum_{k=-\infty}^{\infty}x[k]u[n-k].
+        \end{equation*}
+        As $u[n-k]$ is $0$ for $n-k < 0$ and $1$ for $n-k \geq 0$,
+        \begin{equation*}
+            y[n] = \sum_{k=-\infty}^{n}x[k].
+        \end{equation*}
+        \pause
+        This is the summer or the accumulator. As we saw before, the system is invertible, and its inverse is
+        \begin{equation*}
+            x[n] = y[n] - y[n-1].
+        \end{equation*}
+        \pause
+        Choosing the input $y[n] = \delta[n]$,
+        \begin{equation*}
+            h_1[n] = \delta[n] - \delta[n-1].
+        \end{equation*}
     }
+\end{frame}
+
+\begin{frame}
+    \noindent\textbf{Example ctd.}\par
+    Verify that $h_1[n] = \delta[n] - \delta[n-1]$ indeed is the inverse of $h[n] = u[n]$.
+    \pause
+    \begin{align*}
+        h[n]\ast h_1[n]  &= u[n]\ast\left\{\delta[n] - \delta[n-1]\right\}\\
+        &= u[n]\ast \delta[n] - u[n]\ast \delta[n-1]\\
+        &= u[n] - u[n-1]\\
+        &= \delta[n]
+    \end{align*}
 \end{frame}
 
 
@@ -1073,6 +1104,26 @@ Convolution distributes over addition.\par
     \end{enumerate}
 \end{frame}
 
+
+\begin{frame}
+    For a causal DT LTI system, the condition $h[n] = 0\quad \text{for } n < 0$ implies that the convolution sum becomes
+        \begin{equation*}
+            y[n] = \sum_{k=-\infty}^{n}x[k]h[n-k].
+        \end{equation*}
+    and as
+    \begin{equation*}
+        y[n] = h[n]\ast x[n] = \sum_{k=-\infty}^{\infty}h[k]x[n-k].
+    \end{equation*}
+    \begin{equation*}
+        y[n] = \sum_{k=0}^{\infty}h[k]x[n-k].
+    \end{equation*}
+    \pause
+    For a causal CT system, $h(t) = 0\quad \text{for } t < 0$, convolution integral is
+    \begin{equation*}
+        y(t) = \int_{-\infty}^{t}x(\tau)h(t - \tau)d\tau = \int_{0}^{\infty}h(\tau)x(t - \tau)d\tau.
+    \end{equation*}
+\end{frame}
+
 \begin{frame}{Stability for LTI Systems}
 A system is stable if every bounded input produces a bounded output. Consider an input $x[n]$ that is bounded in magnitude:
     \begin{align*}
@@ -1097,19 +1148,12 @@ A system is stable if every bounded input produces a bounded output. Consider an
 
 
 \begin{frame}{}
-    \textbf{ Examples}\par
-    Determine whether the following systems are stable:
-    \begin{enumerate}
-        \item Pure time shift in DT.
-        \item Pure time shift in CT.
-        \item Accumulator in DT.
-        \item CT counterpart of the accumulator.
-    \end{enumerate}
+    \noindent\textbf{Examples} Determine whether the following systems are stable: 1. Pure time shift in DT. 2. Pure time shift in CT. 3. Accumulator in DT. 4. CT counterpart of the accumulator.
 
     \mode<beamer>
     {
-        \begin{columns}
-            \column{0.48\textwidth}
+        \begin{columns}[totalwidth=\textwidth]
+            \column{0.5\textwidth}
             Pure time shift in DT:\par
             \begin{equation*}
                 \sum_{n=-\infty}^{\infty}|h[n]| = \sum_{n=-\infty}^{\infty}|\delta[n-n_0]| = 1
@@ -1119,7 +1163,7 @@ A system is stable if every bounded input produces a bounded output. Consider an
             \pause
             Pure time shift in CT:\par
             \begin{equation*}
-                \int_{-\infty}^{\infty}|h(\tau)d\tau| = \int_{-\infty}^{\infty}|\delta(\tau- t_0)d\tau| = 1
+                \int_{-\infty}^{\infty}|h(\tau)|d\tau = \int_{-\infty}^{\infty}|\delta(\tau- t_0)|d\tau = 1
             \end{equation*}
             \pause
             Ans: \textcolor{YellowGreen}{stable.}\par
@@ -1130,7 +1174,7 @@ A system is stable if every bounded input produces a bounded output. Consider an
             \pause
             Ans: \textcolor{Tomato}{unstable.}
             \pause
-            \column{0.48\textwidth}
+            \column{0.5\textwidth}
 
             CT counterpart of the accumulator:
             \begin{equation*}
@@ -1141,7 +1185,7 @@ A system is stable if every bounded input produces a bounded output. Consider an
                 h(t) = \int_{-\infty}^{t}\delta(\tau)d\tau = u(t).
             \end{equation*}
             \begin{equation*}
-                \int_{-\infty}^{\infty}|u(\tau)d\tau| = \int_{0}^{\infty}d\tau| = \infty
+                \int_{-\infty}^{\infty}|u(\tau)|d\tau = \int_{0}^{\infty}d\tau = \infty
             \end{equation*}
             \pause
             Ans: \textcolor{Tomato}{unstable.}
@@ -1203,7 +1247,8 @@ u[n]$ or $x(t) = u(t)$.
 \end{frame}
 
 \begin{frame}{}
-    \textcolor{Tomato}{That is, the step response of a discrete-time LTI system is the running sum of its impulse response. Conversely, the impulse response of a discrete-time LTI system is the first difference of its step response.}\par
+    That is, the step response of a discrete-time LTI system is the running sum of its impulse response. Conversely, the impulse response of a discrete-time LTI system is the first difference of its step response.\par
+    \vspace{0.1cm}
     Similarly, in CT, the step response of an LTI system with impulse response $h(t)$ is given by $s(t) = u(t) \ast h(t)$, which also equals the response of an integrator
     [with impulse response $u(t)$] to the input $h(t)$. That is, the unit step response of a continuous-time LTI system is the running integral of its impulse response, or
     \mode<beamer>
@@ -1298,8 +1343,8 @@ u[n]$ or $x(t) = u(t)$.
     {
     \begin{equation*}
         \begin{split}
-            y[n] = \sum_{k=-\infty}^{\infty}x[k]h[n-k] \quad & y(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\\ \pause
-            y[n] = \sum_{k=-\infty}^{n}x[k]h[n-k] \quad & y(t) = \int_{-\infty}^{t}x(\tau)h(t-\tau)
+            y[n] = \sum_{k=-\infty}^{\infty}x[k]h[n-k] \quad & y(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)d\tau\\ \pause
+            y[n] = \sum_{k=-\infty}^{n}x[k]h[n-k] \quad & y(t) = \int_{-\infty}^{t}x(\tau)h(t-\tau)d\tau
         \end{split}
     \end{equation*}
     Only values of $x[n]$ up until $n$ are used to compute  $y[n]$ (causal). Similar in CT case.
@@ -1317,7 +1362,7 @@ u[n]$ or $x(t) = u(t)$.
     \end{equation*}
 
     \begin{columns}
-        \column{0.48\textwidth}
+        \column{0.6\textwidth}
 
             \begin{enumerate}
               \item Does the accumulator have memory?
@@ -1336,7 +1381,7 @@ u[n]$ or $x(t) = u(t)$.
             \end{enumerate}
             }
         \pause
-        \column{0.48\textwidth}
+        \column{0.4\textwidth}
             \mode<beamer>
             {
             Inverse $h[n] = u[n]$, $h^{-1}[n] =?$:\par
@@ -1374,13 +1419,13 @@ u[n]$ or $x(t) = u(t)$.
                     x_2[n] - x_2[n-1] = y_2[n].
                 \end{equation*}
                 \begin{equation*}
-                    \delta[n] - \delta[n-1] = h^{-1}[n].
+                    \delta[n] - \delta[n-1] = h_1[n].
                 \end{equation*}
             \column{0.48\textwidth}
-            Inverse of the accumulator:
+            \noindent Inverse of the accumulator:
             \begin{enumerate}
               \item Does it have memory? Yes.
-              \item Is the sysetm causal? Yes.
+              \item Is the system causal? Yes.
               \item Is the system stable in the BIBO sense? Yes.
             \end{enumerate}
 

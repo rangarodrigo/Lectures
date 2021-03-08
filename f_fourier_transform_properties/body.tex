@@ -80,8 +80,8 @@ Analysis equation:
                     \input{figures/example49}
                 \end{figure}
             \end{example}
+            \pause
         \column{0.4\textwidth}
-        \pause
         \mode<beamer>
         {
             \begin{equation*}
@@ -91,13 +91,16 @@ Analysis equation:
                     X_2(j\omega) &= \frac{2\sin(3\omega/2)}{\omega}\\
                 \end{aligned}
             \end{equation*}
-            \pause
+        
             \begin{equation*}
                 X(j\omega) = e^{-j5\omega/2}\left[\frac{\sin(\omega/2) + 2\sin(3\omega/2)}{\omega}\right].
             \end{equation*}
         }
     \end{columns}
-
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[anchor=east, xshift=-0.2in, yshift=-1in, fill=orange!20!white, opacity=.8,text opacity=1, text width= 3.5cm] at (current page.east)
+            {For the rectangular pulse\\ $x(t) = \begin{cases}1, & |t|<T_1,\\0, &  |t|> T_1\end{cases}, $\\ $X(j\omega) = 2\frac{\sin\omega T_1}{\omega}$};
+        \end{tikzpicture}
 \end{frame}
 
 
